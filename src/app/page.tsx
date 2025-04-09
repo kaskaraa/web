@@ -1,6 +1,6 @@
 "use client"
 import { useEffect, useState } from 'react'
-
+import Footer from './components/footer'
 export default function Home() {
   const [state, setState] = useState(false)
 
@@ -125,7 +125,7 @@ export default function Home() {
             </section>
         </div>
 
-        
+        <Footer />
     </div>
 
     
