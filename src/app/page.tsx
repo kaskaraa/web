@@ -6,10 +6,10 @@ export default function Home() {
 
     // Replace javascript:void(0) paths with your paths
     const navigation = [
-        { title: "Features", path: "javascript:void(0)" },
-        { title: "Integrations", path: "javascript:void(0)" },
-        { title: "Customers", path: "javascript:void(0)" },
-        { title: "Pricing", path: "javascript:void(0)" }
+        { title: "Xiphos Mark I", path: "javascript:void(0)" },
+        { title: "Partnerships", path: "javascript:void(0)" },
+        { title: "Applications", path: "javascript:void(0)" },
+        { title: "Support", path: "javascript:void(0)" }
     ]
 
     useEffect(() => {
@@ -22,12 +22,15 @@ export default function Home() {
     const Brand = () => (
       <div className="flex items-center justify-between py-5 md:block">
           <a href="javascript:void(0)">
-              <img
-                  src="https://www.floatui.com/logo.svg"
+          <h1 className="text-xl text-gray-800 font-[Avenir] sm:text-xl">
+                BladesmithLabs 
+            </h1>              
+                {/* <img
+                  src=""
                   width={120}
                   height={50}
-                  alt="Float UI logo"
-              />
+                  alt="logo"
+              /> */}
           </a>
           <div className="md:hidden">
               <button className="menu-btn text-gray-500 hover:text-gray-800"
@@ -65,7 +68,7 @@ export default function Home() {
                                 {
                                     navigation.map((item, idx) => {
                                         return (
-                                            <li key={idx} className="text-gray-700 hover:text-gray-900">
+                                            <li key={idx} className="text-gray-700 hover:text-gray-900 font-[Avenir]">
                                                 <a href={item.path} className="block">
                                                     {item.title}
                                                 </a>
@@ -87,46 +90,44 @@ export default function Home() {
                 </nav>
             </header>
             <section>
-                <div className="max-w-screen-xl mx-auto px-4 py-28 gap-12 text-gray-600 overflow-hidden md:px-8 md:flex">
+                <div className="max-w-screen-xl mx-auto px-4 py-16 gap-12 text-gray-600 overflow-hidden md:px-8 md:flex md:items-center">
                     <div className='flex-none space-y-5 max-w-xl'>
                         <a href="javascript:void(0)" className='inline-flex gap-x-6 items-center rounded-full p-1 pr-6 border text-sm font-medium duration-150 hover:bg-white'>
                             <span className='inline-block rounded-full px-3 py-1 bg-indigo-600 text-white'>
                                 News
                             </span>
                             <p className='flex items-center'>
-                                Read the launch post from here
+                                Read up on new developments
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5">
                                     <path fillRule="evenodd" d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z" clipRule="evenodd" />
                                 </svg>
                             </p>
                         </a>
-                        <h1 className="text-4xl text-gray-800 font-[Avenir] sm:text-5xl">
-                            Build your SaaS exactly how you want
+                        <h1 className="text-5xl text-gray-800 font-[Avenir] sm:text-5xl">
+                            PATHOLOGY <span className="font-[sagona]">AUTOMATION</span>
                         </h1>
                         <p>
-                            Sed ut perspiciatis unde omnis iste natus voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae.
+                        We streamline pathology workflows with smart automation, enhancing accuracy, efficiency, and turnaround time for labs, hospitals, and research facilities.
                         </p>
                         <div className='flex items-center gap-x-3 sm:text-sm'>
                             <a href="javascript:void(0)" className="flex items-center justify-center gap-x-1 py-2 px-4 text-white font-medium bg-gray-800 duration-150 hover:bg-gray-700 active:bg-gray-900 rounded-full md:inline-flex">
-                                Get started
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5">
-                                    <path fillRule="evenodd" d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z" clipRule="evenodd" />
-                                </svg>
+                                About Us
                             </a>
                             <a href="javascript:void(0)" className="flex items-center justify-center gap-x-1 py-2 px-4 text-gray-700 hover:text-gray-900 font-medium duration-150 md:inline-flex">
                                 Contact sales
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5">
-                                    <path fillRule="evenodd" d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z" clipRule="evenodd" />
-                                </svg>
                             </a>
                         </div>
                     </div>
-                    <div className='flex-1 hidden md:block'>
-                        <img src="/images/landing.png" className="max-w-xl" />
+                    <div className='flex-1 hidden md:flex md:justify-end self-start'>
+                        <img src="/images/landing.png" className="max-w-md" />
                     </div>
                 </div>
             </section>
         </div>
+
+        
     </div>
+
+    
 )
 }
