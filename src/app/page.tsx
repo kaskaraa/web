@@ -4,7 +4,6 @@ import Footer from './components/footer'
 export default function Home() {
   const [state, setState] = useState(false)
 
-    // Replace javascript:void(0) paths with your paths
     const navigation = [
         { title: "Xiphos Mark I", path: "javascript:void(0)" },
         { title: "Partnerships", path: "javascript:void(0)" },
@@ -12,13 +11,7 @@ export default function Home() {
         { title: "Support", path: "javascript:void(0)" }
     ]
 
-    useEffect(() => {
-        document.onclick = (e) => {
-            const target = e.target;
-            if (!target.closest(".menu-btn")) setState(false);
-        };
-    }, [])
-
+   
     const Brand = () => (
       <div className="flex items-center justify-between py-5 md:block">
           <a href="javascript:void(0)">
@@ -103,7 +96,7 @@ export default function Home() {
                                 </svg>
                             </p>
                         </a>
-                        <h1 className="text-5xl text-gray-800 font-[Avenir] sm:text-5xl">
+                        <h1 className="text-7xl text-gray-800 font-[Avenir] sm:text-7xl">
                             PATHOLOGY <span className="font-[sagona]">AUTOMATION</span>
                         </h1>
                         <p>
