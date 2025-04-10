@@ -26,6 +26,7 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+/* Fonts */
 @font-face {
   font-family: Avenir;
   font-style: bold;
@@ -35,6 +36,15 @@ body {
 }
 
 @font-face {
+  font-family: Avenir;
+  font-style: light;
+  font-weight: 600 1100;
+  font-display: swap;
+  src: url("/fonts/AvenirLTStd-Light.otf") format("opentype");
+}
+
+
+@font-face {
   font-family: Sagona;
   font-style: normal;
   font-weight: 200 700;
@@ -42,6 +52,9 @@ body {
   src: url("/fonts/SAGONABOOKITALIC.TTF") format("truetype");
 }
 
+
+
+/* The page load anim */
 .fade-in {
   opacity: 0;
   animation: fadeIn 1s ease-in forwards;
