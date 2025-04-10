@@ -96,11 +96,11 @@ export default function Home() {
                                 </svg>
                             </p>
                         </a>
-                        <h1 className="text-7xl text-gray-800 font-[Avenir] sm:text-7xl">
+                        <h1 className="text-4xl text-gray-800 font-[Avenir] sm:text-7xl">
                             PATHOLOGY <span className="font-[sagona]">AUTOMATION</span>
                         </h1>
-                        <p>
-                        We streamline pathology workflows with smart automation, enhancing accuracy, efficiency, and turnaround time for labs, hospitals, and research facilities.
+                        <p className="text-sm sm:text-base">
+                            We streamline pathology workflows with smart automation, enhancing accuracy, efficiency, and turnaround time for labs, hospitals, and research facilities.
                         </p>
                         <div className='flex items-center gap-x-3 sm:text-sm'>
                             <a href="javascript:void(0)" className="flex items-center justify-center gap-x-1 py-2 px-4 text-white font-medium bg-gray-800 duration-150 hover:bg-gray-700 active:bg-gray-900 rounded-full md:inline-flex">

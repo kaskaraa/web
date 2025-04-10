@@ -29,7 +29,7 @@ export default function Footer() {
                                     <a href="https://github.com/themesberg/flowbite" className="hover:underline">Github</a>
                                 </li>
                                 <li>
-                                    <a href="https://discord.gg/4eeurUVvTy" className="hover:underline">Discord</a>
+                                    <a href="https://discord.gg/4eeurUVvTy" className="hover:underline">Linkedin</a>
                                 </li>
                             </ul>
                         </div>
