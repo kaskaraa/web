@@ -1,5 +1,5 @@
 "use client"
-import { useEffect, useState } from 'react'
+import {  useState } from 'react'
 import Footer from './components/footer'
 export default function Home() {
   const [state, setState] = useState(false)
