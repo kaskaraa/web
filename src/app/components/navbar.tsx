@@ -29,7 +29,7 @@ const Navbar = () => {
   const Brand = () => (
     <div className="flex items-center justify-between py-5 md:block">
       <a href="javascript:void(0)">
-        <h1 className="text-xl text-gray-800 font-[Avenir] font-bold sm:text-xl">
+        <h1 className="text-xl text-gray-800 font-[Avenir]  sm:text-xl">
           BladesmithLabs
         </h1>
       </a>
@@ -101,7 +101,7 @@ const Navbar = () => {
                     <div className="relative">
                       <button
                         onClick={() => setDropdownOpen(isOpen ? null : idx)}
-                        className="w-full flex justify-between items-center text-left text-gray-700 hover:text-gray-900 font-bold font-[Avenir] py-2 px-4 md:inline-flex md:py-0 md:px-0 md:gap-x-1"
+                        className="w-full flex justify-between items-center text-left text-gray-700 hover:text-gray-900 font-[Avenir] py-2 px-4 md:inline-flex md:py-0 md:px-0 md:gap-x-1"
                       >
                         {item.title}
                         {hasChildren && (
@@ -129,7 +129,7 @@ const Navbar = () => {
                             <li key={cIdx}>
                               <a
                                 href={child.path}
-                                className="block px-4 py-2 text-gray-700 hover:text-gray-900 font-[Avenir] font-bold"
+                                className="block px-4 py-2 text-gray-700 hover:text-gray-900 font-[Avenir]"
                               >
                                 {child.title}
                               </a>

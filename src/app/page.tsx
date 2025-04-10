@@ -3,9 +3,6 @@ import Footer from "./components/footer";
 import Navbar from "./components/navbar";
 
 export default function Home() {
-
-  
-
   return (
     <div className="relative">
       <div
@@ -16,7 +13,7 @@ export default function Home() {
         }}
       ></div>
       <div className="relative">
-      <Navbar />
+        <Navbar />
 
         <section>
           <div className="max-w-screen-xl mx-auto px-4 py-16 gap-12 text-gray-600 overflow-hidden md:px-8 md:flex md:items-center">
@@ -44,7 +41,7 @@ export default function Home() {
                   </svg>
                 </p>
               </a>
-              <h1 className="text-5xl text-gray-800 font-[Avenir] font-bold sm:text-7xl">
+              <h1 className="text-5xl text-gray-800 font-[Avenir]  sm:text-7xl">
                 PATHOLOGY <span className="font-[sagona] ">AUTOMATION</span>
               </h1>
               <p className="text-sm sm:text-base">
@@ -55,7 +52,7 @@ export default function Home() {
               <div className="flex items-center gap-x-3 sm:text-sm">
                 <a
                   href="javascript:void(0)"
-                  className="flex items-center  justify-center gap-x-1 py-2 px-4 text-white font-[Avenir] bg-gray-800 duration-150 hover:bg-gray-700 active:bg-gray-900 rounded-full md:inline-flex"
+                  className="flex items-center  justify-center gap-x-1 py-2 px-4 text-white font-[Avenirlight] bg-gray-800 duration-150 hover:bg-gray-700 active:bg-gray-900 rounded-full md:inline-flex"
                 >
                   About Us
                 </a>

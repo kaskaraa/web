@@ -26,18 +26,16 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-/* Fonts */
+/* The fonts brev */
 @font-face {
   font-family: Avenir;
-  font-style: bold;
   font-weight: 600 1100;
   font-display: swap;
   src: url("/fonts/AvenirNextLTProDemi.otf") format("opentype");
 }
 
 @font-face {
-  font-family: Avenir;
-  font-style: light;
+  font-family: Avenirlight;
   font-weight: 600 1100;
   font-display: swap;
   src: url("/fonts/AvenirLTStd-Light.otf") format("opentype");
