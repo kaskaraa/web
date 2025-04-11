@@ -52,7 +52,7 @@ export default function Home() {
               </p>
               <div className="flex items-center gap-x-3 sm:text-sm">
                 <a
-                  href="javascript:void(0)"
+                  href=""
                   className="flex items-center justify-center gap-x-1 py-2 px-4 text-white font-[Avenirlight] bg-gray-800 duration-150 hover:bg-gray-700 active:bg-gray-900 rounded-full md:inline-flex"
                 >
                   About Us
