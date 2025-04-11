@@ -1,11 +1,18 @@
 "use client";
 import { useState } from "react";
 
+// Add interface for navigation items
+interface NavItem {
+  title: string;
+  path: string;
+  children?: { title: string; path: string }[];
+}
+
 const Navbar = () => {
   const [state, setState] = useState(false);
-  const [dropdownOpen, setDropdownOpen] = useState(null); // `null` means no dropdown is open
+  const [dropdownOpen, setDropdownOpen] = useState<number | null>(null);
 
-  const navigation = [
+  const navigation: NavItem[] = [
     {
       title: "Xiphos Mark I",
       path: "#",
@@ -92,8 +99,8 @@ const Navbar = () => {
             }`}
           >
             <ul className="flex-1 justify-center items-center space-y-6 md:flex md:space-x-6 md:space-y-0">
-              {navigation.map((item, idx) => {
-                const hasChildren = item.children?.length > 0;
+              {navigation.map((item: NavItem, idx) => {
+                const hasChildren = item.children && item.children.length > 0; 
                 const isOpen = dropdownOpen === idx;
 
                 return (
@@ -123,9 +130,9 @@ const Navbar = () => {
                         )}
                       </button>
 
-                      {hasChildren && isOpen && (
-                        <ul className="md:absolute z-10 mt-2 w-full md:w-48 bg-white shadow-md rounded-xl py-2 space-y-2 md:space-y-1 border">
-                          {item.children.map((child, cIdx) => (
+                      {hasChildren && isOpen && item.children && (
+  <ul className="md:absolute z-10 mt-2 w-full md:w-48 bg-white shadow-md rounded-xl py-2 space-y-2 md:space-y-1 border">
+    {item.children.map((child, cIdx) => (
                             <li key={cIdx}>
                               <a
                                 href={child.path}
