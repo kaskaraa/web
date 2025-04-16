@@ -17,6 +17,8 @@ export const metadata: Metadata = {
   description: "Bladesmithlabs is a research and development company focused on building the next generation pathology automation tools. Website by Nathan Aruna"
 };
 
+
+
 export default function RootLayout({
   children,
 }: Readonly<{

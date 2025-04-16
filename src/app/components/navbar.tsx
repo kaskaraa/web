@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
+import Link from "next/link";
 
-// Add interface for navigation items
 interface NavItem {
   title: string;
   path: string;
@@ -35,11 +35,11 @@ const Navbar = () => {
 
   const Brand = () => (
     <div className="flex items-center justify-between py-5 md:block">
-      <a href="javascript:void(0)">
+     <Link href="/">
         <h1 className="text-xl text-gray-800 font-[Avenir]  sm:text-xl">
           BladesmithLabs
         </h1>
-      </a>
+      </Link>
       <div className="md:hidden">
         <button
           className="menu-btn text-gray-500 hover:text-gray-800"
