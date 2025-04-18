@@ -23,7 +23,7 @@ export default function Home() {
                 href="javascript:void(0)"
                 className="inline-flex gap-x-6 items-center rounded-full p-1 pr-6 border text-sm font-medium duration-150 hover:bg-white"
               >
-                <span className="inline-block rounded-full px-3 py-1 bg-gray-700 text-white">
+                <span className="inline-block rounded-full px-3 py-1 bg-gray-800 text-white">
                   News
                 </span>
                 <p className="flex items-center">
@@ -52,7 +52,7 @@ export default function Home() {
               </p>
               <div className="flex items-center gap-x-3 sm:text-sm">
                 <a
-                  href=""
+                  href="/about"
                   className="flex items-center justify-center gap-x-1 py-2 px-4 text-white font-[Avenirlight] bg-gray-800 duration-150 hover:bg-gray-700 active:bg-gray-900 rounded-full md:inline-flex"
                 >
                   About Us
