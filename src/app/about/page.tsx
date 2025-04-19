@@ -8,9 +8,16 @@ const AboutPage = () => {
       <Navbar />
 
       <section className="py-14 lg:py-24 relative">
-        
+        {/* Gradient Background */}
+        <div
+          className="absolute inset-0 blur-xl h-full z-[-1]"
+          style={{
+            background:
+              "linear-gradient(143.6deg, rgba(192, 132, 252, 0) 20.79%, rgba(232, 121, 249, 0.26) 40.92%, rgba(204, 171, 238, 0) 70.35%)",
+          }}
+        ></div>
+
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative">
-          
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-9">
             <div className="img-box">
               <img
@@ -29,24 +36,24 @@ const AboutPage = () => {
                   do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                   Ut enim ad minim veniam, quis nostrud exercitation ullamco
                   laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-                  irure dolor in reprehenderit. 
-                  <a 
-                    href="about/team" 
+                  irure dolor in reprehenderit.{" "}
+                  <a
+                    href="about/team"
                     className="text-blue-500 hover:underline transition-colors duration-200 ease-in-out flex items-center gap-1"
                   >
                     The team
-                    <svg 
-                      xmlns="http://www.w3.org/2000/svg" 
-                      fill="none" 
-                      viewBox="0 0 24 24" 
-                      strokeWidth={2} 
-                      stroke="currentColor" 
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      strokeWidth={2}
+                      stroke="currentColor"
                       className="w-4 h-4"
                     >
-                      <path 
-                        strokeLinecap="round" 
-                        strokeLinejoin="round" 
-                        d="M17.25 8.75L21 12m0 0l-3.75 3.25M21 12H3" 
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M17.25 8.75L21 12m0 0l-3.75 3.25M21 12H3"
                       />
                     </svg>
                   </a>
@@ -75,7 +82,7 @@ const AboutPage = () => {
               </div>
             </div>
             <div className="img-box">
-            <img
+              <img
                 src="https://travel.destinationcanada.com/_next/image?url=https%3A%2F%2Fadmin.destinationcanada.com%2Fsites%2Fdefault%2Ffiles%2F2023-06%2FQC-Montreal-Skyline_hero.jpg&w=1920&q=75"
                 alt="About Us tailwind page"
                 className="w-full h-[500px] object-cover rounded-lg max-lg:mx-auto"
