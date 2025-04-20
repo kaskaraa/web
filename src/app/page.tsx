@@ -10,15 +10,15 @@ export default function Home() {
 
       <main className="flex-grow relative">
         <div
-          className="absolute inset-0 blur-xl h-[580px] z-0" 
+          className="absolute inset-0 blur-xl h-[580px] z-0"
           style={{
             background:
               "linear-gradient(143.6deg, rgba(192, 132, 252, 0) 20.79%, rgba(232, 121, 249, 0.26) 40.92%, rgba(204, 171, 238, 0) 70.35%)",
           }}
         ></div>
 
-        <section className="relative z-10"> 
-          <div className="max-w-screen-xl mx-auto px-4 py-16 gap-12 text-gray-600 overflow-hidden md:px-8 md:flex md:items-center">
+        <section className="relative z-10">
+          <div className="max-w-screen-xl mx-auto px-4 py-8 sm:py-12 lg:py-16 gap-12 text-gray-600 overflow-hidden md:px-8 md:flex md:items-center">
             <div className="flex-none space-y-5 max-w-xl">
               <a
                 href="javascript:void(0)"
@@ -46,7 +46,7 @@ export default function Home() {
               <h1 className="text-5xl text-gray-800 font-[Avenir] sm:text-7xl">
                 PATHOLOGY <span className="font-[sagona]">AUTOMATION</span>
               </h1>
-              <p className="text-sm sm:text-base">
+              <p className="text-lg font-[Avenirlight]">
                 We streamline pathology workflows with smart automation,
                 enhancing accuracy, efficiency, and turnaround time for labs,
                 hospitals, and research facilities.
@@ -60,14 +60,56 @@ export default function Home() {
                 </a>
                 <a
                   href="javascript:void(0)"
-                  className="flex items-center justify-center gap-x-1 py-2 px-4 text-gray-700 hover:text-gray-900 duration-150 md:inline-flex"
+                  className="flex items-center justify-center gap-x-1 py-2 px-4 text-gray-700 hover:text-gray-900 duration-150 md:inline-flex font-[Avenir]"
                 >
-                  Contact sales
+                  Contact us
                 </a>
               </div>
             </div>
             <div className="flex-1 hidden md:flex md:justify-end self-start">
               <img src="/images/landing.png" className="max-w-md" />
+            </div>
+          </div>
+        </section>
+
+        <div className="relative py-10 px-4 sm:px-6 lg:px-8">
+          <div className="relative mx-auto max-w-screen-xl">
+            <div className="flex items-center" aria-hidden="true">
+              <div className="w-full border-t border-gray-300"></div>
+            </div>
+            <div className="absolute inset-0 flex items-center justify-center">
+              <span className="bg-white px-3 text-gray-500 text-sm font-[Sagona]">Our Impact</span>
+            </div>
+          </div>
+        </div>
+
+        <section className="py-20 sm:py-20 lg:py-20 lg:px-20">
+          <div className="mx-auto max-w-7xl px-3 sm:px-3 lg:px-3">
+            <div className="flex flex-col gap-10 xl:gap-14 lg:flex-row lg:justify-between">
+              <div className="w-full lg:w-1/3">
+                <div className="font-[Sagona] text-5xl text-gray-600 mb-6 text-center">
+                  13M+
+                </div>
+                <p className="text-lg text-gray-500 leading-7 text-center font-[Avenirlight]">
+                  We have reached more than 13 million in seed funding
+                </p>
+              </div>
+              <div className="w-full lg:w-1/3">
+                <div className="font-[Sagona] text-5xl text-gray-600 mb-6 text-center">
+                  5
+                </div>
+                <p className="text-lg text-gray-500 leading-7 text-center font-[Avenirlight]">
+                  Accelerated by 5 excellent engineers and scientist  
+                </p>
+              </div>
+              <div className="w-full lg:w-1/3">
+                <div className="font-[Sagona] text-5xl text-gray-600 mb-6 text-center">
+                  98%
+                </div>
+                <p className="text-lg text-gray-500 leading-7 text-center font-[Avenirlight]">
+                  Our users are satisfied using our tools in their daily use
+                </p>
+              </div>
             </div>
           </div>
         </section>
