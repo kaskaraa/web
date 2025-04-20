@@ -21,7 +21,7 @@ const AboutPage = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-9">
             <div className="img-box">
               <img
-                src="https://content.ilabsolutions.com/wp-content/uploads/2022/10/HistologyLabHero-640x392-revised.jpg"
+                src="/images/about.jpg"
                 alt="About Us tailwind page"
                 className="w-full h-[500px] object-cover rounded-lg max-lg:mx-auto"
               />
