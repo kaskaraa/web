@@ -78,12 +78,14 @@ export default function Home() {
               <div className="w-full border-t border-gray-300"></div>
             </div>
             <div className="absolute inset-0 flex items-center justify-center">
-              <span className="bg-white px-3 text-gray-500 text-sm font-[Sagona]">Our Impact</span>
+              <span className="bg-white px-3 text-gray-500 text-sm font-[Sagona]">
+                Our Impact
+              </span>
             </div>
           </div>
         </div>
 
-        <section className="py-20 sm:py-20 lg:py-20 lg:px-20">
+        <section className="py-20 sm:py-20 lg:py-30 lg:px-20">
           <div className="mx-auto max-w-7xl px-3 sm:px-3 lg:px-3">
             <div className="flex flex-col gap-10 xl:gap-14 lg:flex-row lg:justify-between">
               <div className="w-full lg:w-1/3">
@@ -99,7 +101,7 @@ export default function Home() {
                   5
                 </div>
                 <p className="text-lg text-gray-500 leading-7 text-center font-[Avenirlight]">
-                  Accelerated by 5 excellent engineers and scientist  
+                  Accelerated by 5 excellent engineers and scientist
                 </p>
               </div>
               <div className="w-full lg:w-1/3">
@@ -115,7 +117,9 @@ export default function Home() {
         </section>
       </main>
 
-      <Footer />
+      <section className=" pt-10 sm:pt-20 lg:pt-30 ">
+        <Footer />
+      </section>
     </div>
   );
 }
