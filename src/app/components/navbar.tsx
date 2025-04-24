@@ -34,7 +34,7 @@ const Navbar = () => {
   ];
 
   const Brand = () => (
-    <div className="flex items-center justify-between py-5 md:block">
+    <div className="wflex items-center justify-between py-5 md:block">
      <Link href="/">
         <h1 className="text-xl text-gray-800 font-[Avenir]  sm:text-xl">
           BladesmithLabs
@@ -91,7 +91,7 @@ const Navbar = () => {
             : ""
         }`}
       >
-        <div className="gap-x-14 items-center max-w-screen-xl mx-auto px-4 md:flex md:px-8">
+        <div className="gap-x-14 items-center max-w-screen-2xl mx-auto px-4 md:flex md:px-8">
           <Brand />
           <div
             className={`flex-1 items-center mt-8 md:mt-0 md:flex ${

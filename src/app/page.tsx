@@ -5,20 +5,28 @@ import "./home.css";
 
 export default function Home() {
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="flex flex-col min-h-screen ">
       <Navbar />
 
       <main className="flex-grow relative">
         <div
-          className="absolute inset-0 blur-xl h-[580px] z-0"
+          className="absolute inset-0 blur-xl h-[900px] z-0"
           style={{
             background:
               "linear-gradient(143.6deg, rgba(192, 132, 252, 0) 20.79%, rgba(232, 121, 249, 0.26) 40.92%, rgba(204, 171, 238, 0) 70.35%)",
           }}
         ></div>
 
+<div
+          className="absolute inset-0 blur-xl h-[900px] z-0"
+          style={{
+            background:
+              "linear-gradient(190.6deg, rgba(192, 132, 252, 0) 20.79%, rgba(232, 121, 249, 0.26) 15.92%, rgba(204, 171, 238, 0) 30.35%) ",
+          }}
+        ></div>
+
         <section className="relative z-10">
-          <div className="max-w-screen-xl mx-auto px-4 py-8 sm:py-12 lg:py-16 gap-12 text-gray-600 overflow-hidden md:px-8 md:flex md:items-center">
+          <div className="max-w-screen-2xl mx-auto px-4 py-8 sm:py-12 lg:py-16 gap-12 text-gray-600 overflow-hidden md:px-8 md:flex md:items-center">
             <div className="flex-none space-y-5 max-w-xl">
               <a
                 href="javascript:void(0)"
@@ -62,7 +70,7 @@ export default function Home() {
                   href="javascript:void(0)"
                   className="flex items-center justify-center gap-x-1 py-2 px-4 text-gray-700 hover:text-gray-900 duration-150 md:inline-flex font-[Avenir]"
                 >
-                  Contact us
+                  Contact us ⇀
                 </a>
               </div>
             </div>
@@ -72,8 +80,8 @@ export default function Home() {
           </div>
         </section>
 
-        <div className="relative py-10 px-4 sm:px-6 lg:px-8">
-          <div className="relative mx-auto max-w-screen-xl">
+        {/* <div className="relative py-10 px-4 sm:px-6 lg:px-8">
+          <div className="relative mx-auto max-w-screen-2xl">
             <div className="flex items-center" aria-hidden="true">
               <div className="w-full border-t border-gray-300"></div>
             </div>
@@ -85,8 +93,8 @@ export default function Home() {
           </div>
         </div>
 
-        <section className="py-20 sm:py-20 lg:py-30 lg:px-20">
-          <div className="mx-auto max-w-7xl px-3 sm:px-3 lg:px-3">
+        <section className="py-15 sm:py-15 lg:py-25 lg:px-20">
+          <div className="mx-auto max-w-screen-xl px-3 sm:px-3 lg:px-3">
             <div className="flex flex-col gap-10 xl:gap-14 lg:flex-row lg:justify-between">
               <div className="w-full lg:w-1/3">
                 <div className="font-[Sagona] text-5xl text-gray-600 mb-6 text-center">
@@ -114,7 +122,9 @@ export default function Home() {
               </div>
             </div>
           </div>
-        </section>
+        </section> */}
+
+       
       </main>
 
       <section className=" pt-10 sm:pt-20 lg:pt-30 ">
