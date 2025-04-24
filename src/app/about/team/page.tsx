@@ -8,10 +8,10 @@ const TeamPage = () => {
       <Navbar />
 
       <section className="py-14 lg:py-24 relative">
-        <div class="py-4 mx-auto max-w-screen-2xl relative">
-          <div class=" mx-auto text-center">
-            <h2 class="text-slate-900 text-4xl font-[sagona]">Meet our team</h2>
-            <p class="text-slate-600 font-[Avenirlight] text-sm mt-6 leading-relaxed p-3">
+        <div className="py-4 mx-auto max-w-screen-2xl relative">
+          <div className="mx-auto text-center">
+            <h2 className="text-slate-900 text-4xl font-[sagona]">Meet our team</h2>
+            <p className="text-slate-600 font-[Avenirlight] text-sm mt-6 leading-relaxed p-3">
               Veniam proident aute magna anim excepteur et ex consectetur velit
               ullamco veniam minim aute sit. Ullamco nisi enim ipsum irure
               laboris ad ut. Esse cupidatat deserunt magna aute.
@@ -60,7 +60,6 @@ const TeamPage = () => {
                 </div>
               </div>
             </div>
-
 
             <div className="overflow-hidden bg-white">
               <img
@@ -145,12 +144,6 @@ const TeamPage = () => {
               </div>
             </div>
           </div>
-
-
-
-          
-
-          
         </div>
       </section>
 
