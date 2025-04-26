@@ -34,9 +34,9 @@ const Navbar = () => {
   ];
 
   const Brand = () => (
-    <div className="wflex items-center justify-between py-5 md:block">
-     <Link href="/">
-        <h1 className="text-xl text-gray-800 font-[Avenir]  sm:text-xl">
+    <div className="flex items-center justify-between py-5 md:block ">
+      <Link href="/">
+        <h1 className="text-xl text-gray-800 font-[Avenir] sm:text-xl">
           BladesmithLabs
         </h1>
       </Link>
@@ -80,14 +80,21 @@ const Navbar = () => {
   );
 
   return (
-    <header>
+    <header className="z-10">
+      {state && (
+        <div
+          className="fixed inset-0 bg-black/30 backdrop-blur-sm z-10"
+          onClick={() => setState(false)} 
+        ></div>
+      )}
+
       <div className={`md:hidden ${state ? "mx-2 pb-5" : "hidden"}`}>
         <Brand />
       </div>
       <nav
         className={`pb-5 md:text-sm ${
           state
-            ? "absolute top-0 inset-x-0 bg-white shadow-lg rounded-xl border mx-2 mt-2 md:shadow-none md:border-none md:mx-0 md:mt-0 md:relative md:bg-transparent"
+            ? "absolute top-0 inset-x-0 bg-white shadow-lg rounded-xl border mx-2 mt-2 md:shadow-none md:border-none md:mx-0 md:mt-0 md:relative md:bg-transparent z-50"
             : ""
         }`}
       >
@@ -100,7 +107,7 @@ const Navbar = () => {
           >
             <ul className="flex-1 justify-center items-center space-y-6 md:flex md:space-x-6 md:space-y-0">
               {navigation.map((item: NavItem, idx) => {
-                const hasChildren = item.children && item.children.length > 0; 
+                const hasChildren = item.children && item.children.length > 0;
                 const isOpen = dropdownOpen === idx;
 
                 return (
@@ -131,8 +138,8 @@ const Navbar = () => {
                       </button>
 
                       {hasChildren && isOpen && item.children && (
-  <ul className="md:absolute z-10 mt-2 w-full md:w-48 bg-white shadow-md rounded-xl py-2 space-y-2 md:space-y-1 border">
-    {item.children.map((child, cIdx) => (
+                        <ul className="md:absolute z-50 mt-2 w-full md:w-48 bg-white shadow-md rounded-xl py-2 space-y-2 md:space-y-1 border">
+                          {item.children.map((child, cIdx) => (
                             <li key={cIdx}>
                               <a
                                 href={child.path}

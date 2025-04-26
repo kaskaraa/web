@@ -10,7 +10,7 @@ export default function Home() {
 
       <main className="flex-grow relative">
         <div
-          className="absolute inset-0 blur-xl h-[900px] z-0"
+          className="absolute inset-0 blur-xl h-[900px]"
           style={{
             background:
               "linear-gradient(143.6deg, rgba(192, 132, 252, 0) 20.79%, rgba(232, 121, 249, 0.26) 40.92%, rgba(204, 171, 238, 0) 70.35%)",
@@ -18,14 +18,14 @@ export default function Home() {
         ></div>
 
 <div
-          className="absolute inset-0 blur-xl h-[900px] z-0"
+          className="absolute inset-0 blur-xl h-[900px] "
           style={{
             background:
               "linear-gradient(190.6deg, rgba(192, 132, 252, 0) 20.79%, rgba(232, 121, 249, 0.26) 15.92%, rgba(204, 171, 238, 0) 30.35%) ",
           }}
         ></div>
 
-        <section className="relative z-10">
+        <section className="relative">
           <div className="max-w-screen-2xl mx-auto px-4 py-8 sm:py-12 lg:py-16 gap-12 text-gray-600 overflow-hidden md:px-8 md:flex md:items-center">
             <div className="flex-none space-y-5 max-w-xl">
               <a
@@ -67,7 +67,7 @@ export default function Home() {
                   About Us
                 </a>
                 <a
-                  href="javascript:void(0)"
+                  href=""
                   className="flex items-center justify-center gap-x-1 py-2 px-4 text-gray-700 hover:text-gray-900 duration-150 md:inline-flex font-[Avenir]"
                 >
                   Contact us ⇀
@@ -75,7 +75,7 @@ export default function Home() {
               </div>
             </div>
             <div className="flex-1 hidden md:flex md:justify-end self-start">
-              <img src="/images/landing.png" className="max-w-md" />
+              <img src="/images/landing.png" className="max-w-lg" />
             </div>
           </div>
         </section>
