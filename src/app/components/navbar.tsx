@@ -14,7 +14,7 @@ const Navbar = () => {
 
   const navigation: NavItem[] = [
     {
-      title: "Xiphos Mark I",
+      title: "Kaskara Mark I",
       path: "#",
       children: [
         { title: "Overview", path: "#" },
@@ -37,7 +37,7 @@ const Navbar = () => {
     <div className="flex items-center justify-between py-5 md:block ">
       <Link href="/">
         <h1 className="text-xl text-gray-800 font-[Avenir] sm:text-xl">
-          BladesmithLabs
+          Xiphos Labs
         </h1>
       </Link>
       <div className="md:hidden">

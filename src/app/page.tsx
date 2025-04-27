@@ -54,7 +54,7 @@ export default function Home() {
               <h1 className="text-5xl text-gray-800 font-[Avenir] sm:text-7xl">
                 PATHOLOGY <span className="font-[sagona]">AUTOMATION</span>
               </h1>
-              <p className="text-lg font-[Avenirlight]">
+              <p className="text-lg font-[Avenirlight] ">
                 We streamline pathology workflows with smart automation,
                 enhancing accuracy, efficiency, and turnaround time for labs,
                 hospitals, and research facilities.
