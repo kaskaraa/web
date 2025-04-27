@@ -7,141 +7,88 @@ const TeamPage = () => {
     <>
       <Navbar />
 
-      <section className="py-14 lg:py-24 relative">
-        <div className="py-4 mx-auto max-w-screen-2xl relative">
-          <div className="mx-auto text-center">
-            <h2 className="text-slate-900 text-4xl font-[sagona]">Meet our team</h2>
-            <p className="text-slate-600 font-[Avenirlight] text-sm mt-6 leading-relaxed p-3">
-              Veniam proident aute magna anim excepteur et ex consectetur velit
-              ullamco veniam minim aute sit. Ullamco nisi enim ipsum irure
-              laboris ad ut. Esse cupidatat deserunt magna aute.
-            </p>
+      <section className="py-24">
+        <div className="mx-auto max-w-screen-2xl sm:px-6 lg:px-1">
+          <div className="mb-12">
+            <h2 className="text-5xl text-center font-[Avenir] text-gray-800">
+              Our team
+            </h2>
           </div>
-
-          <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-8 mt-12 mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="overflow-hidden bg-white">
-              <img
-                src=""
-                className="w-full object-contain aspect-square object-top bg-gray-500 border rounded-md "
-              />
-              <div className="p-4">
-                <h4 className="text-slate-800 text-base font-semibold font-[Avenir]">
-                  Nathan Aruna
-                </h4>
-                <p className="text-slate-600 text-xs mt-1 font-[Avenirlight]">
-                  Software Engineer
-                </p>
-                <div className="mt-4">
-                  <p className="text-gray-800 text-sm leading-relaxed font-[Avenir]">
-                    Eiusmod commodo aliquip laboris qui anim non voluptate
-                    consectetur.
-                  </p>
-                </div>
+          <div className="grid grid-cols-1 min-[500px]:grid-cols-2 md:grid-cols-6 lg:grid-cols-5 gap-8 max-w-xl mx-auto md:max-w-3xl lg:max-w-full">
+            <div className="block group md:col-span-2 lg:col-span-1">
+              <div className="relative mb-6">
+                <img
+                  src="https://pagedone.io/asset/uploads/1696238374.png"
+                  alt="Antonio image"
+                  className="w-40 h-40 rounded-full mx-auto transition-all duration-500 object-cover border border-solid border-transparent group-hover:border-indigo-600"
+                />
               </div>
+              <h4 className="text-xl font-[Avenir] text-gray-900 mb-2 capitalize text-center transition-all duration-500 group-hover:text-indigo-600">
+                Nathan Aruna
+              </h4>
+              <span className="font-[Avenirlight] text-gray-500 text-center block transition-all duration-500 group-hover:text-gray-900">
+                Engineering Oversight
+              </span>
             </div>
-
-            <div className="overflow-hidden bg-white">
-              <img
-                src=""
-                className="w-full object-contain aspect-square object-top bg-gray-500 border rounded-md "
-              />
-              <div className="p-4">
-                <h4 className="text-slate-800 text-base font-semibold font-[Avenir]">
-                  Arielle Benarroch
-                </h4>
-                <p className="text-slate-600 text-xs mt-1 font-[Avenirlight]">
-                  Software Engineer
-                </p>
-                <div className="mt-4">
-                  <p className="text-gray-800 text-sm leading-relaxed font-[Avenir]">
-                    Eiusmod commodo aliquip laboris qui anim non voluptate
-                    consectetur.
-                  </p>
-                </div>
+            <div className="block group md:col-span-2 lg:col-span-1">
+              <div className="relative mb-6">
+                <img
+                  src="https://pagedone.io/asset/uploads/1696238396.png"
+                  alt="Patricia image"
+                  className="w-40 h-40 rounded-full mx-auto transition-all duration-500 object-cover border border-solid border-transparent group-hover:border-indigo-600"
+                />
               </div>
+              <h4 className="text-xl font-[Avenir] text-gray-900 mb-2 capitalize text-center transition-all duration-500 group-hover:text-indigo-600">
+                Domenico Valentino
+              </h4>
+              <span className="font-[Avenirlight] text-gray-500 text-center block transition-all duration-500 group-hover:text-gray-900">
+                Lead Software Engineer
+              </span>
             </div>
-
-            <div className="overflow-hidden bg-white">
-              <img
-                src=""
-                className="w-full object-contain aspect-square object-top bg-gray-500 border rounded-md "
-              />
-              <div className="p-4">
-                <h4 className="text-slate-800 text-base font-semibold font-[Avenir]">
-                  Domenico Valentino
-                </h4>
-                <p className="text-slate-600 text-xs mt-1 font-[Avenirlight]">
-                  Software Engineer
-                </p>
-                <div className="mt-4">
-                  <p className="text-gray-800 text-sm leading-relaxed font-[Avenir]">
-                    Eiusmod commodo aliquip laboris qui anim non voluptate
-                    consectetur.
-                  </p>
-                </div>
+            <div className="group group md:col-span-2 lg:col-span-1">
+              <div className="relative mb-6">
+                <img
+                  src="https://pagedone.io/asset/uploads/1696238411.png"
+                  alt="Jerom image"
+                  className="w-40 h-40 rounded-full mx-auto transition-all duration-500 object-cover border border-solid border-transparent group-hover:border-indigo-600"
+                />
               </div>
+              <h4 className="text-xl font-[Avenir] text-gray-900 mb-2 capitalize text-center transition-all duration-500 group-hover:text-indigo-600">
+                Raphael Ethier
+              </h4>
+              <span className="font-[Avenirlight] text-gray-500 text-center block transition-all duration-500 group-hover:text-gray-900">
+                Lead Mechanical Engineer
+              </span>
             </div>
-
-            <div className="overflow-hidden bg-white">
-              <img
-                src=""
-                className="w-full object-contain aspect-square object-top bg-gray-500 border rounded-md "
-              />
-              <div className="p-4">
-                <h4 className="text-slate-800 text-base font-semibold font-[Avenir]">
-                  Raphael Ethier
-                </h4>
-                <p className="text-slate-600 text-xs mt-1 font-[Avenirlight]">
-                  Software Engineer
-                </p>
-                <div className="mt-4">
-                  <p className="text-gray-800 text-sm leading-relaxed font-[Avenir]">
-                    Eiusmod commodo aliquip laboris qui anim non voluptate
-                    consectetur.
-                  </p>
-                </div>
+            <div className="block group md:col-span-2 lg:col-span-1 md:col-start-2 lg:col-start-4">
+              <div className="relative mb-6">
+                <img
+                  src="https://pagedone.io/asset/uploads/1696238425.png"
+                  alt="Yasmine image"
+                  className="w-40 h-40 rounded-full mx-auto transition-all duration-500 object-cover border border-solid border-transparent group-hover:border-indigo-600"
+                />
               </div>
+              <h4 className="text-xl font-[Avenir] text-gray-900 mb-2 capitalize text-center transition-all duration-500 group-hover:text-indigo-600">
+                Arielle Benarroch
+              </h4>
+              <span className="font-[Avenirlight] text-gray-500 text-center block transition-all duration-500 group-hover:text-gray-900">
+                Research, Legal & Marketing
+              </span>
             </div>
-            <div className="overflow-hidden bg-white">
-              <img
-                src=""
-                className="w-full object-contain aspect-square object-top bg-gray-500 border rounded-md "
-              />
-              <div className="p-4">
-                <h4 className="text-slate-800 text-base font-semibold font-[Avenir]">
-                  Nathan Aruna
-                </h4>
-                <p className="text-slate-600 text-xs mt-1 font-[Avenirlight]">
-                  Software Engineer
-                </p>
-                <div className="mt-4">
-                  <p className="text-gray-800 text-sm leading-relaxed font-[Avenir]">
-                    Eiusmod commodo aliquip laboris qui anim non voluptate
-                    consectetur.
-                  </p>
-                </div>
+            <div className="block group min-[500px]:col-span-2 mx-auto md:col-span-2 lg:col-span-1">
+              <div className="relative mb-6">
+                <img
+                  src="https://pagedone.io/asset/uploads/1696238446.png"
+                  alt="Martin image"
+                  className="w-40 h-40 rounded-full mx-auto transition-all duration-500 object-cover border border-solid border-transparent group-hover:border-indigo-600"
+                />
               </div>
-            </div>
-
-            <div className="overflow-hidden bg-white">
-              <img
-                src=""
-                className="w-full object-contain aspect-square object-top bg-gray-500 border rounded-md "
-              />
-              <div className="p-4">
-                <h4 className="text-slate-800 text-base font-semibold font-[Avenir]">
-                  Nathan Aruna
-                </h4>
-                <p className="text-slate-600 text-xs mt-1 font-[Avenirlight]">
-                  Software Engineer
-                </p>
-                <div className="mt-4">
-                  <p className="text-gray-800 text-sm leading-relaxed font-[Avenir]">
-                    Eiusmod commodo aliquip laboris qui anim non voluptate
-                    consectetur.
-                  </p>
-                </div>
-              </div>
+              <h4 className="text-xl font-[Avenir] text-gray-900 mb-2 capitalize text-center transition-all duration-500 group-hover:text-indigo-600">
+                Majed Munazzit
+              </h4>
+              <span className="font-[Avenirlight] text-gray-500 text-center block transition-all duration-500 group-hover:text-gray-900">
+                Clinical Researcher
+              </span>
             </div>
           </div>
         </div>
