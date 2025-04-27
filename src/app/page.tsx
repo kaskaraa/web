@@ -25,8 +25,8 @@ export default function Home() {
           }}
         ></div>
 
-        <section className="relative">
-          <div className="max-w-screen-2xl mx-auto px-4 py-8 sm:py-12 lg:py-16 gap-12 text-gray-600 overflow-hidden md:px-8 md:flex md:items-center">
+        <section className="relative ">
+          <div className="max-w-screen-2xl mx-auto px-4 py-8 sm:py-12 lg:py-30 gap-12 text-gray-600 overflow-hidden md:px-8 md:flex md:items-center ">
             <div className="flex-none space-y-5 max-w-xl">
               <a
                 href="javascript:void(0)"
@@ -80,49 +80,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* <div className="relative py-10 px-4 sm:px-6 lg:px-8">
-          <div className="relative mx-auto max-w-screen-2xl">
-            <div className="flex items-center" aria-hidden="true">
-              <div className="w-full border-t border-gray-300"></div>
-            </div>
-            <div className="absolute inset-0 flex items-center justify-center">
-              <span className="bg-white px-3 text-gray-500 text-sm font-[Sagona]">
-                Our Impact
-              </span>
-            </div>
-          </div>
-        </div>
-
-        <section className="py-15 sm:py-15 lg:py-25 lg:px-20">
-          <div className="mx-auto max-w-screen-xl px-3 sm:px-3 lg:px-3">
-            <div className="flex flex-col gap-10 xl:gap-14 lg:flex-row lg:justify-between">
-              <div className="w-full lg:w-1/3">
-                <div className="font-[Sagona] text-5xl text-gray-600 mb-6 text-center">
-                  13M+
-                </div>
-                <p className="text-lg text-gray-500 leading-7 text-center font-[Avenirlight]">
-                  We have reached more than 13 million in seed funding
-                </p>
-              </div>
-              <div className="w-full lg:w-1/3">
-                <div className="font-[Sagona] text-5xl text-gray-600 mb-6 text-center">
-                  5
-                </div>
-                <p className="text-lg text-gray-500 leading-7 text-center font-[Avenirlight]">
-                  Accelerated by 5 excellent engineers and scientist
-                </p>
-              </div>
-              <div className="w-full lg:w-1/3">
-                <div className="font-[Sagona] text-5xl text-gray-600 mb-6 text-center">
-                  98%
-                </div>
-                <p className="text-lg text-gray-500 leading-7 text-center font-[Avenirlight]">
-                  Our users are satisfied using our tools in their daily use
-                </p>
-              </div>
-            </div>
-          </div>
-        </section> */}
+        
 
        
       </main>
