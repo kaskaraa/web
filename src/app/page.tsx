@@ -27,7 +27,7 @@ export default function Home() {
 
         <section className="relative ">
           <div className="max-w-screen-2xl mx-auto px-4 py-8 sm:py-12 lg:py-30 gap-12 text-gray-600 overflow-hidden md:px-8 md:flex md:items-center ">
-            <div className="flex-none space-y-5 max-w-xl">
+            <div className="flex-none space-y-5 max-w-2xl">
               <a
                 href="javascript:void(0)"
                 className="inline-flex gap-x-6 items-center rounded-full p-1 pr-6 border text-sm font-medium duration-150 hover:bg-white"

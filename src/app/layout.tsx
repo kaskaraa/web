@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Xiphos Labs",
-  description: "Xiphos Labs is a research and development company focused on building the next generation pathology automation tools. Website by Nathan Aruna"
+  title: "Kaskara Intruments",
+  description: "Kaskara Intruments is a research and development company focused on building the next generation pathology automation tools. Website by Nathan Aruna"
 };
 
 

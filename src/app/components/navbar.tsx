@@ -21,7 +21,10 @@ const Navbar = () => {
         { title: "Specs", path: "#" },
       ],
     },
-    { title: "Partnerships", path: "#" },
+    {
+      title: "Products",
+      path: "#"
+    },
     {
       title: "Applications",
       path: "#",
@@ -30,6 +33,8 @@ const Navbar = () => {
         { title: "Research", path: "#" },
       ],
     },
+    { title: "Partnerships", path: "#" },
+   
     { title: "Support", path: "#" },
   ];
 
@@ -37,7 +42,7 @@ const Navbar = () => {
     <div className="flex items-center justify-between py-5 md:block ">
       <Link href="/">
         <h1 className="text-xl text-gray-800 font-[Avenir] sm:text-xl">
-          Xiphos Labs
+        Kaskara Instruments.ﾒ
         </h1>
       </Link>
       <div className="md:hidden">
