@@ -29,7 +29,7 @@ export default function Footer() {
                                     <a href="" className="hover:underline">Github</a>
                                 </li>
                                 <li>
-                                    <a href="" className="hover:underline">Linkedin</a>
+                                    <a href="https://www.linkedin.com/company/106752688/admin/dashboard/" className="hover:underline">Linkedin</a>
                                 </li>
                             </ul>
                         </div>
