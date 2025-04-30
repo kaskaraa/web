@@ -67,7 +67,7 @@ export default function Home() {
                   About Us
                 </a>
                 <a
-                  href=""
+                  href="/contact"
                   className="flex items-center justify-center gap-x-1 py-2 px-4 text-gray-700 hover:text-gray-900 duration-150 md:inline-flex font-[Avenir]"
                 >
                   Contact us ⇀

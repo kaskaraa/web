@@ -18,75 +18,75 @@ const TeamPage = () => {
             <div className="block group md:col-span-2 lg:col-span-1">
               <div className="relative mb-6">
                 <img
-                  src="https://pagedone.io/asset/uploads/1696238374.png"
-                  alt="Antonio image"
-                  className="w-40 h-40 rounded-full mx-auto transition-all duration-500 object-cover border border-solid border-transparent group-hover:border-indigo-600"
+                  src=""
+                  alt="Nathan Aruna"
+                  className="bg-gray-600 w-40 h-40 rounded-full mx-auto transition-all duration-500 object-cover border border-solid border-transparent group-hover:border-gray-600"
                 />
               </div>
-              <h4 className="text-xl font-[Avenir] text-gray-900 mb-2 capitalize text-center transition-all duration-500 group-hover:text-indigo-600">
+              <h4 className="text-xl font-[Avenir] text-gray-900 mb-2 capitalize text-center transition-all duration-500 group-hover:text-gray-600">
                 Nathan Aruna
               </h4>
-              <span className="font-[Avenirlight] text-gray-500 text-center block transition-all duration-500 group-hover:text-gray-900">
+              <span className="font-[Avenirlight] text-gray-500 text-center block transition-all duration-500 group-hover:text-gray-600">
                 Engineering Oversight
               </span>
             </div>
             <div className="block group md:col-span-2 lg:col-span-1">
               <div className="relative mb-6">
                 <img
-                  src="https://pagedone.io/asset/uploads/1696238396.png"
-                  alt="Patricia image"
-                  className="w-40 h-40 rounded-full mx-auto transition-all duration-500 object-cover border border-solid border-transparent group-hover:border-indigo-600"
+                  src=""
+                  alt="Domenico Valentino"
+                  className="bg-gray-600 w-40 h-40 rounded-full mx-auto transition-all duration-500 object-cover border border-solid border-transparent group-hover:border-gray-600"
                 />
               </div>
-              <h4 className="text-xl font-[Avenir] text-gray-900 mb-2 capitalize text-center transition-all duration-500 group-hover:text-indigo-600">
+              <h4 className="text-xl font-[Avenir] text-gray-900 mb-2 capitalize text-center transition-all duration-500 group-hover:text-gray-600">
                 Domenico Valentino
               </h4>
-              <span className="font-[Avenirlight] text-gray-500 text-center block transition-all duration-500 group-hover:text-gray-900">
+              <span className="font-[Avenirlight] text-gray-500 text-center block transition-all duration-500 group-hover:text-gray-600">
                 Lead Software Engineer
               </span>
             </div>
             <div className="group group md:col-span-2 lg:col-span-1">
               <div className="relative mb-6">
                 <img
-                  src="https://pagedone.io/asset/uploads/1696238411.png"
-                  alt="Jerom image"
-                  className="w-40 h-40 rounded-full mx-auto transition-all duration-500 object-cover border border-solid border-transparent group-hover:border-indigo-600"
+                  src=""
+                  alt="Raphael Ethier"
+                  className="bg-gray-600 w-40 h-40 rounded-full mx-auto transition-all duration-500 object-cover border border-solid border-transparent group-hover:border-gray-600"
                 />
               </div>
-              <h4 className="text-xl font-[Avenir] text-gray-900 mb-2 capitalize text-center transition-all duration-500 group-hover:text-indigo-600">
+              <h4 className="text-xl font-[Avenir] text-gray-900 mb-2 capitalize text-center transition-all duration-500 group-hover:text-gray-600">
                 Raphael Ethier
               </h4>
-              <span className="font-[Avenirlight] text-gray-500 text-center block transition-all duration-500 group-hover:text-gray-900">
+              <span className="font-[Avenirlight] text-gray-500 text-center block transition-all duration-500 group-hover:text-gray-600">
                 Lead Mechanical Engineer
               </span>
             </div>
             <div className="block group md:col-span-2 lg:col-span-1 md:col-start-2 lg:col-start-4">
               <div className="relative mb-6">
                 <img
-                  src="https://pagedone.io/asset/uploads/1696238425.png"
-                  alt="Yasmine image"
-                  className="w-40 h-40 rounded-full mx-auto transition-all duration-500 object-cover border border-solid border-transparent group-hover:border-indigo-600"
+                  src=""
+                  alt="Arielle Benarroch"
+                  className="bg-gray-600 w-40 h-40 rounded-full mx-auto transition-all duration-500 object-cover border border-solid border-transparent group-hover:border-gray-600"
                 />
               </div>
-              <h4 className="text-xl font-[Avenir] text-gray-900 mb-2 capitalize text-center transition-all duration-500 group-hover:text-indigo-600">
+              <h4 className="text-xl font-[Avenir] text-gray-900 mb-2 capitalize text-center transition-all duration-500 group-hover:text-gray-600">
                 Arielle Benarroch
               </h4>
-              <span className="font-[Avenirlight] text-gray-500 text-center block transition-all duration-500 group-hover:text-gray-900">
+              <span className="font-[Avenirlight] text-gray-500 text-center block transition-all duration-500 group-hover:text-gray-600">
                 Research, Legal & Marketing
               </span>
             </div>
             <div className="block group min-[500px]:col-span-2 mx-auto md:col-span-2 lg:col-span-1">
               <div className="relative mb-6">
                 <img
-                  src="https://pagedone.io/asset/uploads/1696238446.png"
-                  alt="Martin image"
-                  className="w-40 h-40 rounded-full mx-auto transition-all duration-500 object-cover border border-solid border-transparent group-hover:border-indigo-600"
+                  src=""
+                  alt="Majed Munazzit"
+                  className="bg-gray-600 w-40 h-40 rounded-full mx-auto transition-all duration-500 object-cover border border-solid border-transparent group-hover:border-gray-600"
                 />
               </div>
-              <h4 className="text-xl font-[Avenir] text-gray-900 mb-2 capitalize text-center transition-all duration-500 group-hover:text-indigo-600">
+              <h4 className="text-xl font-[Avenir] text-gray-900 mb-2 capitalize text-center transition-all duration-500 group-hover:text-gray-600">
                 Majed Munazzit
               </h4>
-              <span className="font-[Avenirlight] text-gray-500 text-center block transition-all duration-500 group-hover:text-gray-900">
+              <span className="font-[Avenirlight] text-gray-500 text-center block transition-all duration-500 group-hover:text-gray-600">
                 Clinical Researcher
               </span>
             </div>

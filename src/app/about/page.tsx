@@ -87,10 +87,10 @@ const AboutPage = () => {
                         clipRule="evenodd"
                       ></path>
                     </svg>
-                    What does lifetime access exactly mean?
+                    What is the meaning of our name?
                   </h3>
                   <p className="text-gray-500">
-                    Once you have purchased either the design, code, or both packages, you will have access to all of the future updates based on the roadmap, free of charge.
+                  Kaskara refers to a traditional sword known for precision and craftsmanship, symbolizing our commitment to cutting-edge, high-quality medical instruments.
                   </p>
                 </div>
               </div>
@@ -109,17 +109,11 @@ const AboutPage = () => {
                         clipRule="evenodd"
                       ></path>
                     </svg>
-                    What does free updates include?
+                    What is the meaning of our name?
                   </h3>
                   <p className="text-gray-500">
-                    The free updates that will be provided are based on the{" "}
-                    <a
-                      href="#"
-                      className="font-medium underline text-primary-600 hover:no-underline"
-                    >
-                      roadmap
-                    </a>{" "}
-                    that we have laid out for this project. It is also possible that we will provide extra updates outside of the roadmap as well.
+                  Kaskara refers to a traditional sword known for precision and craftsmanship, symbolizing our commitment to cutting-edge, high-quality medical instruments.
+                   
                   </p>
                 </div>
               </div>
