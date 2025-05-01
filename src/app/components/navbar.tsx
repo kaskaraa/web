@@ -164,9 +164,9 @@ const Navbar = () => {
             <div className="items-center justify-end mt-6 space-y-6 md:flex md:mt-0">
               <a
                 href="javascript:void(0)"
-                className="flex items-center justify-center gap-x-1 py-2 px-4 text-white font-medium bg-gray-800 hover:bg-gray-700 active:bg-gray-900 rounded-full md:inline-flex"
+                className="flex items-center justify-center gap-x-1 py-2 px-4 text-white font-[Avenir] bg-gray-800 hover:bg-gray-700 active:bg-gray-900 rounded-full md:inline-flex"
               >
-                Sign in
+                Download
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 20 20"
