@@ -3,6 +3,7 @@ import Footer from "../components/footer";
 import Navbar from "../components/navbar";
 import "./animations.css"; 
 import type { Metadata } from "next";
+import Image from "next/image";
 
 export const metadata: Metadata = {
 	title: "Kaskaraa Intruments About",
@@ -37,15 +38,19 @@ const AboutPage = () => {
           </div>
 
           <div className="grid grid-cols-2 gap-4 mt-8">
-            <img
+            <Image
+              src="/images/about1.png"
+              alt="About us image 1"
+              width={500}
+              height={500}
               className="w-full rounded-lg"
-              src="./images/about1.png"
-              alt=""
             />
-            <img
+            <Image
+              src="/images/about2.png"
+              alt="About us image 2"
+              width={500}
+              height={500}
               className="mt-4 w-full lg:mt-10 rounded-lg"
-              src="./images/about2.png"
-              alt=""
             />
           </div>
         </div>

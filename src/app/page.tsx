@@ -2,6 +2,7 @@
 import Footer from "./components/footer";
 import Navbar from "./components/navbar";
 import "./home.css";
+import Image from "next/image";
 
 export default function Home() {
   return (
@@ -75,7 +76,13 @@ export default function Home() {
               </div>
             </div>
             <div className="flex-1 hidden md:flex md:justify-end self-start">
-              <img src="/images/landing.png" className="max-w-lg" />
+              <Image
+                src="/images/landing.png"
+                alt="Landing page illustration"
+                width={500}
+                height={500}
+                className="max-w-lg"
+              />
             </div>
           </div>
         </section>

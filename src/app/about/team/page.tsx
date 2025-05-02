@@ -2,6 +2,7 @@
 import Footer from "../../components/footer";
 import Navbar from "../../components/navbar";
 import type { Metadata } from "next";
+import Image from "next/image";
 
 export const metadata: Metadata = {
 	title: "Kaskaraa Intruments Team",
@@ -23,9 +24,11 @@ const TeamPage = () => {
           <div className="grid grid-cols-1 min-[500px]:grid-cols-2 md:grid-cols-6 lg:grid-cols-5 gap-8 max-w-xl mx-auto md:max-w-3xl lg:max-w-full">
             <div className="block group md:col-span-2 lg:col-span-1">
               <div className="relative mb-6">
-                <img
-                  src=""
+                <Image
+                  src="/images/nathan-aruna.png"
                   alt="Nathan Aruna"
+                  width={160}
+                  height={160}
                   className="bg-gray-600 w-40 h-40 rounded-full mx-auto transition-all duration-500 object-cover border border-solid border-transparent group-hover:border-gray-600"
                 />
               </div>
@@ -38,9 +41,11 @@ const TeamPage = () => {
             </div>
             <div className="block group md:col-span-2 lg:col-span-1">
               <div className="relative mb-6">
-                <img
-                  src=""
+                <Image
+                  src="/images/domenico-valentino.png"
                   alt="Domenico Valentino"
+                  width={160}
+                  height={160}
                   className="bg-gray-600 w-40 h-40 rounded-full mx-auto transition-all duration-500 object-cover border border-solid border-transparent group-hover:border-gray-600"
                 />
               </div>
@@ -53,9 +58,11 @@ const TeamPage = () => {
             </div>
             <div className="group group md:col-span-2 lg:col-span-1">
               <div className="relative mb-6">
-                <img
-                  src=""
+                <Image
+                  src="/images/raphael-ethier.png"
                   alt="Raphael Ethier"
+                  width={160}
+                  height={160}
                   className="bg-gray-600 w-40 h-40 rounded-full mx-auto transition-all duration-500 object-cover border border-solid border-transparent group-hover:border-gray-600"
                 />
               </div>
@@ -68,9 +75,11 @@ const TeamPage = () => {
             </div>
             <div className="block group md:col-span-2 lg:col-span-1 md:col-start-2 lg:col-start-4">
               <div className="relative mb-6">
-                <img
-                  src=""
+                <Image
+                  src="/images/arielle-benarroch.png"
                   alt="Arielle Benarroch"
+                  width={160}
+                  height={160}
                   className="bg-gray-600 w-40 h-40 rounded-full mx-auto transition-all duration-500 object-cover border border-solid border-transparent group-hover:border-gray-600"
                 />
               </div>
@@ -83,9 +92,11 @@ const TeamPage = () => {
             </div>
             <div className="block group min-[500px]:col-span-2 mx-auto md:col-span-2 lg:col-span-1">
               <div className="relative mb-6">
-                <img
-                  src=""
+                <Image
+                  src="/images/majed-munazzit.png"
                   alt="Majed Munazzit"
+                  width={160}
+                  height={160}
                   className="bg-gray-600 w-40 h-40 rounded-full mx-auto transition-all duration-500 object-cover border border-solid border-transparent group-hover:border-gray-600"
                 />
               </div>

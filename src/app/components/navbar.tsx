@@ -10,7 +10,7 @@ interface NavItem {
 
 const Navbar = () => {
   const [state, setState] = useState(false);
-  const [dropdownOpen, setDropdownOpen] = useState<number | null>(null);
+  const [dropdownOpen, setDropdownOpen] = useState<number | null>(null); // Define dropdownOpen state
 
   const navigation: NavItem[] = [
     {
@@ -23,7 +23,7 @@ const Navbar = () => {
     },
     {
       title: "Products",
-      path: "/products"
+      path: "/products",
     },
     {
       title: "Applications",
@@ -34,7 +34,6 @@ const Navbar = () => {
       ],
     },
     { title: "Partnerships", path: "/partnerships" },
-   
     { title: "Support", path: "/support-us" },
   ];
 
@@ -121,6 +120,11 @@ const Navbar = () => {
                       <Link
                         href={item.path}
                         className="w-full flex justify-between items-center text-left text-gray-700 hover:text-gray-900 font-[Avenir] py-2 px-4 md:inline-flex md:py-0 md:px-0 md:gap-x-1"
+                        onClick={() =>
+                          hasChildren
+                            ? setDropdownOpen(isOpen ? null : idx)
+                            : setDropdownOpen(null)
+                        }
                       >
                         {item.title}
                         {hasChildren && (
