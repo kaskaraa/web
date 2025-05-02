@@ -15,15 +15,15 @@ const Navbar = () => {
   const navigation: NavItem[] = [
     {
       title: "Kaskaraa Mark I",
-      path: "#",
+      path: "/products",
       children: [
-        { title: "Overview", path: "#" },
-        { title: "Specs", path: "#" },
+        { title: "Overview", path: "" },
+        { title: "Specs", path: "" },
       ],
     },
     {
       title: "Products",
-      path: "#"
+      path: "/products"
     },
     {
       title: "Applications",
@@ -33,9 +33,9 @@ const Navbar = () => {
         { title: "Research", path: "#" },
       ],
     },
-    { title: "Partnerships", path: "#" },
+    { title: "Partnerships", path: "/partnerships" },
    
-    { title: "Support", path: "#" },
+    { title: "Support", path: "/support-us" },
   ];
 
   const Brand = () => (
@@ -118,8 +118,8 @@ const Navbar = () => {
                 return (
                   <li key={idx} className="w-full md:w-auto">
                     <div className="relative">
-                      <button
-                        onClick={() => setDropdownOpen(isOpen ? null : idx)}
+                      <Link
+                        href={item.path}
                         className="w-full flex justify-between items-center text-left text-gray-700 hover:text-gray-900 font-[Avenir] py-2 px-4 md:inline-flex md:py-0 md:px-0 md:gap-x-1"
                       >
                         {item.title}
@@ -140,18 +140,18 @@ const Navbar = () => {
                             />
                           </svg>
                         )}
-                      </button>
+                      </Link>
 
                       {hasChildren && isOpen && item.children && (
                         <ul className="md:absolute z-50 mt-2 w-full md:w-48 bg-white shadow-md rounded-xl py-2 space-y-2 md:space-y-1 border">
                           {item.children.map((child, cIdx) => (
                             <li key={cIdx}>
-                              <a
+                              <Link
                                 href={child.path}
                                 className="block px-4 py-2 text-gray-700 hover:text-gray-900 font-[Avenir]"
                               >
                                 {child.title}
-                              </a>
+                              </Link>
                             </li>
                           ))}
                         </ul>
