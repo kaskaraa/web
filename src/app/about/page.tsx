@@ -2,6 +2,12 @@
 import Footer from "../components/footer";
 import Navbar from "../components/navbar";
 import "./animations.css"; 
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+	title: "Kaskaraa Intruments About",
+	description: "Kaskaraa Intruments is a research and development company focused on building the next generation pathology automation tools. Website by Nathan Aruna"
+  };
 
 const AboutPage = () => {
   return (

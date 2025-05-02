@@ -4,6 +4,7 @@ import emailjs from "@emailjs/browser";
 import Footer from "../components/footer";
 import Navbar from "../components/navbar";
 
+
 const ContactPage = () => {
   const formRef = useRef<HTMLFormElement>(null);
   const [status, setStatus] = useState("");

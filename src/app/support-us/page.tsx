@@ -1,14 +1,8 @@
 // app/about/page.tsx
-import Footer from "../../components/footer";
-import Navbar from "../../components/navbar";
-import type { Metadata } from "next";
+import Footer from "../components/footer";
+import Navbar from "../components/navbar";
 
-export const metadata: Metadata = {
-	title: "Kaskaraa Intruments Team",
-	description: "Kaskaraa Intruments is a research and development company focused on building the next generation pathology automation tools. Website by Nathan Aruna"
-  };
-  
-const TeamPage = () => {
+const SupportPage = () => {
   return (
     <>
       <Navbar />
@@ -105,4 +99,4 @@ const TeamPage = () => {
   );
 };
 
-export default TeamPage;
+export default SupportPage;
