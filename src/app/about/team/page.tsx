@@ -42,7 +42,7 @@ const TeamPage = () => {
             <div className="block group md:col-span-2 lg:col-span-1">
               <div className="relative mb-6">
                 <Image
-                  src="/images/domenico-valentino.png"
+                  src="/images/team/Domenico.png"
                   alt="Domenico Valentino"
                   width={160}
                   height={160}
