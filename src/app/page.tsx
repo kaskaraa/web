@@ -36,7 +36,7 @@ export default function Home() {
                 <span className="inline-block rounded-full px-3 py-1 bg-gray-800 text-white">
                   News
                 </span>
-                <p className="flex items-center">
+                <p className="flex items-center font-[Avenirlight]">
                   Read up on new developments
                   <svg
                     xmlns="http://www.w3.org/2000/svg"

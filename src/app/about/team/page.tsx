@@ -25,11 +25,11 @@ const TeamPage = () => {
             <div className="block group md:col-span-2 lg:col-span-1">
               <div className="relative mb-6">
                 <Image
-                  src="/images/nathan-aruna.png"
+                  src="/images/team/Nathan.png"
                   alt="Nathan Aruna"
                   width={160}
                   height={160}
-                  className="bg-gray-600 w-40 h-40 rounded-full mx-auto transition-all duration-500 object-cover border border-solid border-transparent group-hover:border-gray-600"
+                  className=" w-40 h-40 rounded-full mx-auto transition-all duration-500 object-cover border border-solid border-transparent group-hover:border-gray-600"
                 />
               </div>
               <h4 className="text-xl font-[Avenir] text-gray-900 mb-2 capitalize text-center transition-all duration-500 group-hover:text-gray-600">
@@ -46,7 +46,7 @@ const TeamPage = () => {
                   alt="Domenico Valentino"
                   width={160}
                   height={160}
-                  className="bg-gray-600 w-40 h-40 rounded-full mx-auto transition-all duration-500 object-cover border border-solid border-transparent group-hover:border-gray-600"
+                  className=" w-40 h-40 rounded-full mx-auto transition-all duration-500 object-cover border border-solid border-transparent group-hover:border-gray-600"
                 />
               </div>
               <h4 className="text-xl font-[Avenir] text-gray-900 mb-2 capitalize text-center transition-all duration-500 group-hover:text-gray-600">
@@ -59,11 +59,11 @@ const TeamPage = () => {
             <div className="group group md:col-span-2 lg:col-span-1">
               <div className="relative mb-6">
                 <Image
-                  src="/images/raphael-ethier.png"
+                  src="/images/team/Raphael.png"
                   alt="Raphael Ethier"
                   width={160}
                   height={160}
-                  className="bg-gray-600 w-40 h-40 rounded-full mx-auto transition-all duration-500 object-cover border border-solid border-transparent group-hover:border-gray-600"
+                  className=" w-40 h-40 rounded-full mx-auto transition-all duration-500 object-cover border border-solid border-transparent group-hover:border-gray-600"
                 />
               </div>
               <h4 className="text-xl font-[Avenir] text-gray-900 mb-2 capitalize text-center transition-all duration-500 group-hover:text-gray-600">
