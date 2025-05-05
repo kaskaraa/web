@@ -55,7 +55,7 @@ const SupportPage = () => {
                    Get In Touch
                   </a>
                   <a
-                    href="kaskaraa.com/mission.pdf"
+                    href="/mission.pdf"
                     className="text-sm/6 font-[Avenir] text-gray-900"
                   >
                     Mission Statement <span aria-hidden="true">→</span>
