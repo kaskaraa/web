@@ -15,14 +15,14 @@ export default function Home() {
           className="absolute inset-0 blur-xl h-[900px]"
           style={{
             background:
-              "linear-gradient(143.6deg, rgba(192, 132, 252, 0.05) 20.79%, rgba(232, 121, 249, 0.2) 40.92%, rgba(204, 171, 238, 0.05) 70.35%)",
+              "linear-gradient(143.6deg, rgba(192, 132, 252, 0.02) 20.79%, rgba(232, 121, 249, 0.1) 40.92%, rgba(204, 171, 238, 0.02) 70.35%)",
           }}
         ></div>
 <div
           className="absolute inset-0 blur-xl h-[900px] "
           style={{
             background:
-              "linear-gradient(190.6deg, rgba(192, 132, 252, 0.05) 20.79%, rgba(232, 121, 249, 0.2) 15.92%, rgba(204, 171, 238, 0.05) 30.35%) ",
+              "linear-gradient(190.6deg, rgba(192, 132, 252, 0.02) 20.79%, rgba(232, 121, 249, 0.1) 15.92%, rgba(204, 171, 238, 0.02) 30.35%) ",
           }}
         ></div>
 
