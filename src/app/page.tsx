@@ -11,47 +11,30 @@ export default function Home() {
 
       <main className="flex-grow relative">
         
-        <div
-          className="absolute inset-0 blur-xl h-[900px]"
-          style={{
-            background:
-              "linear-gradient(143.6deg, rgba(192, 132, 252, 0.02) 20.79%, rgba(232, 121, 249, 0.1) 40.92%, rgba(204, 171, 238, 0.02) 70.35%)",
-          }}
-        ></div>
-<div
-          className="absolute inset-0 blur-xl h-[900px] "
-          style={{
-            background:
-              "linear-gradient(190.6deg, rgba(192, 132, 252, 0.02) 20.79%, rgba(232, 121, 249, 0.1) 15.92%, rgba(204, 171, 238, 0.02) 30.35%) ",
-          }}
-        ></div>
+       
 
-        <section className="relative ">
+        <section className="relative z-1">
+          <div
+              className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
+              aria-hidden="true"
+            >
+              <div
+                className="relative left-[calc(50%-11rem)] aspect-1155/678 w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-linear-to-tr from-[#ff80b5] to-[#d08cf7] opacity-20 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]"
+                style={{
+                  clipPath:
+                    "polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)",
+                }}
+              ></div>
+              </div>
+
           <div className="max-w-screen-2xl mx-auto px-4 py-8 sm:py-12 lg:py-30 gap-12 text-gray-600 overflow-hidden md:px-8 md:flex md:items-center ">
-            <div className="flex-none space-y-5 max-w-2xl">
-              <a
-                href="javascript:void(0)"
-                className="inline-flex gap-x-6 items-center rounded-full p-1 pr-6 border text-sm font-medium duration-150 hover:bg-white"
-              >
-                <span className="inline-block rounded-full px-3 py-1 bg-gray-800 text-white">
-                  News
-                </span>
-                <p className="flex items-center font-[Avenirlight]">
-                  Read up on new developments
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 20 20"
-                    fill="currentColor"
-                    className="w-5 h-5"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
-                      clipRule="evenodd"
-                    />
-                  </svg>
-                </p>
-              </a>
+            <div className="flex-none space-y-5 max-w-xl">
+              <div className="inline-flex items-center rounded-full px-3 py-1 text-sm/6 text-gray-800 ring-1 ring-gray-900/10 hover:ring-gray-900/20 font-[Avenirlight] gap-1">
+                <span>Development and progression.</span>
+                <a href="#" className="font-semibold text-gray-800 whitespace-nowrap">
+                  Read more <span aria-hidden="true">&rarr;</span>
+                </a>
+              </div>
               <h1 className="text-5xl text-gray-800 font-[Avenir] sm:text-7xl">
                 PATHOLOGY <span className="font-[sagona]">AUTOMATION</span>
               </h1>
@@ -85,6 +68,19 @@ export default function Home() {
               />
             </div>
           </div>
+
+          <div
+              className="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]"
+              aria-hidden="true"
+            >
+              <div
+              className="relative left-[calc(50%+3rem)] aspect-1155/678 w-[36.125rem] -translate-x-1/2 bg-linear-to-tr from-[#ff80b5] to-[#d08cf7] opacity-20 sm:left-[calc(50%+36rem)] sm:w-[72.1875rem]"
+                style={{
+                  clipPath:
+                    "polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)",
+                }}
+              ></div>
+            </div>
         </section>
 
        
@@ -92,9 +88,7 @@ export default function Home() {
        
       </main>
 
-      <section className=" pt-10 sm:pt-20 lg:pt-30 ">
         <Footer />
-      </section>
     </div>
   );
 }

@@ -15,10 +15,10 @@ const Navbar = () => {
   const navigation: NavItem[] = [
     {
       title: "Kaskaraa Mark I",
-      path: "/products",
+      path: "",
       children: [
-        { title: "Overview", path: "" },
-        { title: "Specs", path: "" },
+        { title: "Overview", path: "/products" },
+        { title: "Specs", path: "/products" },
       ],
     },
     {
@@ -29,8 +29,8 @@ const Navbar = () => {
       title: "Applications",
       path: "#",
       children: [
-        { title: "Clinical", path: "#" },
-        { title: "Research", path: "#" },
+        { title: "Clinical", path: "/applications/clinical" },
+        { title: "Research", path: "/applications/research" },
       ],
     },
     { title: "Partnerships", path: "/partnerships" },
