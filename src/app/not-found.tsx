@@ -9,19 +9,17 @@ export default function notfound() {
         }}
       ></div>
       <section className="relative z-10">
-      <div className="min-h-screen mx-auto px-4 flex items-center justify-center">
-        <div className="text-center space-y-6">
-          <h1 className="text-7xl tracking-tight font-[Avenir] lg:text-9xl text-gray-400">
-            404
-          </h1>
-          <p className="text-3xl tracking-tight  text-gray-400 md:text-4xl font-[Sagona]">
-            PAGE NOT FOUND
-          </p>
-          
-         
+        <div className="min-h-screen mx-auto px-4 flex items-center justify-center">
+          <div className="text-center space-y-6">
+            <h1 className="text-7xl tracking-tight font-[Avenir] lg:text-9xl text-gray-400">
+              404
+            </h1>
+            <p className="text-3xl tracking-tight  text-gray-400 md:text-4xl font-[Sagona]">
+              PAGE NOT FOUND
+            </p>
+          </div>
         </div>
-      </div>
-    </section>
-        </div>
+      </section>
+    </div>
   );
 }

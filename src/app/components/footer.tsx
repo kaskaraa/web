@@ -1,7 +1,7 @@
 // components/Footer.tsx
 export default function Footer() {
     return (
-        <footer className="bg-white">
+        <footer className="z-10">
             <div className="mx-auto w-full max-w-screen-2xl px-5 sm:px-10 py-6 lg:py-10">
                 <div className="md:flex md:justify-between">
                     <div className="mb-6 md:mb-0">
@@ -26,10 +26,10 @@ export default function Footer() {
                             <h2 className="mb-6 text-sm font-[Avenir] font-bold text-gray-900 uppercase">Follow us</h2>
                             <ul className="text-gray-500 font-medium">
                                 <li className="mb-4">
-                                    <a href="" className="hover:underline">Github</a>
+                                    <a href="https://github.com/Kaskara-Intruments" className="hover:underline">Github</a>
                                 </li>
                                 <li>
-                                    <a href="https://www.linkedin.com/company/106752688/admin/dashboard/" className="hover:underline">Linkedin</a>
+                                    <a href="https://www.linkedin.com/company/106752688" className="hover:underline">Linkedin</a>
                                 </li>
                             </ul>
                         </div>
