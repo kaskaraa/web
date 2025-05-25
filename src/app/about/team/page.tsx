@@ -76,11 +76,11 @@ const TeamPage = () => {
               <div className="block group md:col-span-2 lg:col-span-1 md:col-start-2 lg:col-start-4">
                 <div className="relative mb-6">
                   <Image
-                    src="/images/arielle-benarroch.png"
+                    src="/images/team/Arielle.png"
                     alt="Arielle Benarroch"
                     width={160}
                     height={160}
-                    className="bg-gray-600 w-40 h-40 rounded-full mx-auto transition-all duration-500 object-cover border border-solid border-transparent group-hover:border-gray-600"
+                    className="w-40 h-40 rounded-full mx-auto transition-all duration-500 object-cover border border-solid border-transparent group-hover:border-gray-600"
                   />
                 </div>
                 <h4 className="text-xl font-[Avenir] text-gray-900 mb-2 capitalize text-center transition-all duration-500 group-hover:text-gray-600">
@@ -93,11 +93,11 @@ const TeamPage = () => {
               <div className="block group min-[500px]:col-span-2 mx-auto md:col-span-2 lg:col-span-1">
                 <div className="relative mb-6">
                   <Image
-                    src="/images/majed-munazzit.png"
+                    src="/images/team/Majed.png"
                     alt="Majed Munazzit"
                     width={160}
                     height={160}
-                    className="bg-gray-600 w-40 h-40 rounded-full mx-auto transition-all duration-500 object-cover border border-solid border-transparent group-hover:border-gray-600"
+                    className="w-40 h-40 rounded-full mx-auto transition-all duration-500 object-cover border border-solid border-transparent group-hover:border-gray-600"
                   />
                 </div>
                 <h4 className="text-xl font-[Avenir] text-gray-900 mb-2 capitalize text-center transition-all duration-500 group-hover:text-gray-600">
