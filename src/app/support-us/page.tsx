@@ -4,10 +4,10 @@ import Navbar from "../components/navbar";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-	title: "Support Kaskaraa Intruments",
-	description: "Kaskaraa Intruments is a research and development company focused on building the next generation pathology automation tools. Website by Nathan Aruna"
+  title: "Support Kaskaraa Intruments",
+  description:
+    "Kaskaraa Intruments is a research and development company focused on building the next generation pathology automation tools. Website by Nathan Aruna",
 };
-  
 
 const SupportPage = () => {
   return (
@@ -32,27 +32,32 @@ const SupportPage = () => {
               <div className="hidden sm:mb-8 sm:flex sm:justify-center">
                 <div className="relative rounded-full px-3 py-1 text-sm/6 text-gray-800 ring-1 ring-gray-900/10 hover:ring-gray-900/20 font-[Avenirlight]">
                   Development and progression.{" "}
-                  <a href="#" className="font-semibold gray-800">
-                    <span className="absolute inset-0" aria-hidden="true"></span>
+                  <a href="/news" className="font-semibold gray-800">
+                    <span
+                      className="absolute inset-0"
+                      aria-hidden="true"
+                    ></span>
                     Read more <span aria-hidden="true">&rarr;</span>
                   </a>
                 </div>
               </div>
               <div className="text-center">
                 <h1 className="text-4xl font-[Avenir] tracking-tight text-balance text-gray-800 sm:text-7xl">
-                From Slide to Insight: Automating the <span className="font-[sagona]"> Pathology </span>Pipeline
+                  From Slide to Insight: Automating the{" "}
+                  <span className="font-[sagona]"> Pathology </span>Pipeline
                 </h1>
                 <p className="mt-8 text-lg font-[Avenirlight] text-pretty text-gray-500 sm:text-xl/8">
-                We’re transforming the future of diagnostics by automating pathology workflows. 
-  Our platform enhances speed, accuracy, and accessibility empowering clinicians 
-  with data-driven decisions and improving patient outcomes.
+                  We’re transforming the future of diagnostics by automating
+                  pathology workflows. Our platform enhances speed, accuracy,
+                  and accessibility empowering clinicians with data-driven
+                  decisions and improving patient outcomes.
                 </p>
                 <div className="mt-10 flex items-center justify-center gap-x-6">
                   <a
                     href="/contact"
                     className="flex items-center justify-center gap-x-1 py-2 px-4 text-white font-[Avenirlight] bg-gray-800 duration-150 hover:bg-gray-700 active:bg-gray-900 rounded-full md:inline-flex"
                   >
-                   Get In Touch
+                    Get In Touch
                   </a>
                   <a
                     href="/mission.pdf"

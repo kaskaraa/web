@@ -15,9 +15,23 @@ const AboutPage = () => {
     <>
       <Navbar />
 
-      <section className="bg-white animate-roll-in">
+      <section className=" animate-roll-in">
+        <div
+              className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
+              aria-hidden="true"
+            >
+              <div
+                className="relative left-[calc(50%-11rem)] aspect-1155/678 w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-linear-to-tr from-[#ff80b5] to-[#d08cf7] opacity-20 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]"
+                style={{
+                  clipPath:
+                    "polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)",
+                }}
+              ></div>
+              </div>
         <div className="gap-16 items-center py-8 px-5 max-w-screen-2xl mx-auto lg:grid lg:grid-cols-2 lg:py-16 lg:px-8">
+          
           <div className="font-light text-gray-500 sm:text-lg">
+            
             <h2 className="mb-4 text-4xl tracking-tight font-[Avenir] text-gray-800">
               Building the Future of Pathology
             </h2>
@@ -56,7 +70,7 @@ const AboutPage = () => {
         </div>
       </section>
 
-      <section className="bg-white animate-roll-in">
+      <section className="animate-roll-in">
         <div className="py-8 px-4 mx-auto max-w-screen-2xl sm:py-30 lg:px-8">
           <h2 className="mb-8 text-4xl tracking-tight font-[Avenir] text-gray-800">
             Frequently asked questions
@@ -80,7 +94,7 @@ const AboutPage = () => {
                     </svg>
                     What is the meaning of our name?
                   </h3>
-                  <p className="text-gray-500">
+                  <p className="text-lg font-[Avenirlight] mb-4 text-gray-500">
                   Kaskara refers to a traditional sword known for precision and craftsmanship, symbolizing our commitment to cutting-edge, high-quality medical instruments.
                   </p>
                 </div>
@@ -100,7 +114,7 @@ const AboutPage = () => {
                     </svg>
                     How did the idea come to be?
                   </h3>
-                  <p className="text-gray-500">
+                  <p className="text-lg font-[Avenirlight] mb-4 text-gray-500">
                Our journey began as a CEGEP science fair project a simple idea to improve lab precision. What started as a prototype has evolved into a mission to transform medical technology through innovation and automation.                  </p>
                 </div>
               </div>
@@ -121,7 +135,7 @@ const AboutPage = () => {
                     </svg>
                     What is the meaning of our name?
                   </h3>
-                  <p className="text-gray-500">
+                  <p className="text-lg font-[Avenirlight] mb-4 text-gray-500">
                   Kaskara refers to a traditional sword known for precision and craftsmanship, symbolizing our commitment to cutting-edge, high-quality medical instruments.
                    
                   </p>
@@ -130,6 +144,18 @@ const AboutPage = () => {
             </div>
           </div>
         </div>
+         <div
+              className="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]"
+              aria-hidden="true"
+            >
+              <div
+              className="relative left-[calc(50%+3rem)] aspect-1155/678 w-[36.125rem] -translate-x-1/2 bg-linear-to-tr from-[#ff80b5] to-[#d08cf7] opacity-20 sm:left-[calc(50%+36rem)] sm:w-[72.1875rem]"
+                style={{
+                  clipPath:
+                    "polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)",
+                }}
+              ></div>
+            </div>
       </section>
       <Footer />
     </>
