@@ -45,7 +45,7 @@ const ContactPage = () => {
               Contact Us
             </h2>
             <p className="mb-8 lg:mb-16 font-[avenirlight] text-center text-gray-500 sm:text-xl">
-              Got a technical issue? Want to send feedback about a beta feature?
+              Got a technical question? Want to send feedback about our tools?
               Need details about our Business plan? Let us know.
             </p>
             <form ref={formRef} onSubmit={sendEmail} className="space-y-8">

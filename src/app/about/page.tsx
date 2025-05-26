@@ -98,11 +98,10 @@ const AboutPage = () => {
                         clipRule="evenodd"
                       ></path>
                     </svg>
-                    What is the meaning of our name?
+                    How did the idea come to be?
                   </h3>
                   <p className="text-gray-500">
-                  Kaskara refers to a traditional sword known for precision and craftsmanship, symbolizing our commitment to cutting-edge, high-quality medical instruments.
-                  </p>
+               Our journey began as a CEGEP science fair project a simple idea to improve lab precision. What started as a prototype has evolved into a mission to transform medical technology through innovation and automation.                  </p>
                 </div>
               </div>
               <div>

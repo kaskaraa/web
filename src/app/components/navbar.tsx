@@ -13,14 +13,7 @@ const Navbar = () => {
   const [dropdownOpen, setDropdownOpen] = useState<number | null>(null); // Define dropdownOpen state
 
   const navigation: NavItem[] = [
-    {
-      title: "Kaskaraa Mark I",
-      path: "",
-      children: [
-        { title: "Overview", path: "/products" },
-        { title: "Specs", path: "/products" },
-      ],
-    },
+    
     {
       title: "Products",
       path: "/products",
