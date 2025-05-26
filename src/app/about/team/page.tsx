@@ -36,7 +36,7 @@ const TeamPage = () => {
                   Nathan Aruna
                 </h4>
                 <span className="font-[Avenirlight] text-gray-500 text-center block transition-all duration-500 group-hover:text-gray-600">
-                  Engineering Oversight
+                  Technical Project Manager
                 </span>
               </div>
               <div className="block group md:col-span-2 lg:col-span-1">

@@ -34,13 +34,13 @@ export default function Footer() {
                             </ul>
                         </div>
                         <div>
-                            <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase">Legal</h2>
+                            <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase">About</h2>
                             <ul className="text-gray-500 font-medium">
                                 <li className="mb-4">
-                                    <a href="#" className="hover:underline">Privacy Policy</a>
+                                    <a href="/about/team" className="hover:underline">Our Team</a>
                                 </li>
                                 <li>
-                                    <a href="#" className="hover:underline">Terms &amp; Conditions</a>
+                                    <a href="/news" className="hover:underline">News</a>
                                 </li>
                             </ul>
                         </div>
