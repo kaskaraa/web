@@ -10,7 +10,7 @@ interface NavItem {
 
 const Navbar = () => {
   const [state, setState] = useState(false);
-  const [dropdownOpen, setDropdownOpen] = useState<number | null>(null); // Define dropdownOpen state
+  const [dropdownOpen, setDropdownOpen] = useState<number | null>(null); 
 
   const navigation: NavItem[] = [
     

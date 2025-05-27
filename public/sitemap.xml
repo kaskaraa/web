@@ -37,4 +37,18 @@
     <priority>0.7</priority>
   </url>
 
+  <url>
+    <loc>https://kaskaraa.com/news</loc>
+    <lastmod>2025-05-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+   <url>
+    <loc>https://kaskaraa.com/partnerships</loc>
+    <lastmod>2025-05-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
 </urlset>
