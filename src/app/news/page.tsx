@@ -10,6 +10,35 @@ export const metadata: Metadata = {
 
 const posts = [
   {
+    id:6,
+    title: "CWSF 2025",
+    date: "2025-06-5",
+    category: "Press",
+    link: "https://www.lapresse.ca/dialogue/chroniques/2025-06-04/expo-sciences/retenez-les-noms-de-ces-jeunes.php",
+    description:
+    "We are honoured to compete at the Canada-Wide Science Fair (CWSF) 2025, representing Quebec with our project. This prestigious event showcases the best young scientists from across the country.",
+    author: {
+      name: "Nathan Aruna",
+      role: "Technical Project Manager",
+      imageUrl: "/images/team/Nathan.png",
+    },
+  },
+ 
+  {
+    id: 5,
+    title: "LaPresse Interview",
+    date: "2025-06-5",
+    category: "Press",
+    link: "https://www.lapresse.ca/dialogue/chroniques/2025-06-04/expo-sciences/retenez-les-noms-de-ces-jeunes.php",
+    description:
+      "On May 22nd three of our team members had the incredible opportunity to participate at OCTAS 2025, proudly demoing our first prototype in the Collegial Student",
+    author: {
+      name: "Nathan Aruna",
+      role: "Technical Project Manager",
+      imageUrl: "/images/team/Nathan.png",
+    },
+  },
+  {
     id: 4,
     title: "OCTAS 2025",
     date: "2025-05-23",
