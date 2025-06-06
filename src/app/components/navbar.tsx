@@ -14,18 +14,18 @@ const Navbar = () => {
 
   const navigation: NavItem[] = [
     
-    {
-      title: "Products",
-      path: "/products",
-    },
-    {
-      title: "Applications",
-      path: "#",
-      children: [
-        { title: "Clinical", path: "/applications/clinical" },
-        { title: "Research", path: "/applications/research" },
-      ],
-    },
+    // {
+    //   title: "Products",
+    //   path: "/products",
+    // },
+    // {
+    //   title: "Applications",
+    //   path: "#",
+    //   children: [
+    //     { title: "Clinical", path: "/applications/clinical" },
+    //     { title: "Research", path: "/applications/research" },
+    //   ],
+    // },
     { title: "Partnerships", path: "/partnerships" },
     { title: "Resources", path: "/" },
   ];
