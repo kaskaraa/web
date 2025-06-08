@@ -17,17 +17,17 @@ export default function Footer() {
                                 <li className="mb-4">
                                     <a href="/contact" className="hover:underline">Contact</a>
                                 </li>
-                                <li>
+                                {/* <li>
                                     <a href="/support-us" className="hover:underline">Investment</a>
-                                </li>
+                                </li> */}
                             </ul>
                         </div>
                         <div>
                             <h2 className="mb-6 text-sm font-[Avenir] font-bold text-gray-900 uppercase">Follow us</h2>
                             <ul className="text-gray-500 font-medium">
-                                <li className="mb-4">
+                                {/* <li className="mb-4">
                                     <a href="https://github.com/Kaskara-Intruments" className="hover:underline">Github</a>
-                                </li>
+                                </li> */}
                                 <li>
                                     <a href="https://www.linkedin.com/company/106752688" className="hover:underline">Linkedin</a>
                                 </li>

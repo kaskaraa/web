@@ -10,10 +10,9 @@ interface NavItem {
 
 const Navbar = () => {
   const [state, setState] = useState(false);
-  const [dropdownOpen, setDropdownOpen] = useState<number | null>(null); 
+  const [dropdownOpen, setDropdownOpen] = useState<number | null>(null);
 
   const navigation: NavItem[] = [
-    
     // {
     //   title: "Products",
     //   path: "/products",
@@ -26,6 +25,12 @@ const Navbar = () => {
     //     { title: "Research", path: "/applications/research" },
     //   ],
     // },
+    {
+      title: "Investment",
+      path: "",
+        children: [{ title: "Overview", path: "/investment" }, { title: "Mission Statement", path: "/investment" }]
+
+    },
     { title: "Partnerships", path: "/partnerships" },
     { title: "Resources", path: "/" },
   ];
@@ -34,7 +39,7 @@ const Navbar = () => {
     <div className="flex items-center justify-between py-5 md:block ">
       <Link href="/">
         <h1 className="text-xl text-gray-800 font-[Avenir] sm:text-xl">
-        Kaskaraa Instruments.ﾒ
+          Kaskaraa Instruments.ﾒ
         </h1>
       </Link>
       <div className="md:hidden">
@@ -81,7 +86,7 @@ const Navbar = () => {
       {state && (
         <div
           className="fixed inset-0 bg-black/30 backdrop-blur-sm z-10"
-          onClick={() => setState(false)} 
+          onClick={() => setState(false)}
         ></div>
       )}
 
