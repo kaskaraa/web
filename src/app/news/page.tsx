@@ -13,7 +13,7 @@ const posts = [
     id:6,
     title: "CWSF 2025",
     date: "2025-06-5",
-    category: "Press",
+    category: "Presntation",
     link: "https://www.lapresse.ca/dialogue/chroniques/2025-06-04/expo-sciences/retenez-les-noms-de-ces-jeunes.php",
     description:
     "We are honoured to compete at the Canada-Wide Science Fair (CWSF) 2025, representing Quebec with our project. This prestigious event showcases the best young scientists from across the country.",
