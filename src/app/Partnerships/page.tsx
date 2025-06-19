@@ -40,7 +40,7 @@ const partners = [
   },
 ];
 
-const PartnerPage = () => {
+export default function PartnerPage()  {
   return (
     <>
       <Navbar />
@@ -98,4 +98,4 @@ const PartnerPage = () => {
   );
 };
 
-export default PartnerPage;
+
