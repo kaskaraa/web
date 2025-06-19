@@ -31,7 +31,7 @@ const Navbar = () => {
         children: [{ title: "Overview", path: "/investment" }, { title: "Mission Statement", path: "/investment" }]
 
     },
-    { title: "Partnerships", path: "/partnerships" },
+    { title: "Partnerships", path: "/partnership" },
     { title: "Resources", path: "/" },
   ];
 
