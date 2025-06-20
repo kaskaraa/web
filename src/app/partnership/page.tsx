@@ -79,3 +79,4 @@ const PartnerPage = () => {
 };
 
 export default PartnerPage;
+
