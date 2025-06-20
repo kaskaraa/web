@@ -13,7 +13,7 @@ const partners = [
   {
     name: "ThinkSci Outreach",
     bio: "The ThinkSci Outreach Program (Programme ThinkSci) is a youth-led outreach program dedicated to empowering underrepresented students in STEM. Through hands-on workshops, mentorship, and community-based research opportunities, we foster curiosity, creativity, and critical thinking. We bring together a vibrant community of high school, CÉGEP, undergraduate, and graduate students across Montreal and Ottawa, united by a mission to make science accessible, inclusive, and inspiring - supporting the next generation of diverse innovators from the classroom to the lab and beyond",
-    link: "#",
+    link: "https://linktr.ee/thinkscioutreach?fbclid=PAZXh0bgNhZW0CMTEAAafyKkuNqNs1PLKGjO89YRLwuEJQJap_ZsZ1_J2rQh9JKf1rLyhSsfaLLtuXfA_aem_Mn2wCh79D2202YvGdOW5vQ",
     imageUrl: "/images/partnership/thinksci.png",
     imageAlt: "ThinkSci Outreach",
   },
@@ -30,7 +30,7 @@ const PartnerPage = () => {
           {partners.map((partner, i) => (
             <div
               key={i}
-              className="max-w-sm p-6 bg-gray-300 border border-gray-200 rounded-lg shadow-sm  dark:border-gray-700 flex flex-col h-full"
+              className="max-w-sm p-6  border  rounded-lg shadow-sm   flex flex-col h-full"
             >
               <a href={partner.link}>
                 <img
@@ -49,7 +49,7 @@ const PartnerPage = () => {
               </p>
               <a
                 href={partner.link}
-                className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-gray-800 rounded-lg hover:bg-gray-900 focus:ring-4 focus:outline-none focus:ring-blue-300 "
+                className="inline-flex items-center px-3 py-2 text-sm font-[avenirlight] text-center text-white bg-gray-800 rounded-lg hover:bg-gray-900 focus:ring-4 focus:outline-none focus:ring-blue-300 "
               >
                 Read more
                 <svg
