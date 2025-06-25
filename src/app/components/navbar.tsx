@@ -28,7 +28,7 @@ const Navbar = () => {
     {
       title: "Investment",
       path: "",
-        children: [{ title: "Overview", path: "/investment" }, { title: "Mission Statement", path: "/investment" }]
+        children: [{ title: "Overview", path: "/investment" }, { title: "Mission Statement", path: "/mission.pdf" }]
 
     },
     { title: "Partnerships", path: "/partnership" },
