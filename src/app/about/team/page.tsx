@@ -104,7 +104,7 @@ const TeamPage = () => {
                   Majed Munazzit
                 </h4>
                 <span className="font-[Avenirlight] text-gray-500 text-center block transition-all duration-500 group-hover:text-gray-600">
-                  Lead Clinical Applications  
+                  Business Development and Clinical Applications 
                 </span>
               </div>
             </div>
