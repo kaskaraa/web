@@ -39,7 +39,7 @@ const AboutPage = () => {
               Kaskaraa Labs is a Montreal-based team of five students and professionals passionate about medicine, engineering, and innovation. Focused on advancing pathology, we design automated solutions to improve accuracy, efficiency, and patient outcomes.
             </p>
             <p className="text-lg font-[Avenirlight]">
-              We believe technology can transform healthcare, and we are committed to building the future of diagnostics — one breakthrough at a time. Our team works relentlessly to bridge the gap between science, technology, and real-world medical needs.
+              We believe technology can transform healthcare, and we are committed to building the future of diagnostics one breakthrough at a time. Our team works relentlessly to bridge the gap between science, technology, and real-world medical needs.
             </p>
             <div className="flex items-center gap-x-3 sm:text-sm py-5">
               <a

@@ -9,12 +9,12 @@ export default function Footer() {
                     <div className="mb-6 md:mb-0">
                         <Link href="/" className="flex items-center">
                             {/* <img src="https://flowbite.com/docs/images/logo.svg" className="h-8 me-3" alt="FlowBite Logo" /> */}
-                            <span className="self-center text-2xl font-[Avenir] font-bold  text-gray-300 whitespace-nowrap">Kaskaraa Instruments</span>
+                            <span className="self-center text-2xl font-[Avenir]   text-gray-300 whitespace-nowrap">Kaskaraa Instruments</span>
                         </Link>
                     </div>
                     <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
                         <div>
-                            <h2 className="mb-6 text-sm font-[Avenir] font-bold text-gray-900 uppercase">Resources</h2>
+                            <h2 className="mb-6 text-sm font-[Avenir]  text-gray-900 uppercase">Resources</h2>
                             <ul className="text-gray-500 font-medium">
                                 <li className="mb-4">
                                     <a href="/contact" className="hover:underline">Contact</a>
@@ -25,7 +25,7 @@ export default function Footer() {
                             </ul>
                         </div>
                         <div>
-                            <h2 className="mb-6 text-sm font-[Avenir] font-bold text-gray-900 uppercase">Follow us</h2>
+                            <h2 className="mb-6 text-sm font-[Avenir]  text-gray-900 uppercase">Follow us</h2>
                             <ul className="text-gray-500 font-medium">
                                 {/* <li className="mb-4">
                                     <a href="https://github.com/Kaskara-Intruments" className="hover:underline">Github</a>
@@ -36,7 +36,7 @@ export default function Footer() {
                             </ul>
                         </div>
                         <div>
-                            <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase">About</h2>
+                            <h2 className="mb-6 text-sm font-[Avenir]  text-gray-900 uppercase">About</h2>
                             <ul className="text-gray-500 font-medium">
                                 <li className="mb-4">
                                     <a href="/about/team" className="hover:underline">The Team</a>
