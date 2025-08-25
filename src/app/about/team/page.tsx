@@ -15,13 +15,13 @@ const TeamPage = () => {
       <Navbar />
       <main className="flex-grow flex items-center justify-center">
         <section className="w-full py-12">
-          <div className="mx-auto max-w-screen-2xl sm:px-6 lg:px-1">
+          <div className="mx-auto max-w-screen-2xl sm:px-6 lg:px-1 flex flex-col items-center">
             <div className="mb-12">
               <h2 className="text-5xl text-center font-[Avenir] text-gray-800">
                 Our team
               </h2>
             </div>
-            <div className="grid grid-cols-1 min-[500px]:grid-cols-2 md:grid-cols-6 lg:grid-cols-5 gap-8 max-w-xl mx-auto md:max-w-3xl lg:max-w-full">
+            <div className="grid grid-cols-1 min-[500px]:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-8 w-full justify-items-center">
               <div className="block group md:col-span-2 lg:col-span-1">
                 <div className="relative mb-6">
                   <Image
