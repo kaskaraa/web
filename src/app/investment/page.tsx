@@ -53,17 +53,14 @@ const SupportPage = () => {
                   decisions and improving patient outcomes.
                 </p>
                 <div className="mt-10 flex items-center justify-center gap-x-6">
+                  <a href="/about"
+              className="flex items-center justify-center gap-x-1 py-2 px-4 text-white font-[sagona] bg-gray-800 duration-150 hover:bg-gray-700 active:bg-gray-900 rounded-full md:inline-flex">
+              Get in touch →
+            </a>
                   <a
-                    href="/contact"
-                    className="flex items-center justify-center gap-x-1 py-2 px-4 text-white font-[Avenirlight] bg-gray-800 duration-150 hover:bg-gray-700 active:bg-gray-900 rounded-full md:inline-flex"
-                  >
-                    Get In Touch
-                  </a>
-                  <a
-                    href="/mission.pdf"
                     className="text-sm/6 font-[Avenir] text-gray-900"
                   >
-                    Mission Statement <span aria-hidden="true">→</span>
+                    Mission Statement <span aria-hidden="true"></span>
                   </a>
                 </div>
               </div>

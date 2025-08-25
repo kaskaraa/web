@@ -42,12 +42,10 @@ const AboutPage = () => {
               We believe technology can transform healthcare, and we are committed to building the future of diagnostics one breakthrough at a time. Our team works relentlessly to bridge the gap between science, technology, and real-world medical needs.
             </p>
             <div className="flex items-center gap-x-3 sm:text-sm py-5">
-              <a
-                href="/about/team"
-                className="flex items-center justify-center gap-x-1 py-1 text-gray-700 hover:text-gray-900 duration-150 md:inline-flex font-[Avenir] text-lg"
-              >
-                The team ⇀
-              </a>
+              <a href="/about/team"
+              className="flex items-center justify-center gap-x-1 py-2 px-4 text-white font-[sagona] bg-gray-800 duration-150 hover:bg-gray-700 active:bg-gray-900 rounded-full md:inline-flex">
+              The team →
+            </a>
             </div>
           </div>
 
@@ -100,7 +98,7 @@ const AboutPage = () => {
                 </div>
                
               </div>
-              <div>
+              {/* <div>
                 <div className="mb-10">
                   <h3 className="flex items-center mb-4 text-lg font-medium text-gray-900">
                     <svg
@@ -122,7 +120,7 @@ const AboutPage = () => {
                    
                   </p>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>

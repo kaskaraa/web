@@ -25,12 +25,8 @@ const Navbar = () => {
     //     { title: "Research", path: "/applications/research" },
     //   ],
     // },
-    {
-      title: "Investment",
-      path: "",
-        children: [{ title: "Overview", path: "/investment" }, { title: "Mission Statement", path: "/mission.pdf" }]
-
-    },
+    
+    { title: "Investment", path: "/investment"},
     { title: "Partnerships", path: "/partnership" },
     { title: "Resources", path: "/" },
   ];
