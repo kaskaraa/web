@@ -36,7 +36,7 @@ const TeamPage = () => {
                   Nathan Aruna
                 </h4>
                 <span className="font-[Avenirlight] text-gray-500 text-center block transition-all duration-500 group-hover:text-gray-600">
-                  Technical Project Manager
+                  Founder & CEO — Engineering & Technology
                 </span>
               </div>
               <div className="block group md:col-span-2 lg:col-span-1">
@@ -53,8 +53,8 @@ const TeamPage = () => {
                   Domenico Valentino
                 </h4>
                 <span className="font-[Avenirlight] text-gray-500 text-center block transition-all duration-500 group-hover:text-gray-600">
-                  Lead Software Engineer
-                </span>
+                  Co-Founder — Chief Software Architect
+                </span> 
               </div>
               <div className="group group md:col-span-2 lg:col-span-1">
                 <div className="relative mb-6">
@@ -70,7 +70,7 @@ const TeamPage = () => {
                   Raphael Ethier
                 </h4>
                 <span className="font-[Avenirlight] text-gray-500 text-center block transition-all duration-500 group-hover:text-gray-600">
-                  Lead Mechanical Engineer
+                  Co-Founder — Chief of Hardware Engineering
                 </span>
               </div>
               
@@ -88,7 +88,7 @@ const TeamPage = () => {
                   Majed Munazzit
                 </h4>
                 <span className="font-[Avenirlight] text-gray-500 text-center block transition-all duration-500 group-hover:text-gray-600">
-                  Business Development and Clinical Applications 
+                 Co-Founder — Business Development & Clinical Applications 
                 </span>
               </div>
             </div>

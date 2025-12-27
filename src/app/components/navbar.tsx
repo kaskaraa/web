@@ -78,10 +78,10 @@ const Navbar = () => {
   );
 
   return (
-    <header className="z-10">
+    <header className="z-100">
       {state && (
         <div
-          className="fixed inset-0 bg-black/30 backdrop-blur-sm z-10"
+          className="fixed inset-0 bg-black/30 backdrop-blur-xl z-100"
           onClick={() => setState(false)}
         ></div>
       )}
@@ -92,7 +92,7 @@ const Navbar = () => {
       <nav
         className={`pb-5 md:text-sm ${
           state
-            ? "absolute top-0 inset-x-0 bg-white shadow-lg rounded-xl border mx-2 mt-2 md:shadow-none md:border-none md:mx-0 md:mt-0 md:relative md:bg-transparent z-50"
+            ? "absolute top-0 inset-x-0 bg-white shadow-lg rounded-xl border mx-2 mt-2 md:shadow-none md:border-none md:mx-0 md:mt-0 md:relative md:bg-transparent z-100"
             : ""
         }`}
       >
