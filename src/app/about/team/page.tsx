@@ -5,8 +5,8 @@ import type { Metadata } from "next";
 import Image from "next/image";
 
 export const metadata: Metadata = {
-  title: "Kaskaraa Intruments Team",
-  description: "Kaskaraa Intruments is a research and development company focused on building the next generation pathology automation tools. Website by Nathan Aruna"
+  title: "Kaskaraa Instruments Team",
+  description: "Kaskaraa Instruments is a research and development company focused on building the next generation pathology automation tools. Website by Nathan Aruna"
   };
   
 const TeamPage = () => {
