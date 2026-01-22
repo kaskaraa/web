@@ -6,8 +6,8 @@ import type { Metadata } from "next";
 import Image from "next/image";
 
 export const metadata: Metadata = {
-	title: "Kaskaraa Intruments About",
-	description: "Kaskaraa Intruments is a research and development company focused on building the next generation pathology automation tools. Website by Nathan Aruna"
+	title: "Kaskaraa Instruments About",
+	description: "Kaskaraa Instruments is a research and development company focused on building the next generation pathology automation tools. Website by Nathan Aruna"
   };
 
 const AboutPage = () => {
@@ -36,7 +36,7 @@ const AboutPage = () => {
               Building the Future of Pathology
             </h2>
             <p className="text-lg font-[Avenirlight] mb-4">
-              Kaskaraa Labs is a Montreal-based team of five students and professionals passionate about medicine, engineering, and innovation. Focused on advancing pathology, we design automated solutions to improve accuracy, efficiency, and patient outcomes.
+              Kaskaraa Instruments is a Montreal-based research and developemnt team of four students and professionals passionate about medicine, engineering, and innovation. Focused on advancing pathology, we design automated solutions to improve accuracy, efficiency, and patient outcomes.
             </p>
             <p className="text-lg font-[Avenirlight]">
               We believe technology can transform healthcare, and we are committed to building the future of diagnostics one breakthrough at a time. Our team works relentlessly to bridge the gap between science, technology, and real-world medical needs.

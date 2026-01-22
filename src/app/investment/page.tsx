@@ -4,9 +4,9 @@ import Navbar from "../components/navbar";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Kaskaraa Intruments Investment",
+  title: "Kaskaraa Instruments Investment",
   description:
-    "Kaskaraa Intruments is a research and development company focused on building the next generation pathology automation tools. Website by Nathan Aruna",
+    "Kaskaraa Instruments is a research and development company focused on building the next generation pathology automation tools. Website by Nathan Aruna",
 };
 
 const SupportPage = () => {

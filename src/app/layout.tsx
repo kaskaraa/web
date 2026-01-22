@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Kaskaraa Intruments",
-  description: "Kaskaraa Intruments is a research and development company focused on building the next generation pathology automation tools. Website by Nathan Aruna"
+  title: "Kaskaraa Instruments",
+  description: "Kaskaraa Instruments is a research and development company focused on building the next generation pathology automation tools. Website by Nathan Aruna"
 };
 
 
