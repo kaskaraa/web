@@ -50,7 +50,7 @@ export default function Footer() {
                 </div>
                 <hr className="my-6 border-gray-200 sm:mx-auto lg:my-8" />
                 <div className="sm:flex sm:items-center sm:justify-between">
-                    <span className="text-sm text-gray-500 sm:text-center">© 2025 <a href="" className="hover:underline">Kaskaraa Instruments Inc.™</a></span>
+                    <span className="text-sm text-gray-500 sm:text-center">© 2026 <a href="" className="hover:underline">Kaskaraa Instruments Inc.</a></span>
                     {/* <div className="flex mt-4 sm:justify-center sm:mt-0">
                         <a href="#" className="text-gray-500 hover:text-gray-900">
                             <svg className="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 8 19">
