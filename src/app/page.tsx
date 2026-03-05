@@ -35,7 +35,7 @@ return (
             PATHOLOGY <span className="font-[sagona]">AUTOMATION</span>
           </h1>
           <p className="text-lg font-[Avenirlight] ">
-            We streamline pathology workflows with smart automation,
+            Fixated on streamlining pathology workflows with smart automation and robotics,
             enhancing accuracy, efficiency, and turnaround time for labs,
             hospitals, and research facilities.
           </p>
