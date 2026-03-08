@@ -99,6 +99,16 @@ const TeamPage = () => {
                                     className="font-[Avenirlight] text-gray-500 text-center block transition-all duration-500 group-hover:text-gray-600">
                                     Co-Founder — Chief of Hardware Engineering
                                 </span>
+                                <p
+                                    className="font-[Avenirlight] text-gray-400 text-center text-sm mt-3 leading-relaxed max-w-xs mx-auto">
+                                    Raphael leads hardware engineering and mechanical design at Kaskaraa Instruments. 
+                                    Currently studying aerospace engineering with a strong foundation in mechanical 
+                                    design, his passion for engineering was sparked through competitive robotics, where 
+                                    he developed the technical expertise to lead and mentor the next generation of 
+                                    engineers. Raphael drives the research and development of our hardware systems, 
+                                    working to ensure our tools are designed for precision and reliability. Outside of 
+                                    work, he loves to travel and immerse himself in different cultures.
+                                </p>
                             </div>
 
                             <div
