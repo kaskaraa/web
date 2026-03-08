@@ -28,7 +28,7 @@ const Navbar = () => {
     
     { title: "Investment", path: "/investment"},
     { title: "Partnerships", path: "/partnership" },
-    { title: "Resources", path: "/" },
+    { title: "Resources", path: "/comingsoon" },
   ];
 
   const Brand = () => (

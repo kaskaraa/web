@@ -1,4 +1,5 @@
-export default function products() {
+export default function comingsoon
+() {
 	return (
 	  <div className="relative">
 		<div
