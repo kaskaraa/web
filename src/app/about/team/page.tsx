@@ -129,6 +129,10 @@ const TeamPage = () => {
                                     className="font-[Avenirlight] text-gray-500 text-center block transition-all duration-500 group-hover:text-gray-600">
                                     Co-Founder — Business Development & Clinical Applications
                                 </span>
+                                <p 
+                                    className="font-[Avenirlight] text-gray-400 text-center text-sm mt-3 leading-relaxed max-w-xs mx-auto">
+                                    With a career spanning over 10 years in pathology laboratory operations, Majed has evolved from a medical technologist to a lab manager and digital pathology project leader. He has successfully spearheaded large-scale digital transformations and AI-powered imaging deployments across North America, bridging the gap between complex hospital IT requirements and clinical workflows.
+                                At Kaskaraa Instruments, Majed leads market validation, ensuring Kaskaraa’s automation solutions are perfectly aligned with the operational needs and regulatory standards of modern pathology labs. Out of works, he enjoys reading and outdoor activities such as hiking.                                </p>
                             </div>
                         </div>
                     </div>
