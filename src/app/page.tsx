@@ -35,9 +35,7 @@ return (
             PATHOLOGY <span className="font-[sagona]">AUTOMATION</span>
           </h1>
           <p className="text-lg font-[Avenirlight] ">
-            Fixated on streamlining pathology workflows with smart automation and robotics,
-            enhancing accuracy, efficiency, and turnaround time for labs,
-            hospitals, and research facilities.
+            Dedicated to improving accuracy, efficiency, and turnaround times for labs, hospitals, and research facilities by optimizing pathology workflows through robotics and computer vision.
           </p>
           <div className="flex items-center gap-x-3 sm:text-sm">
             <a href="/about"
