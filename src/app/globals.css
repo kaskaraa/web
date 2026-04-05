@@ -5,11 +5,18 @@
   --bg-primary: #0a0a0a;
   --bg-surface: #111111;
   --bg-surface-hover: #1a1a1a;
+
   --metal-dark: #8a8a8a;
   --metal-mid: #c0c0c0;
   --metal-light: #e8e8e8;
-  --accent: #c77dba;
-  --accent-hover: #d99bce;
+
+  /* Muted hematoxylin-inspired purple */
+  --accent: #5f5aa2;        /* desaturated, slightly grayed purple */
+  --accent-hover: #7873b8;  /* softer, subtle lift */
+
+  /* very soft eosin hint (optional) */
+  --accent-secondary: #cfa3ad;
+
   --text-primary: #ffffff;
   --text-secondary: #a0a0a0;
   --text-muted: #666666;

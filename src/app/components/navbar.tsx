@@ -32,7 +32,7 @@ export default function Navbar() {
         {/* Logo */}
         <Link href="/" className="shrink-0">
           <span className="text-lg font-[Avenir] text-white tracking-tight">
-            Kaskaraa
+            .ﾒ
           </span>
         </Link>
 
