@@ -1,69 +1,94 @@
-// app/about/page.tsx
+"use client";
+
 import Footer from "../components/footer";
 import Navbar from "../components/navbar";
-import "./animations.css"; 
-import type { Metadata } from "next";
+import ScrollReveal from "../components/scroll-reveal";
+import LetterReveal from "../components/letter-reveal";
 import Image from "next/image";
+import Link from "next/link";
 
-export const metadata: Metadata = {
-  title: "Kaskaraa Instruments About",
-  description: "Kaskaraa Instruments is a research and development company focused on building the next generation pathology automation tools."
-};
-
-const AboutPage = () => {
+export default function AboutPage() {
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="flex flex-col min-h-screen page-enter">
       <Navbar />
 
-      <main className="flex-grow flex items-center">
-        <section className="animate-roll-in w-full">
-          <div
-            className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
-            aria-hidden="true"
-          >
-            <div
-              className="relative left-[calc(50%-11rem)] aspect-1155/678 w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-linear-to-tr from-[#ff80b5] to-[#d08cf7] opacity-20 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]"
-              style={{
-                clipPath:
-                  "polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)",
-              }}
-            ></div>
-          </div>
-          <div className="gap-16 items-center py-8 px-5 max-w-screen-2xl mx-auto lg:grid lg:grid-cols-2 lg:py-16 lg:px-8">
-            
-            <div className="font-light text-gray-500 sm:text-lg">
-              <h2 className="mb-4 text-4xl tracking-tight font-[Avenir] text-gray-800">
-                Building the Future of Pathology
-              </h2>
-              <p className="text-lg font-[Avenirlight] mb-4">
-                Kaskaraa Instruments is a Montreal-based team of four students and professionals passionate about medicine, engineering, and innovation. Focused on advancing pathology, we design automated robotic solutions to improve accuracy, efficiency, and patient outcomes.
-              </p>
-              <p className="text-lg font-[Avenirlight]">
-                We believe robotics can transform healthcare, and we are committed to building the future of diagnostics one breakthrough at a time. Our team works constantly to bridge the gap between science, robotics, and real-world medical needs.
-              </p>
-              <div className="flex items-center gap-x-3 sm:text-sm py-5">
-                <a href="/about/team"
-                className="flex items-center justify-center gap-x-1 py-2 px-4 text-white font-[sagona] bg-gray-800 duration-150 hover:bg-gray-700 active:bg-gray-900 rounded-full md:inline-flex">
-                The team →
-                </a>
-              </div>
+      <main className="flex-grow pt-28">
+        {/* Hero */}
+        <section className="max-w-6xl mx-auto px-6 py-16 sm:py-24">
+          <LetterReveal
+            text="About Kaskaraa"
+            className="text-5xl sm:text-6xl lg:text-7xl font-[Avenir] tracking-tight"
+            delay={300}
+            letterDelay={40}
+          />
+
+          {/* Metallic divider */}
+          <div className="mt-8 h-px bg-gradient-to-r from-metal-mid via-metal-dark to-transparent max-w-md" />
+        </section>
+
+        {/* Content */}
+        <section className="max-w-6xl mx-auto px-6 pb-24">
+          <div className="grid lg:grid-cols-2 gap-16 items-start">
+            <div className="space-y-8">
+              <ScrollReveal>
+                <h2 className="text-3xl sm:text-4xl font-[Avenir] leading-tight">
+                  Building the Future of{" "}
+                  <span className="font-[Sagona] text-accent">Pathology</span>
+                </h2>
+              </ScrollReveal>
+
+              <ScrollReveal delay={100}>
+                <p className="text-text-secondary text-lg font-[Avenirlight] leading-relaxed">
+                  Kaskaraa Instruments is a Montreal-based team of four students
+                  and professionals passionate about medicine, engineering, and
+                  innovation. Focused on advancing pathology, we design automated
+                  robotic solutions to improve accuracy, efficiency, and patient
+                  outcomes.
+                </p>
+              </ScrollReveal>
+
+              <ScrollReveal delay={200}>
+                <p className="text-text-secondary text-lg font-[Avenirlight] leading-relaxed">
+                  We believe robotics can transform healthcare, and we are
+                  committed to building the future of diagnostics one
+                  breakthrough at a time. Our team works constantly to bridge the
+                  gap between science, robotics, and real-world medical needs.
+                </p>
+              </ScrollReveal>
+
+              <ScrollReveal delay={300}>
+                <Link
+                  href="/about/team"
+                  className="inline-block border border-accent text-accent px-8 py-3 rounded-full text-sm uppercase tracking-widest hover:bg-accent hover:text-[#0a0a0a] transition-all duration-300"
+                >
+                  Meet the Team &rarr;
+                </Link>
+              </ScrollReveal>
             </div>
 
-            <div className="grid grid-cols-2 gap-4 mt-8">
-              <Image
-                src="/images/about1.png"
-                alt="About us image 1"
-                width={500}
-                height={500}
-                className="w-full rounded-lg"
-              />
-              <Image
-                src="/images/about2.png"
-                alt="About us image 2"
-                width={500}
-                height={500}
-                className="mt-4 w-full lg:mt-10 rounded-lg"
-              />
+            <div className="grid grid-cols-2 gap-4">
+              <ScrollReveal delay={200}>
+                <div className="metal-border rounded-xl overflow-hidden">
+                  <Image
+                    src="/images/about1.png"
+                    alt="Kaskaraa lab work"
+                    width={500}
+                    height={500}
+                    className="w-full object-cover"
+                  />
+                </div>
+              </ScrollReveal>
+              <ScrollReveal delay={350}>
+                <div className="metal-border rounded-xl overflow-hidden mt-8">
+                  <Image
+                    src="/images/about2.png"
+                    alt="Kaskaraa team"
+                    width={500}
+                    height={500}
+                    className="w-full object-cover"
+                  />
+                </div>
+              </ScrollReveal>
             </div>
           </div>
         </section>
@@ -72,6 +97,4 @@ const AboutPage = () => {
       <Footer />
     </div>
   );
-};
-
-export default AboutPage;
+}

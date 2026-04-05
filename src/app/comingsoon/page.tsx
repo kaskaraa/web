@@ -1,28 +1,34 @@
-export default function comingsoon
-() {
-	return (
-	  <div className="relative">
-		<div
-		  className="absolute inset-0 blur-xl h-[900px]"
-		  style={{
-			background:
-			  "linear-gradient(143.6deg, rgba(192, 132, 252, 0) 20.79%, rgba(232, 121, 249, 0.26) 40.92%, rgba(204, 171, 238, 0) 70.35%)",
-		  }}
-		></div>
-		<section className="relative z-10">
-		<div className="min-h-screen mx-auto px-4 flex items-center justify-center">
-		  <div className="text-center space-y-6">
-			<h1 className="text-7xl tracking-tight font-[Avenir] lg:text-9xl text-gray-400">
-			  
-			</h1>
-			<p className="text-3xl tracking-tight  text-gray-400 md:text-4xl font-[Sagona]">
-			  COMING SOON
-			</p>
-			
-		   
-		  </div>
-		</div>
-	  </section>
-		  </div>
-	);
-  }
+"use client";
+
+import Link from "next/link";
+import Navbar from "../components/navbar";
+import SvgLines from "../components/svg-lines";
+
+export default function ComingSoon() {
+  return (
+    <div className="flex flex-col min-h-screen page-enter">
+      <Navbar />
+
+      <main className="flex-grow relative flex items-center justify-center overflow-hidden">
+        <SvgLines className="opacity-20" />
+
+        <div className="relative z-10 text-center px-6">
+          <h1 className="text-6xl sm:text-8xl font-[Avenir] text-white tracking-tight">
+            Coming <span className="font-[Sagona] text-accent">Soon</span>
+          </h1>
+
+          <p className="mt-6 text-text-muted text-lg font-[Avenirlight]">
+            Something new is in the works.
+          </p>
+
+          <Link
+            href="/"
+            className="inline-block mt-10 text-sm uppercase tracking-widest text-text-secondary hover:text-accent transition-colors border-b border-metal-dark hover:border-accent pb-1"
+          >
+            &larr; Back to home
+          </Link>
+        </div>
+      </main>
+    </div>
+  );
+}

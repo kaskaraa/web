@@ -1,73 +1,594 @@
 "use client";
-import Footer from "./components/footer";
+
+import { useEffect, useRef } from "react";
 import Navbar from "./components/navbar";
-import "./home.css";
+import Footer from "./components/footer";
+import SvgLines from "./components/svg-lines";
+import ScrollReveal from "./components/scroll-reveal";
+import MetallicCard from "./components/metallic-card";
+import Counter from "./components/counter";
+import Link from "next/link";
 import Image from "next/image";
 
+/* ── Brushed titanium hero text with light sweep ── */
+function TitaniumText({ text, className = "" }: { text: string; className?: string }) {
+  const ref = useRef<HTMLHeadingElement>(null);
+
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+
+    let rafId: number;
+    function onMove(e: MouseEvent) {
+      rafId = requestAnimationFrame(() => {
+        if (!el) return;
+        const x = (e.clientX / window.innerWidth) * 100;
+        el.style.backgroundPosition = `${x}% 50%`;
+      });
+    }
+
+    window.addEventListener("mousemove", onMove);
+    return () => {
+      window.removeEventListener("mousemove", onMove);
+      cancelAnimationFrame(rafId);
+    };
+  }, []);
+
+  return (
+    <h1
+      ref={ref}
+      className={`titanium-text ${className}`}
+      style={{ backgroundPosition: "50% 50%" }}
+    >
+      {text}
+    </h1>
+  );
+}
+
+/* ── Light sweep overlay for hero ── */
+function LightSweep() {
+  const ref = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+
+    let rafId: number;
+    function onMove(e: MouseEvent) {
+      rafId = requestAnimationFrame(() => {
+        if (!el) return;
+        const x = (e.clientX / window.innerWidth) * 100;
+        const y = (e.clientY / window.innerHeight) * 100;
+        el.style.background = `radial-gradient(ellipse 600px 400px at ${x}% ${y}%, rgba(192,192,192,0.07) 0%, transparent 70%)`;
+      });
+    }
+
+    window.addEventListener("mousemove", onMove);
+    return () => {
+      window.removeEventListener("mousemove", onMove);
+      cancelAnimationFrame(rafId);
+    };
+  }, []);
+
+  return <div ref={ref} className="absolute inset-0 pointer-events-none z-[1]" aria-hidden="true" />;
+}
+
+/* ── Dot Grid with subtle parallax ── */
+function DotGrid() {
+  const ref = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    let rafId: number;
+    function onMove(e: MouseEvent) {
+      rafId = requestAnimationFrame(() => {
+        if (!ref.current) return;
+        const x = (e.clientX / window.innerWidth - 0.5) * 20;
+        const y = (e.clientY / window.innerHeight - 0.5) * 20;
+        ref.current.style.transform = `translate(${x}px, ${y}px)`;
+      });
+    }
+    window.addEventListener("mousemove", onMove);
+    return () => {
+      window.removeEventListener("mousemove", onMove);
+      cancelAnimationFrame(rafId);
+    };
+  }, []);
+
+  return (
+    <div
+      ref={ref}
+      className="dot-grid absolute -inset-10 opacity-20 transition-transform duration-1000 ease-out"
+      aria-hidden="true"
+    />
+  );
+}
+
+/* ── Horizontal metallic divider line ── */
+function MetalDivider() {
+  const ref = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          el.classList.add("visible");
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.5 }
+    );
+
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
+
+  return (
+    <div className="max-w-6xl mx-auto px-6 py-4">
+      <div ref={ref} className="line-draw h-px bg-gradient-to-r from-transparent via-metal-mid to-transparent" />
+    </div>
+  );
+}
+
+/* ── Data ── */
+
+const bentoItems = [
+  {
+    title: "Micron-Level Precision",
+    description:
+      "Robotic tissue sectioning engineered to tolerances previously unattainable by human hands.",
+    span: "md:col-span-2",
+  },
+  {
+    title: "Computer Vision QC",
+    description:
+      "Real-time quality control algorithms that detect folds, tears, and inconsistencies instantly — flagging defects the human eye would miss.",
+    span: "md:col-span-1",
+  },
+  {
+    title: "Integrated Sample Tracking",
+    description:
+      "Automated barcode scanning ensures patient sample identity is never lost, eliminating specimen-handling errors.",
+    span: "md:col-span-1",
+  },
+  {
+    title: "Hands-Free Operation",
+    description:
+      "Continuous unattended runs allow a single technologist to oversee multiple units — scaling throughput without scaling headcount.",
+    span: "md:col-span-2",
+  },
+];
+
+const team = [
+  { name: "Nathan Aruna", role: "Founder & CEO", image: "/images/team/Nathan.png" },
+  { name: "Domenico Valentino", role: "Chief Software Architect", image: "/images/team/Domenico.png" },
+  { name: "Raphael Ethier", role: "Chief Hardware Engineer", image: "/images/team/Raphael.png" },
+  { name: "Majed Munazzit", role: "Business Development", image: "/images/team/Majed.png" },
+];
+
+const newsItems = [
+  {
+    date: "2025",
+    title: "District 3 Incubator",
+    description:
+      "Kaskaraa Instruments accepted into District 3, Quebec's premier biotech innovation incubator at Concordia University — gaining access to world-class mentorship and deep-tech resources.",
+  },
+  {
+    date: "2025",
+    title: "ThinkSci Partnership",
+    description:
+      "Official partnership with ThinkSci Outreach to advance STEM accessibility and cultivate the next generation of biomedical engineers across Montreal and Ottawa.",
+  },
+  {
+    date: "2025",
+    title: "Prototype Milestone",
+    description:
+      "First functional prototype completed and validated — demonstrating automated tissue sectioning with unprecedented precision and repeatability.",
+  },
+  {
+    date: "2025",
+    title: "Featured in La Presse",
+    description:
+      "Kaskaraa Instruments profiled by La Presse, highlighting the team's mission to transform pathology diagnostics through intelligent automation.",
+  },
+];
+
+/* ── Page ── */
+
 export default function Home() {
-return (
-<div className="flex flex-col min-h-screen ">
-  <Navbar />
+  return (
+    <div className="flex flex-col min-h-screen page-enter">
+      <Navbar />
 
-  <main className="flex-grow relative">
-    <section className="relative z-1">
-      <div className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
-        aria-hidden="true">
-        <div
-          className="relative left-[calc(50%-11rem)] aspect-1155/678 w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-linear-to-tr from-[#ff80b5] to-[#d08cf7] opacity-20 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]"
-          style={{
-                clipPath:
-                  "polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)",
-              }}></div>
-      </div>
+      <main className="flex-grow">
+        {/* ═══ HERO — TITANIUM STYLE ═══ */}
+        <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+          <DotGrid />
+          <SvgLines className="opacity-30" />
+          <LightSweep />
 
-      <div
-        className="max-w-screen-2xl mx-auto px-4 py-8 sm:py-12 lg:py-30 gap-12 text-gray-600 overflow-hidden md:px-8 md:flex md:items-center ">
-        <div className="flex-none space-y-5 max-w-xl">
           <div
-            className="inline-flex items-center rounded-full px-3 py-1 text-sm/6 text-gray-800 ring-1 ring-gray-900/10 hover:ring-gray-900/20 font-[Avenirlight] gap-1">
-            <span>Development and progression.</span>
-            <a href="/news" className="font-semibold text-gray-800 whitespace-nowrap">
-              Read more <span aria-hidden="true">&rarr;</span>
-            </a>
+            className="absolute inset-0 pointer-events-none"
+            style={{
+              background:
+                "radial-gradient(ellipse 80% 60% at 50% 40%, rgba(180,160,130,0.08) 0%, rgba(0,212,170,0.02) 40%, transparent 70%)",
+            }}
+            aria-hidden="true"
+          />
+
+          <div className="relative z-10 text-center px-6 max-w-5xl">
+            <div className="opacity-0 animate-[pageIn_0.6s_ease_0.4s_forwards] mb-6">
+              <span className="text-xs uppercase tracking-[0.3em] text-text-muted font-[Avenirlight]">
+                Kaskaraa Instruments
+              </span>
+            </div>
+
+            <div className="opacity-0 animate-[pageIn_0.8s_ease_0.8s_forwards]">
+              <TitaniumText
+                text="PRECISION."
+                className="text-6xl sm:text-8xl lg:text-[10rem] font-[Avenir] uppercase tracking-tight leading-[0.9]"
+              />
+            </div>
+            <div className="opacity-0 animate-[pageIn_0.8s_ease_1.1s_forwards]">
+              <TitaniumText
+                text="AUTOMATED."
+                className="text-6xl sm:text-8xl lg:text-[10rem] font-[Avenir] uppercase tracking-tight leading-[0.9]"
+              />
+            </div>
+
+            <div className="opacity-0 animate-[pageIn_0.6s_ease_1.6s_forwards] mt-8">
+              <div className="h-px w-32 mx-auto bg-gradient-to-r from-transparent via-metal-light to-transparent" />
+            </div>
+
+            <p className="mt-8 text-lg sm:text-xl text-text-secondary font-[Avenirlight] max-w-2xl mx-auto opacity-0 animate-[pageIn_0.6s_ease_1.8s_forwards]">
+              Next-generation robotic instrumentation for pathology.
+              <br />
+              <span className="text-metal-light">Engineered in Montreal.</span>
+            </p>
+
+            <div className="mt-10 opacity-0 animate-[pageIn_0.6s_ease_2.1s_forwards]">
+              <a
+                href="#challenge"
+                className="inline-block border border-metal-mid/40 text-metal-light px-8 py-3 rounded-full text-sm uppercase tracking-widest hover:bg-white/5 hover:border-metal-light transition-all duration-300"
+              >
+                Discover More
+              </a>
+            </div>
           </div>
-          <h1 className="text-5xl text-gray-800 font-[Avenir] sm:text-7xl">
-            PATHOLOGY <span className="font-[sagona]">AUTOMATION</span>
-          </h1>
-          <p className="text-lg font-[Avenirlight] ">
-            Dedicated to improving accuracy, efficiency, and turnaround times for labs, hospitals, and research facilities by optimizing pathology workflows through robotics and computer vision.
-          </p>
-          <div className="flex items-center gap-x-3 sm:text-sm">
-            <a href="/about"
-              className="flex items-center justify-center gap-x-1 py-2 px-4 text-white font-[sagona] bg-gray-800 duration-150 hover:bg-gray-700 active:bg-gray-900 rounded-full md:inline-flex">
-              About Us →
-            </a>
-           
+
+          <div className="absolute bottom-8 left-1/2 -translate-x-1/2 opacity-0 animate-[pageIn_0.6s_ease_3s_forwards]">
+            <div className="w-px h-16 bg-gradient-to-b from-metal-mid to-transparent mx-auto" />
           </div>
-        </div>
-        <div className="flex-1 hidden md:flex md:justify-end self-start">
-          <Image src="/images/landing.png" alt="Landing page illustration" width={500} height={500}
-            className="max-w-lg" />
-        </div>
-      </div>
+        </section>
 
-      <div
-        className="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]"
-        aria-hidden="true">
-        <div
-          className="relative left-[calc(50%+3rem)] aspect-1155/678 w-[36.125rem] -translate-x-1/2 bg-linear-to-tr from-[#ff80b5] to-[#d08cf7] opacity-20 sm:left-[calc(50%+36rem)] sm:w-[72.1875rem]"
-          style={{
-                clipPath:
-                  "polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)",
-              }}></div>
-      </div>
-    </section>
+        {/* ═══ THE CHALLENGE ═══ */}
+        <MetalDivider />
 
+        <section id="challenge" className="max-w-6xl mx-auto px-6 py-24 sm:py-32">
+          <div className="grid md:grid-cols-5 gap-12 items-start">
+            <ScrollReveal className="md:col-span-3">
+              <h2 className="text-4xl sm:text-5xl lg:text-6xl font-[Avenir] leading-tight">
+                A Collapsing{" "}
+                <span className="font-[Sagona] text-accent">Workforce.</span>
+              </h2>
+            </ScrollReveal>
 
-    
-  </main>
+            <ScrollReveal className="md:col-span-2" delay={200}>
+              <p className="text-text-secondary text-lg font-[Avenirlight] leading-relaxed">
+                Rising cancer incidence is colliding with a hemorrhaging talent
+                pipeline. Labs face record-breaking caseloads while histology
+                positions go unfilled — and 19th-century rotary microtomes remain
+                the standard. Every block is still cut by hand.
+              </p>
+            </ScrollReveal>
+          </div>
 
-  <Footer />
-</div>
-);
+          {/* Stats from pitch deck */}
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-12 mt-24">
+            <ScrollReveal delay={0}>
+              <div className="text-center space-y-3">
+                <div className="text-5xl sm:text-6xl font-[Avenir] titanium-text inline-block">
+                  <Counter target={2} suffix=".04M" />
+                </div>
+                <p className="text-text-muted text-sm uppercase tracking-wider leading-snug">
+                  New U.S. cancer cases<br />projected for 2025
+                </p>
+                <p className="text-text-muted/60 text-xs font-[Avenirlight]">
+                  Source: MSKCC
+                </p>
+              </div>
+            </ScrollReveal>
+
+            <ScrollReveal delay={150}>
+              <div className="text-center space-y-3">
+                <div className="text-5xl sm:text-6xl font-[Avenir] titanium-text inline-block">
+                  <Counter target={20} suffix=".5%" />
+                </div>
+                <p className="text-text-muted text-sm uppercase tracking-wider leading-snug">
+                  Current vacancy rate<br />in histology labs
+                </p>
+                <p className="text-text-muted/60 text-xs font-[Avenirlight]">
+                  Source: ASCP 2024 Vacancy Survey
+                </p>
+              </div>
+            </ScrollReveal>
+
+            <ScrollReveal delay={300}>
+              <div className="text-center space-y-3">
+                <div className="text-5xl sm:text-6xl font-[Avenir] titanium-text inline-block">
+                  $<Counter target={38} suffix=".3B" />
+                </div>
+                <p className="text-text-muted text-sm uppercase tracking-wider leading-snug">
+                  Total addressable<br />market opportunity
+                </p>
+                <p className="text-text-muted/60 text-xs font-[Avenirlight]">
+                  Global Anatomic Pathology
+                </p>
+              </div>
+            </ScrollReveal>
+          </div>
+        </section>
+
+        {/* ═══ BENTO GRID — CAPABILITIES ═══ */}
+        <MetalDivider />
+
+        <section className="max-w-6xl mx-auto px-6 py-24 sm:py-32">
+          <ScrollReveal>
+            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-[Avenir] text-center mb-4">
+              Engineered Without{" "}
+              <span className="font-[Sagona] text-accent">Compromise.</span>
+            </h2>
+            <p className="text-text-secondary text-lg text-center max-w-2xl mx-auto font-[Avenirlight] mb-16">
+              Purpose-built instrumentation that redefines what&apos;s possible
+              in pathology automation.
+            </p>
+          </ScrollReveal>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            {bentoItems.map((item, i) => (
+              <ScrollReveal key={i} delay={i * 100} className={item.span}>
+                <MetallicCard className="h-full">
+                  <div className="flex flex-col justify-between h-full p-2 min-h-[200px]">
+                    <h3 className="text-2xl sm:text-3xl font-[Avenir] text-white leading-tight">
+                      {item.title}
+                    </h3>
+                    <p className="text-text-secondary font-[Avenirlight] leading-relaxed text-sm sm:text-base mt-4">
+                      {item.description}
+                    </p>
+                  </div>
+                </MetallicCard>
+              </ScrollReveal>
+            ))}
+          </div>
+        </section>
+
+        {/* ═══ BACKED BY — PARTNERS & INCUBATOR ═══ */}
+        <MetalDivider />
+
+        <section className="max-w-6xl mx-auto px-6 py-24 sm:py-32">
+          <ScrollReveal>
+            <h2 className="text-4xl sm:text-5xl font-[Avenir] text-center mb-4">
+              Backed By the <span className="font-[Sagona] text-accent">Best.</span>
+            </h2>
+            <p className="text-text-secondary text-lg text-center max-w-2xl mx-auto font-[Avenirlight] mb-16">
+              Supported by leading incubators and partners driving innovation in
+              health technology.
+            </p>
+          </ScrollReveal>
+
+          <div className="grid md:grid-cols-2 gap-6">
+            <ScrollReveal>
+              <MetallicCard className="h-full">
+                <div className="flex flex-col h-full p-2">
+                  <div className="flex items-center gap-3 mb-5">
+                    <div className="w-10 h-10 rounded-full bg-accent/10 flex items-center justify-center shrink-0">
+                      <svg className="w-5 h-5 text-accent" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M12 21v-8.25M15.75 21v-8.25M8.25 21v-8.25M3 9l9-6 9 6m-1.5 12V10.332A48.36 48.36 0 0012 9.75c-2.551 0-5.056.2-7.5.582V21M3 21h18M12 6.75h.008v.008H12V6.75z" />
+                      </svg>
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-[Avenir] text-white leading-tight">
+                        District 3 Innovation Centre
+                      </h3>
+                      <p className="text-xs text-text-muted font-[Avenirlight] mt-0.5">
+                        Concordia University, Montreal
+                      </p>
+                    </div>
+                  </div>
+
+                  <p className="text-text-secondary text-sm font-[Avenirlight] leading-relaxed mb-5 flex-grow">
+                    Quebec&apos;s premier startup incubator — having supported over
+                    1,400 ventures and counting. District 3 is the only incubator in
+                    Quebec with specialized expertise in the biotech sector, providing
+                    world-class coaching, state-of-the-art labs, and a zero-equity
+                    model that lets founders retain full ownership of their IP.
+                  </p>
+
+                  <div className="flex flex-wrap gap-2">
+                    {["Biotech Focus", "1,400+ Startups", "Zero Equity"].map((tag) => (
+                      <span
+                        key={tag}
+                        className="text-xs px-3 py-1.5 rounded-full border border-metal-dark/50 text-text-muted"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </MetallicCard>
+            </ScrollReveal>
+
+            <ScrollReveal delay={150}>
+              <MetallicCard className="h-full">
+                <div className="flex flex-col h-full p-2">
+                  <div className="flex items-center gap-3 mb-5">
+                    <div className="w-10 h-10 rounded-full bg-accent/10 flex items-center justify-center shrink-0">
+                      <svg className="w-5 h-5 text-accent" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 00-.941-3.197m0 0A5.995 5.995 0 0012 12.75a5.995 5.995 0 00-5.058 2.772m0 0a3 3 0 00-4.681 2.72 8.986 8.986 0 003.74.477m.94-3.197a5.971 5.971 0 00-.94 3.197M15 6.75a3 3 0 11-6 0 3 3 0 016 0zm6 3a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0zm-13.5 0a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0z" />
+                      </svg>
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-[Avenir] text-white leading-tight">
+                        ThinkSci Outreach
+                      </h3>
+                      <p className="text-xs text-text-muted font-[Avenirlight] mt-0.5">
+                        Montreal &amp; Ottawa
+                      </p>
+                    </div>
+                  </div>
+
+                  <p className="text-text-secondary text-sm font-[Avenirlight] leading-relaxed mb-5 flex-grow">
+                    A youth-led STEM initiative empowering underrepresented students
+                    through hands-on workshops, mentorship, and community-driven
+                    research. Together with ThinkSci, we&apos;re building pathways for
+                    the next generation of biomedical engineers and scientists — making
+                    cutting-edge science accessible to those who need it most.
+                  </p>
+
+                  <div className="flex flex-wrap gap-2">
+                    {["STEM Outreach", "Mentorship", "Community Research"].map((tag) => (
+                      <span
+                        key={tag}
+                        className="text-xs px-3 py-1.5 rounded-full border border-metal-dark/50 text-text-muted"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </MetallicCard>
+            </ScrollReveal>
+          </div>
+
+          <ScrollReveal className="text-center mt-10" delay={300}>
+            <Link
+              href="/partnership"
+              className="text-sm uppercase tracking-widest text-text-secondary hover:text-accent transition-colors border-b border-metal-dark hover:border-accent pb-1"
+            >
+              View all partners &rarr;
+            </Link>
+          </ScrollReveal>
+        </section>
+
+        {/* ═══ THE TEAM ═══ */}
+        <MetalDivider />
+
+        <section className="max-w-6xl mx-auto px-6 py-24 sm:py-32">
+          <ScrollReveal>
+            <h2 className="text-4xl sm:text-5xl font-[Avenir] text-center mb-16">
+              The Team
+            </h2>
+          </ScrollReveal>
+
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            {team.map((member, i) => (
+              <ScrollReveal key={i} delay={i * 100} className="text-center group">
+                <div className="relative w-32 h-32 sm:w-40 sm:h-40 mx-auto mb-5">
+                  <div className="absolute inset-0 rounded-full metal-ring" />
+                  <Image
+                    src={member.image}
+                    alt={member.name}
+                    width={160}
+                    height={160}
+                    className="w-full h-full rounded-full object-cover relative z-10 group-hover:ring-2 group-hover:ring-accent/50 transition-all duration-300"
+                  />
+                </div>
+                <h4 className="text-lg font-[Avenir] text-white group-hover:text-accent transition-colors duration-300">
+                  {member.name}
+                </h4>
+                <p className="text-sm text-text-muted font-[Avenirlight] mt-1">
+                  {member.role}
+                </p>
+              </ScrollReveal>
+            ))}
+          </div>
+
+          <ScrollReveal className="text-center mt-12" delay={400}>
+            <Link
+              href="/about/team"
+              className="text-sm uppercase tracking-widest text-text-secondary hover:text-accent transition-colors border-b border-metal-dark hover:border-accent pb-1"
+            >
+              Meet the full team &rarr;
+            </Link>
+          </ScrollReveal>
+        </section>
+
+        {/* ═══ NEWS / MILESTONES ═══ */}
+        <MetalDivider />
+
+        <section className="max-w-6xl mx-auto px-6 py-24 sm:py-32">
+          <ScrollReveal>
+            <h2 className="text-4xl sm:text-5xl font-[Avenir] text-center mb-4">
+              Milestones
+            </h2>
+            <p className="text-text-secondary text-lg text-center max-w-xl mx-auto font-[Avenirlight] mb-16">
+              Tracking our progress from concept to commercialization.
+            </p>
+          </ScrollReveal>
+
+          <div className="grid md:grid-cols-2 gap-6">
+            {newsItems.map((item, i) => (
+              <ScrollReveal key={i} delay={i * 100}>
+                <div className="brushed-metal metal-border rounded-xl p-8 h-full flex flex-col">
+                  <span className="text-xs uppercase tracking-widest text-accent font-[Avenirlight]">
+                    {item.date}
+                  </span>
+                  <h3 className="text-xl font-[Avenir] text-white mt-3 mb-3 leading-tight">
+                    {item.title}
+                  </h3>
+                  <p className="text-text-secondary text-sm font-[Avenirlight] leading-relaxed flex-grow">
+                    {item.description}
+                  </p>
+                </div>
+              </ScrollReveal>
+            ))}
+          </div>
+        </section>
+
+        {/* ═══ CONTACT CTA ═══ */}
+        <MetalDivider />
+
+        <section className="relative py-24 sm:py-32 overflow-hidden">
+          <div
+            className="absolute inset-0 pointer-events-none"
+            style={{
+              background:
+                "radial-gradient(ellipse at center, rgba(0,212,170,0.06) 0%, transparent 50%)",
+            }}
+            aria-hidden="true"
+          />
+
+          <div className="relative z-10 text-center px-6">
+            <ScrollReveal>
+              <h2 className="text-5xl sm:text-6xl lg:text-7xl font-[Avenir]">
+                Let&apos;s Talk.
+              </h2>
+            </ScrollReveal>
+
+            <ScrollReveal delay={150}>
+              <p className="mt-6 text-text-secondary text-lg font-[Avenirlight] max-w-lg mx-auto">
+                Whether you&apos;re a pathology lab, a healthcare investor, or a
+                potential collaborator — we&apos;d love to hear from you.
+              </p>
+            </ScrollReveal>
+
+            <ScrollReveal delay={300}>
+              <div className="mt-10">
+                <Link
+                  href="/contact"
+                  className="inline-block bg-accent text-[#0a0a0a] font-[Avenir] px-10 py-4 rounded-full text-sm uppercase tracking-widest hover:bg-accent-hover transition-colors duration-300"
+                >
+                  Get in Touch
+                </Link>
+              </div>
+            </ScrollReveal>
+          </div>
+        </section>
+      </main>
+
+      <Footer />
+    </div>
+  );
 }

@@ -1,32 +1,35 @@
 @import "tailwindcss";
 
+/* ── Design Tokens ── */
 :root {
-  --background: #ffffff;
-  --foreground: #ffffff;
+  --bg-primary: #0a0a0a;
+  --bg-surface: #111111;
+  --bg-surface-hover: #1a1a1a;
+  --metal-dark: #8a8a8a;
+  --metal-mid: #c0c0c0;
+  --metal-light: #e8e8e8;
+  --accent: #00d4aa;
+  --accent-hover: #00f0c0;
+  --text-primary: #ffffff;
+  --text-secondary: #a0a0a0;
+  --text-muted: #666666;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-  
+  --color-background: var(--bg-primary);
+  --color-foreground: var(--text-primary);
+  --color-accent: var(--accent);
+  --color-accent-hover: var(--accent-hover);
+  --color-surface: var(--bg-surface);
+  --color-surface-hover: var(--bg-surface-hover);
+  --color-metal-dark: var(--metal-dark);
+  --color-metal-mid: var(--metal-mid);
+  --color-metal-light: var(--metal-light);
+  --color-text-secondary: var(--text-secondary);
+  --color-text-muted: var(--text-muted);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #ffffff;
-    --foreground: #ffffff;
-  }
-}
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-/* The fonts brev */
+/* ── Fonts ── */
 @font-face {
   font-family: Avenir;
   font-weight: 600 1100;
@@ -41,7 +44,6 @@ body {
   src: url("/fonts/AvenirLTStd-Light.otf") format("opentype");
 }
 
-
 @font-face {
   font-family: Sagona;
   font-style: normal;
@@ -50,4 +52,180 @@ body {
   src: url("/fonts/SAGONABOOKITALIC.TTF") format("truetype");
 }
 
+/* ── Base ── */
+html {
+  scroll-behavior: smooth;
+}
 
+body {
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: "Inter", Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+}
+
+::selection {
+  background: var(--accent);
+  color: var(--bg-primary);
+}
+
+/* ── Dot Grid Background ── */
+.dot-grid {
+  background-image: radial-gradient(circle, var(--metal-dark) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+/* ── Brushed Aluminium Surface ── */
+.brushed-metal {
+  background: linear-gradient(
+    90deg,
+    var(--bg-surface) 0%,
+    #161616 20%,
+    #1a1a1a 40%,
+    #141414 60%,
+    #181818 80%,
+    var(--bg-surface) 100%
+  );
+  position: relative;
+}
+
+.brushed-metal::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    90deg,
+    transparent,
+    transparent 2px,
+    rgba(255, 255, 255, 0.015) 2px,
+    rgba(255, 255, 255, 0.015) 4px
+  );
+  pointer-events: none;
+}
+
+/* ── Metallic Border Gradient ── */
+.metal-border {
+  border: 1px solid var(--metal-dark);
+  background-clip: padding-box;
+}
+
+.metal-ring {
+  box-shadow: 0 0 0 2px var(--metal-dark),
+              0 0 0 3px var(--metal-mid),
+              0 0 0 4px var(--metal-dark);
+}
+
+/* ── Scroll Reveal Animations ── */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ── SVG Line Drawing ── */
+.draw-line {
+  stroke-dasharray: var(--line-length, 1000);
+  stroke-dashoffset: var(--line-length, 1000);
+  transition: stroke-dashoffset 2.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.draw-line.drawn {
+  stroke-dashoffset: 0;
+}
+
+/* ── Letter Reveal ── */
+.letter-reveal span {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.letter-reveal.animate span {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ── Horizontal Line Draw ── */
+.line-draw {
+  width: 0;
+  transition: width 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.line-draw.visible {
+  width: 100%;
+}
+
+/* ── Page Fade In ── */
+@keyframes pageIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.page-enter {
+  animation: pageIn 0.6s ease forwards;
+}
+
+/* ── Titanium / Brushed Aluminium Text ── */
+.titanium-text {
+  background: linear-gradient(
+    90deg,
+    #666666 0%,
+    #8a8a8a 15%,
+    #b8b8b8 30%,
+    #e8e8e8 45%,
+    #ffffff 50%,
+    #e8e8e8 55%,
+    #b8b8b8 70%,
+    #8a8a8a 85%,
+    #666666 100%
+  );
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ── Glow Effects ── */
+.accent-glow {
+  box-shadow: 0 0 60px rgba(0, 212, 170, 0.15),
+              0 0 120px rgba(0, 212, 170, 0.05);
+}
+
+/* ── Glass Morphism ── */
+.glass {
+  background: rgba(10, 10, 10, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(138, 138, 138, 0.2);
+}
+
+/* ── Reduced Motion ── */
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .draw-line {
+    stroke-dashoffset: 0;
+    transition: none;
+  }
+
+  .letter-reveal span {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .line-draw {
+    width: 100%;
+    transition: none;
+  }
+}

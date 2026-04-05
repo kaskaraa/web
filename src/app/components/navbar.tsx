@@ -1,55 +1,70 @@
 "use client";
-import { useState } from "react";
+
+import { useState, useEffect } from "react";
 import Link from "next/link";
 
-interface NavItem {
-  title: string;
-  path: string;
-  children?: { title: string; path: string }[];
-}
+const navLinks = [
+  { title: "About", path: "/about" },
+  { title: "Team", path: "/about/team" },
+  { title: "Partners", path: "/partnership" },
+  { title: "Investment", path: "/investment" },
+];
 
-const Navbar = () => {
-  const [state, setState] = useState(false);
-  const [dropdownOpen, setDropdownOpen] = useState<number | null>(null);
+export default function Navbar() {
+  const [mobileOpen, setMobileOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
-  const navigation: NavItem[] = [
-    // {
-    //   title: "Products",
-    //   path: "/products",
-    // },
-    // {
-    //   title: "Applications",
-    //   path: "#",
-    //   children: [
-    //     { title: "Clinical", path: "/applications/clinical" },
-    //     { title: "Research", path: "/applications/research" },
-    //   ],
-    // },
-    
-    { title: "Investment", path: "/investment"},
-    { title: "Partnerships", path: "/partnership" },
-    { title: "Resources", path: "/comingsoon" },
-  ];
+  useEffect(() => {
+    function onScroll() {
+      setScrolled(window.scrollY > 40);
+    }
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
-  const Brand = () => (
-    <div className="flex items-center justify-between py-5 md:block ">
-      <Link href="/">
-        <h1 className="text-xl text-gray-800 font-[Avenir] sm:text-xl">
-          Kaskaraa Instruments.ﾒ
-        </h1>
-      </Link>
-      <div className="md:hidden">
-        <button
-          className="menu-btn text-gray-500 hover:text-gray-800"
-          onClick={() => setState(!state)}
-        >
-          {state ? (
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-6 w-6"
-              viewBox="0 0 20 20"
-              fill="currentColor"
+  return (
+    <header className="fixed top-0 left-0 right-0 z-50 flex justify-center px-4 pt-4">
+      <nav
+        className={`glass rounded-full px-6 py-3 flex items-center justify-between w-full max-w-5xl transition-all duration-300 ${
+          scrolled ? "bg-[rgba(10,10,10,0.85)] shadow-lg shadow-black/20" : ""
+        }`}
+      >
+        {/* Logo */}
+        <Link href="/" className="shrink-0">
+          <span className="text-lg font-[Avenir] text-white tracking-tight">
+            Kaskaraa
+          </span>
+        </Link>
+
+        {/* Desktop links */}
+        <div className="hidden md:flex items-center gap-6">
+          {navLinks.map((link) => (
+            <Link
+              key={link.path}
+              href={link.path}
+              className="text-sm uppercase tracking-widest text-text-secondary hover:text-white transition-colors duration-200"
             >
+              {link.title}
+            </Link>
+          ))}
+        </div>
+
+        {/* CTA */}
+        <Link
+          href="/contact"
+          className="hidden md:inline-flex items-center gap-1 text-sm uppercase tracking-widest border border-metal-dark rounded-full px-4 py-1.5 text-text-secondary hover:border-accent hover:text-accent transition-all duration-200"
+        >
+          Contact
+        </Link>
+
+        {/* Mobile hamburger */}
+        <button
+          className="md:hidden text-text-secondary hover:text-white transition-colors"
+          onClick={() => setMobileOpen(!mobileOpen)}
+          aria-label="Toggle menu"
+        >
+          {mobileOpen ? (
+            <svg className="w-5 h-5" viewBox="0 0 20 20" fill="currentColor">
               <path
                 fillRule="evenodd"
                 d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
@@ -57,133 +72,37 @@ const Navbar = () => {
               />
             </svg>
           ) : (
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth={1.5}
-              stroke="currentColor"
-              className="w-6 h-6"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-              />
+            <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
             </svg>
           )}
         </button>
-      </div>
-    </div>
-  );
-
-  return (
-    <header className="z-100">
-      {state && (
-        <div
-          className="fixed inset-0 bg-black/30 backdrop-blur-xl z-100"
-          onClick={() => setState(false)}
-        ></div>
-      )}
-
-      <div className={`md:hidden ${state ? "mx-2 pb-5" : "hidden"}`}>
-        <Brand />
-      </div>
-      <nav
-        className={`pb-5 md:text-sm ${
-          state
-            ? "absolute top-0 inset-x-0 bg-white shadow-lg rounded-xl border mx-2 mt-2 md:shadow-none md:border-none md:mx-0 md:mt-0 md:relative md:bg-transparent z-100"
-            : ""
-        }`}
-      >
-        <div className="gap-x-14 items-center max-w-screen-2xl mx-auto px-4 md:flex md:px-8">
-          <Brand />
-          <div
-            className={`flex-1 items-center mt-8 md:mt-0 md:flex ${
-              state ? "block" : "hidden"
-            }`}
-          >
-            <ul className="flex-1 justify-center items-center space-y-6 md:flex md:space-x-6 md:space-y-0">
-              {navigation.map((item: NavItem, idx) => {
-                const hasChildren = item.children && item.children.length > 0;
-                const isOpen = dropdownOpen === idx;
-
-                return (
-                  <li key={idx} className="w-full md:w-auto">
-                    <div className="relative">
-                      <Link
-                        href={item.path}
-                        className="w-full flex justify-between items-center text-left text-gray-700 hover:text-gray-900 font-[Avenir] py-2 px-4 md:inline-flex md:py-0 md:px-0 md:gap-x-1"
-                        onClick={() =>
-                          hasChildren
-                            ? setDropdownOpen(isOpen ? null : idx)
-                            : setDropdownOpen(null)
-                        }
-                      >
-                        {item.title}
-                        {hasChildren && (
-                          <svg
-                            className={`w-4 h-4 transform transition-transform duration-300 ${
-                              isOpen ? "rotate-180" : "rotate-0"
-                            }`}
-                            fill="none"
-                            stroke="currentColor"
-                            strokeWidth={2}
-                            viewBox="0 0 24 24"
-                          >
-                            <path
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                              d="M19 9l-7 7-7-7"
-                            />
-                          </svg>
-                        )}
-                      </Link>
-
-                      {hasChildren && isOpen && item.children && (
-                        <ul className="md:absolute z-50 mt-2 w-full md:w-48 bg-white shadow-md rounded-xl py-2 space-y-2 md:space-y-1 border">
-                          {item.children.map((child, cIdx) => (
-                            <li key={cIdx}>
-                              <Link
-                                href={child.path}
-                                className="block px-4 py-2 text-gray-700 hover:text-gray-900 font-[Avenir]"
-                              >
-                                {child.title}
-                              </Link>
-                            </li>
-                          ))}
-                        </ul>
-                      )}
-                    </div>
-                  </li>
-                );
-              })}
-            </ul>
-            <div className="items-center justify-end mt-6 space-y-6 md:flex md:mt-0">
-              <a
-                href="/contact"
-                className="flex items-center justify-center gap-x-1 py-2 px-4 text-white font-[Avenir] bg-gray-800 hover:bg-gray-700 active:bg-gray-900 rounded-full md:inline-flex"
-              >
-                Contact Us
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 20 20"
-                  fill="currentColor"
-                  className="w-5 h-5"
-                >
-                  <path
-                    fillRule="evenodd"
-                    d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
-                    clipRule="evenodd"
-                  />
-                </svg>
-              </a>
-            </div>
-          </div>
-        </div>
       </nav>
+
+      {/* Mobile overlay */}
+      {mobileOpen && (
+        <div
+          className="fixed inset-0 z-40 bg-[rgba(10,10,10,0.95)] backdrop-blur-xl flex flex-col items-center justify-center gap-8"
+          onClick={() => setMobileOpen(false)}
+        >
+          {navLinks.map((link, i) => (
+            <Link
+              key={link.path}
+              href={link.path}
+              className="text-3xl font-[Avenir] text-white hover:text-accent transition-colors"
+              style={{ animationDelay: `${i * 80}ms` }}
+            >
+              {link.title}
+            </Link>
+          ))}
+          <Link
+            href="/contact"
+            className="text-3xl font-[Avenir] text-accent hover:text-accent-hover transition-colors"
+          >
+            Contact
+          </Link>
+        </div>
+      )}
     </header>
   );
-};
-
-export default Navbar;
+}

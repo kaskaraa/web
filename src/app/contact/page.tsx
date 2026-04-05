@@ -1,16 +1,18 @@
 "use client";
+
 import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import Footer from "../components/footer";
 import Navbar from "../components/navbar";
+import ScrollReveal from "../components/scroll-reveal";
+import LetterReveal from "../components/letter-reveal";
 
-const ContactPage = () => {
+export default function ContactPage() {
   const formRef = useRef<HTMLFormElement>(null);
   const [status, setStatus] = useState("");
 
   const sendEmail = async (e: React.FormEvent) => {
     e.preventDefault();
-
     if (!formRef.current) return;
 
     setStatus("Sending...");
@@ -35,87 +37,86 @@ const ContactPage = () => {
   };
 
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="flex flex-col min-h-screen page-enter">
       <Navbar />
 
-      <main className="flex-grow">
-        <section className="bg-white">
-          <div className="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
-            <h2 className="mb-4 text-4xl tracking-tight font-[avenir] text-center text-gray-800">
-              Contact Us
-            </h2>
-            <p className="mb-8 lg:mb-16 font-[avenirlight] text-center text-gray-500 sm:text-xl">
-              Got a technical question? Want to send feedback about our tools?
-              Need details about our Business plan? Let us know.
+      <main className="flex-grow pt-28">
+        <section className="max-w-2xl mx-auto px-6 py-16 sm:py-24">
+          <LetterReveal
+            text="Get in Touch"
+            className="text-5xl sm:text-6xl font-[Avenir] tracking-tight text-center"
+            delay={300}
+            letterDelay={40}
+          />
+
+          <ScrollReveal className="mt-4">
+            <p className="text-text-secondary text-lg font-[Avenirlight] text-center">
+              Technical questions, partnership inquiries, or just want to say hello.
             </p>
-            <form ref={formRef} onSubmit={sendEmail} className="space-y-8">
+          </ScrollReveal>
+
+          <ScrollReveal delay={200}>
+            <form ref={formRef} onSubmit={sendEmail} className="space-y-8 mt-16">
               <div>
-                <label
-                  htmlFor="email"
-                  className="block mb-2 text-sm font-[avenirlight] text-gray-800"
-                >
+                <label htmlFor="email" className="block mb-2 text-sm font-[Avenirlight] text-text-secondary">
                   Your email
                 </label>
                 <input
                   type="email"
                   name="email"
                   id="email"
-                  className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5"
-                  placeholder="name@kaskaraa.com"
                   required
+                  placeholder="you@company.com"
+                  className="w-full bg-transparent border-b border-metal-dark text-white text-sm py-3 px-1 placeholder:text-text-muted focus:border-accent focus:outline-none transition-colors duration-300"
                 />
               </div>
+
               <div>
-                <label
-                  htmlFor="subject"
-                  className="block mb-2 text-sm font-[avenirlight] text-gray-800"
-                >
+                <label htmlFor="subject" className="block mb-2 text-sm font-[Avenirlight] text-text-secondary">
                   Subject
                 </label>
                 <input
                   type="text"
                   name="subject"
                   id="subject"
-                  className="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500"
-                  placeholder="Let us know how we can help you"
                   required
+                  placeholder="How can we help?"
+                  className="w-full bg-transparent border-b border-metal-dark text-white text-sm py-3 px-1 placeholder:text-text-muted focus:border-accent focus:outline-none transition-colors duration-300"
                 />
               </div>
-              <div className="sm:col-span-2">
-                <label
-                  htmlFor="message"
-                  className="block mb-2 text-sm font-[avenirlight] text-gray-800"
-                >
-                  Your message
+
+              <div>
+                <label htmlFor="message" className="block mb-2 text-sm font-[Avenirlight] text-text-secondary">
+                  Message
                 </label>
                 <textarea
                   name="message"
                   id="message"
-                  rows={6}
-                  className="block p-2.5 w-full text-sm text-gray-800 bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500"
-                  placeholder="Leave a comment..."
+                  rows={5}
                   required
-                ></textarea>
+                  placeholder="Tell us more..."
+                  className="w-full bg-transparent border-b border-metal-dark text-white text-sm py-3 px-1 placeholder:text-text-muted focus:border-accent focus:outline-none transition-colors duration-300 resize-none"
+                />
               </div>
+
               <button
                 type="submit"
-                className="flex items-center justify-center gap-x-1 py-2 px-4 text-white font-[Avenirlight] bg-gray-800 duration-150 hover:bg-gray-700 active:bg-gray-900 rounded-full md:inline-flex"
+                className="bg-accent text-[#0a0a0a] font-[Avenir] px-10 py-3 rounded-full text-sm uppercase tracking-widest hover:bg-accent-hover transition-colors duration-300"
               >
-                Send message
+                Send Message
               </button>
+
               {status && (
-                <p className="text-center text-sm mt-4 text-gray-600">
+                <p className={`text-sm mt-4 ${status.includes("success") ? "text-accent" : "text-text-secondary"}`}>
                   {status}
                 </p>
               )}
             </form>
-          </div>
+          </ScrollReveal>
         </section>
       </main>
 
       <Footer />
     </div>
   );
-};
-
-export default ContactPage;
+}
