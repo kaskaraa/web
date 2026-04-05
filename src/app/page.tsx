@@ -183,12 +183,6 @@ const newsItems = [
   },
   {
     date: "2025",
-    title: "Prototype Milestone",
-    description:
-      "First functional prototype completed and validated — demonstrating automated tissue sectioning with unprecedented precision and repeatability.",
-  },
-  {
-    date: "2025",
     title: "Featured in La Presse",
     description:
       "Kaskaraa Instruments profiled by La Presse, highlighting the team's mission to transform pathology diagnostics through intelligent automation.",
