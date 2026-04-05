@@ -10,10 +10,10 @@
   --metal-mid: #c0c0c0;
   --metal-light: #e8e8e8;
 
-  --accent: #5f5aa2;       
-  --accent-hover: #7873b8;  
+  --accent: #6d6888;
+  --accent-hover: #7e789a;
 
-  --accent-secondary: #cfa3ad;
+  --accent-secondary: #b49aa3;
 
   --text-primary: #ffffff;
   --text-secondary: #a0a0a0;
@@ -198,16 +198,16 @@ body {
 
 /* ── Slide / Specimen Label ── */
 .slide-label {
-  border: 1px solid rgba(199, 125, 186, 0.15);
+  border: 1px solid rgba(160, 136, 168, 0.14);
   background: linear-gradient(
     180deg,
-    rgba(199, 125, 186, 0.04) 0%,
+    rgba(160, 136, 168, 0.035) 0%,
     rgba(10, 10, 10, 0) 100%
   );
 }
 
 .slide-frosted {
-  border: 1px solid rgba(199, 125, 186, 0.08);
+  border: 1px solid rgba(160, 136, 168, 0.07);
   background: linear-gradient(
     180deg,
     rgba(255, 255, 255, 0.02) 0%,
@@ -221,17 +221,17 @@ body {
   background: linear-gradient(
     90deg,
     transparent 0%,
-    rgba(199, 125, 186, 0.2) 20%,
-    rgba(199, 125, 186, 0.4) 50%,
-    rgba(199, 125, 186, 0.2) 80%,
+    rgba(160, 136, 168, 0.18) 20%,
+    rgba(160, 136, 168, 0.3) 50%,
+    rgba(160, 136, 168, 0.18) 80%,
     transparent 100%
   );
 }
 
 /* ── Glow Effects ── */
 .accent-glow {
-  box-shadow: 0 0 60px rgba(199, 125, 186, 0.15),
-              0 0 120px rgba(199, 125, 186, 0.05);
+  box-shadow: 0 0 60px rgba(160, 136, 168, 0.12),
+              0 0 120px rgba(160, 136, 168, 0.04);
 }
 
 /* ── Glass Morphism ── */

@@ -207,7 +207,7 @@ export default function Home() {
             className="absolute inset-0 pointer-events-none"
             style={{
               background:
-                "radial-gradient(ellipse 80% 60% at 50% 40%, rgba(180,160,130,0.08) 0%, rgba(199,125,186,0.03) 40%, transparent 70%)",
+                "radial-gradient(ellipse 80% 60% at 50% 40%, rgba(180,160,130,0.08) 0%, rgba(160,136,168,0.03) 40%, transparent 70%)",
             }}
             aria-hidden="true"
           />
@@ -505,7 +505,7 @@ export default function Home() {
             className="absolute inset-0 pointer-events-none"
             style={{
               background:
-                "radial-gradient(ellipse at center, rgba(199,125,186,0.06) 0%, transparent 50%)",
+                "radial-gradient(ellipse at center, rgba(160,136,168,0.05) 0%, transparent 50%)",
             }}
             aria-hidden="true"
           />
