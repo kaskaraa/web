@@ -12,7 +12,7 @@ export default function Footer() {
         </Link>
 
         {/* Nav links */}
-        <div className="flex items-center gap-6 text-sm text-text-muted">
+        <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-3 text-sm text-text-muted">
           <Link href="/about" className="hover:text-text-secondary transition-colors">About</Link>
           <Link href="/about/team" className="hover:text-text-secondary transition-colors">Team</Link>
           <Link href="/partnership" className="hover:text-text-secondary transition-colors">Partners</Link>

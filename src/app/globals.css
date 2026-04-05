@@ -10,11 +10,9 @@
   --metal-mid: #c0c0c0;
   --metal-light: #e8e8e8;
 
-  /* Muted hematoxylin-inspired purple */
-  --accent: #5f5aa2;        /* desaturated, slightly grayed purple */
-  --accent-hover: #7873b8;  /* softer, subtle lift */
+  --accent: #5f5aa2;       
+  --accent-hover: #7873b8;  
 
-  /* very soft eosin hint (optional) */
   --accent-secondary: #cfa3ad;
 
   --text-primary: #ffffff;

@@ -25,7 +25,7 @@ export default function Navbar() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 flex justify-center px-4 pt-4">
       <nav
-        className={`glass rounded-full px-6 py-3 flex items-center justify-between w-full max-w-5xl transition-all duration-300 ${
+        className={`glass relative rounded-full px-6 py-3 flex items-center justify-between w-full max-w-5xl transition-all duration-300 ${
           scrolled ? "bg-[rgba(10,10,10,0.85)] shadow-lg shadow-black/20" : ""
         }`}
       >
@@ -37,7 +37,7 @@ export default function Navbar() {
         </Link>
 
         {/* Desktop links */}
-        <div className="hidden md:flex items-center gap-6">
+        <div className="hidden md:flex items-center gap-6 md:absolute md:left-1/2 md:-translate-x-1/2">
           {navLinks.map((link) => (
             <Link
               key={link.path}

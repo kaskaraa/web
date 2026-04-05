@@ -220,12 +220,12 @@ export default function Home() {
             </div>
 
             <div className="opacity-0 animate-[pageIn_0.8s_ease_0.8s_forwards]">
-              <TitaniumText className="text-6xl sm:text-8xl lg:text-9xl font-[Avenir] uppercase tracking-tight leading-[0.85] pt-10">
+              <TitaniumText className="text-5xl sm:text-8xl lg:text-9xl font-[Avenir] uppercase tracking-tight leading-[0.85] pt-10">
                 PRECISION.
               </TitaniumText>
             </div>
             <div className="opacity-0 animate-[pageIn_0.8s_ease_1.1s_forwards] mt-2">
-              <TitaniumText className="text-6xl sm:text-8xl lg:text-9xl uppercase tracking-tight leading-[0.85]">
+              <TitaniumText className="text-5xl sm:text-8xl lg:text-9xl uppercase tracking-tight leading-[0.85]">
                 <span className="font-[Sagona] italic">Automated.</span>
               </TitaniumText>
             </div>
@@ -271,7 +271,7 @@ export default function Home() {
               <p className="text-text-secondary text-lg font-[Avenirlight] leading-relaxed">
                 Rising cancer incidence is colliding with a hemorrhaging talent
                 pipeline. Labs face record-breaking caseloads while histology
-                positions go unfilled — and 19th-century rotary microtomes remain
+                positions go unfilled and 19th-century rotary microtomes remain
                 the standard. Every block is still cut by hand.
               </p>
             </ScrollReveal>
