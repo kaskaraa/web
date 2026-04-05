@@ -23,7 +23,7 @@ export default function AboutPage() {
           />
 
           {/* Metallic divider */}
-          <div className="mt-8 h-px bg-gradient-to-r from-metal-mid via-metal-dark to-transparent max-w-md" />
+          <div className="mt-8 specimen-line max-w-md" />
         </section>
 
         {/* Content */}
@@ -66,30 +66,17 @@ export default function AboutPage() {
               </ScrollReveal>
             </div>
 
-            <div className="grid grid-cols-2 gap-4">
-              <ScrollReveal delay={200}>
-                <div className="metal-border rounded-xl overflow-hidden">
-                  <Image
-                    src="/images/about1.png"
-                    alt="Kaskaraa lab work"
-                    width={500}
-                    height={500}
-                    className="w-full object-cover"
-                  />
-                </div>
-              </ScrollReveal>
-              <ScrollReveal delay={350}>
-                <div className="metal-border rounded-xl overflow-hidden mt-8">
-                  <Image
-                    src="/images/about2.png"
-                    alt="Kaskaraa team"
-                    width={500}
-                    height={500}
-                    className="w-full object-cover"
-                  />
-                </div>
-              </ScrollReveal>
-            </div>
+            <ScrollReveal delay={200}>
+              <div className="slide-label rounded-xl overflow-hidden">
+                <Image
+                  src="/images/about1.png"
+                  alt="Kaskaraa lab work"
+                  width={600}
+                  height={600}
+                  className="w-full object-cover"
+                />
+              </div>
+            </ScrollReveal>
           </div>
         </section>
       </main>

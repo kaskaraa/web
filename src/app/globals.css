@@ -8,8 +8,8 @@
   --metal-dark: #8a8a8a;
   --metal-mid: #c0c0c0;
   --metal-light: #e8e8e8;
-  --accent: #00d4aa;
-  --accent-hover: #00f0c0;
+  --accent: #c77dba;
+  --accent-hover: #d99bce;
   --text-primary: #ffffff;
   --text-secondary: #a0a0a0;
   --text-muted: #666666;
@@ -191,10 +191,42 @@ body {
   -webkit-text-fill-color: transparent;
 }
 
+/* ── Slide / Specimen Label ── */
+.slide-label {
+  border: 1px solid rgba(199, 125, 186, 0.15);
+  background: linear-gradient(
+    180deg,
+    rgba(199, 125, 186, 0.04) 0%,
+    rgba(10, 10, 10, 0) 100%
+  );
+}
+
+.slide-frosted {
+  border: 1px solid rgba(199, 125, 186, 0.08);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.02) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+}
+
+/* ── Section divider — thin specimen line ── */
+.specimen-line {
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(199, 125, 186, 0.2) 20%,
+    rgba(199, 125, 186, 0.4) 50%,
+    rgba(199, 125, 186, 0.2) 80%,
+    transparent 100%
+  );
+}
+
 /* ── Glow Effects ── */
 .accent-glow {
-  box-shadow: 0 0 60px rgba(0, 212, 170, 0.15),
-              0 0 120px rgba(0, 212, 170, 0.05);
+  box-shadow: 0 0 60px rgba(199, 125, 186, 0.15),
+              0 0 120px rgba(199, 125, 186, 0.05);
 }
 
 /* ── Glass Morphism ── */

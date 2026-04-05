@@ -11,7 +11,13 @@ import Link from "next/link";
 import Image from "next/image";
 
 /* ── Brushed titanium hero text with light sweep ── */
-function TitaniumText({ text, className = "" }: { text: string; className?: string }) {
+function TitaniumText({
+  children,
+  className = "",
+}: {
+  children: React.ReactNode;
+  className?: string;
+}) {
   const ref = useRef<HTMLHeadingElement>(null);
 
   useEffect(() => {
@@ -40,7 +46,7 @@ function TitaniumText({ text, className = "" }: { text: string; className?: stri
       className={`titanium-text ${className}`}
       style={{ backgroundPosition: "50% 50%" }}
     >
-      {text}
+      {children}
     </h1>
   );
 }
@@ -127,7 +133,7 @@ function MetalDivider() {
 
   return (
     <div className="max-w-6xl mx-auto px-6 py-4">
-      <div ref={ref} className="line-draw h-px bg-gradient-to-r from-transparent via-metal-mid to-transparent" />
+      <div ref={ref} className="line-draw specimen-line" />
     </div>
   );
 }
@@ -144,13 +150,13 @@ const bentoItems = [
   {
     title: "Computer Vision QC",
     description:
-      "Real-time quality control algorithms that detect folds, tears, and inconsistencies instantly — flagging defects the human eye would miss.",
+      "Real-time quality control that detects folds, tears, and inconsistencies — flagging defects the human eye would miss.",
     span: "md:col-span-1",
   },
   {
     title: "Integrated Sample Tracking",
     description:
-      "Automated barcode scanning ensures patient sample identity is never lost, eliminating specimen-handling errors.",
+      "Automated barcode scanning ensures patient sample identity is never compromised.",
     span: "md:col-span-1",
   },
   {
@@ -169,12 +175,6 @@ const team = [
 ];
 
 const newsItems = [
-  {
-    date: "2025",
-    title: "District 3 Incubator",
-    description:
-      "Kaskaraa Instruments accepted into District 3, Quebec's premier biotech innovation incubator at Concordia University — gaining access to world-class mentorship and deep-tech resources.",
-  },
   {
     date: "2025",
     title: "ThinkSci Partnership",
@@ -204,7 +204,7 @@ export default function Home() {
 
       <main className="flex-grow">
         {/* ═══ HERO — TITANIUM STYLE ═══ */}
-        <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+        <section className="relative min-h-screen flex items-center justify-center overflow-x-clip overflow-y-visible">
           <DotGrid />
           <SvgLines className="opacity-30" />
           <LightSweep />
@@ -213,42 +213,40 @@ export default function Home() {
             className="absolute inset-0 pointer-events-none"
             style={{
               background:
-                "radial-gradient(ellipse 80% 60% at 50% 40%, rgba(180,160,130,0.08) 0%, rgba(0,212,170,0.02) 40%, transparent 70%)",
+                "radial-gradient(ellipse 80% 60% at 50% 40%, rgba(180,160,130,0.08) 0%, rgba(199,125,186,0.03) 40%, transparent 70%)",
             }}
             aria-hidden="true"
           />
 
-          <div className="relative z-10 text-center px-6 max-w-5xl">
-            <div className="opacity-0 animate-[pageIn_0.6s_ease_0.4s_forwards] mb-6">
+          <div className="relative z-10 text-center px-6 sm:px-10 w-full max-w-6xl mx-auto">
+            <div className="opacity-0 animate-[pageIn_0.6s_ease_0.4s_forwards] mb-8">
               <span className="text-xs uppercase tracking-[0.3em] text-text-muted font-[Avenirlight]">
                 Kaskaraa Instruments
               </span>
             </div>
 
             <div className="opacity-0 animate-[pageIn_0.8s_ease_0.8s_forwards]">
-              <TitaniumText
-                text="PRECISION."
-                className="text-6xl sm:text-8xl lg:text-[10rem] font-[Avenir] uppercase tracking-tight leading-[0.9]"
-              />
+              <TitaniumText className="text-6xl sm:text-8xl lg:text-9xl font-[Avenir] uppercase tracking-tight leading-[0.85]">
+                PRECISION.
+              </TitaniumText>
             </div>
-            <div className="opacity-0 animate-[pageIn_0.8s_ease_1.1s_forwards]">
-              <TitaniumText
-                text="AUTOMATED."
-                className="text-6xl sm:text-8xl lg:text-[10rem] font-[Avenir] uppercase tracking-tight leading-[0.9]"
-              />
+            <div className="opacity-0 animate-[pageIn_0.8s_ease_1.1s_forwards] mt-2">
+              <TitaniumText className="text-6xl sm:text-8xl lg:text-9xl uppercase tracking-tight leading-[0.85]">
+                <span className="font-[Sagona] italic">Automated.</span>
+              </TitaniumText>
             </div>
 
-            <div className="opacity-0 animate-[pageIn_0.6s_ease_1.6s_forwards] mt-8">
+            <div className="opacity-0 animate-[pageIn_0.6s_ease_1.6s_forwards] mt-10">
               <div className="h-px w-32 mx-auto bg-gradient-to-r from-transparent via-metal-light to-transparent" />
             </div>
 
-            <p className="mt-8 text-lg sm:text-xl text-text-secondary font-[Avenirlight] max-w-2xl mx-auto opacity-0 animate-[pageIn_0.6s_ease_1.8s_forwards]">
+            <p className="mt-8 text-lg sm:text-xl text-text-secondary font-[Avenirlight] max-w-2xl mx-auto opacity-0 animate-[pageIn_0.6s_ease_1.8s_forwards] px-4">
               Next-generation robotic instrumentation for pathology.
               <br />
               <span className="text-metal-light">Engineered in Montreal.</span>
             </p>
 
-            <div className="mt-10 opacity-0 animate-[pageIn_0.6s_ease_2.1s_forwards]">
+            <div className="mt-12 opacity-0 animate-[pageIn_0.6s_ease_2.1s_forwards]">
               <a
                 href="#challenge"
                 className="inline-block border border-metal-mid/40 text-metal-light px-8 py-3 rounded-full text-sm uppercase tracking-widest hover:bg-white/5 hover:border-metal-light transition-all duration-300"
@@ -258,7 +256,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="absolute bottom-8 left-1/2 -translate-x-1/2 opacity-0 animate-[pageIn_0.6s_ease_3s_forwards]">
+          <div className="absolute bottom-10 left-1/2 -translate-x-1/2 opacity-0 animate-[pageIn_0.6s_ease_3s_forwards]">
             <div className="w-px h-16 bg-gradient-to-b from-metal-mid to-transparent mx-auto" />
           </div>
         </section>
@@ -285,7 +283,7 @@ export default function Home() {
             </ScrollReveal>
           </div>
 
-          {/* Stats from pitch deck */}
+          {/* Stats */}
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-12 mt-24">
             <ScrollReveal delay={0}>
               <div className="text-center space-y-3">
@@ -346,15 +344,15 @@ export default function Home() {
             </p>
           </ScrollReveal>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
             {bentoItems.map((item, i) => (
               <ScrollReveal key={i} delay={i * 100} className={item.span}>
                 <MetallicCard className="h-full">
-                  <div className="flex flex-col justify-between h-full p-2 min-h-[200px]">
-                    <h3 className="text-2xl sm:text-3xl font-[Avenir] text-white leading-tight">
+                  <div className="flex flex-col justify-between h-full px-3 py-4 min-h-[220px]">
+                    <h3 className="text-xl sm:text-2xl font-[Avenir] text-white leading-tight mb-auto">
                       {item.title}
                     </h3>
-                    <p className="text-text-secondary font-[Avenirlight] leading-relaxed text-sm sm:text-base mt-4">
+                    <p className="text-text-secondary font-[Avenirlight] leading-relaxed text-sm mt-6">
                       {item.description}
                     </p>
                   </div>
@@ -364,65 +362,23 @@ export default function Home() {
           </div>
         </section>
 
-        {/* ═══ BACKED BY — PARTNERS & INCUBATOR ═══ */}
+        {/* ═══ PARTNERS ═══ */}
         <MetalDivider />
 
         <section className="max-w-6xl mx-auto px-6 py-24 sm:py-32">
           <ScrollReveal>
             <h2 className="text-4xl sm:text-5xl font-[Avenir] text-center mb-4">
-              Backed By the <span className="font-[Sagona] text-accent">Best.</span>
+              Our <span className="font-[Sagona] text-accent">Partners.</span>
             </h2>
             <p className="text-text-secondary text-lg text-center max-w-2xl mx-auto font-[Avenirlight] mb-16">
-              Supported by leading incubators and partners driving innovation in
-              health technology.
+              Partnered with organizations driving real impact in health technology and STEM education.
             </p>
           </ScrollReveal>
 
-          <div className="grid md:grid-cols-2 gap-6">
+          <div className="max-w-2xl mx-auto">
             <ScrollReveal>
               <MetallicCard className="h-full">
-                <div className="flex flex-col h-full p-2">
-                  <div className="flex items-center gap-3 mb-5">
-                    <div className="w-10 h-10 rounded-full bg-accent/10 flex items-center justify-center shrink-0">
-                      <svg className="w-5 h-5 text-accent" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M12 21v-8.25M15.75 21v-8.25M8.25 21v-8.25M3 9l9-6 9 6m-1.5 12V10.332A48.36 48.36 0 0012 9.75c-2.551 0-5.056.2-7.5.582V21M3 21h18M12 6.75h.008v.008H12V6.75z" />
-                      </svg>
-                    </div>
-                    <div>
-                      <h3 className="text-xl font-[Avenir] text-white leading-tight">
-                        District 3 Innovation Centre
-                      </h3>
-                      <p className="text-xs text-text-muted font-[Avenirlight] mt-0.5">
-                        Concordia University, Montreal
-                      </p>
-                    </div>
-                  </div>
-
-                  <p className="text-text-secondary text-sm font-[Avenirlight] leading-relaxed mb-5 flex-grow">
-                    Quebec&apos;s premier startup incubator — having supported over
-                    1,400 ventures and counting. District 3 is the only incubator in
-                    Quebec with specialized expertise in the biotech sector, providing
-                    world-class coaching, state-of-the-art labs, and a zero-equity
-                    model that lets founders retain full ownership of their IP.
-                  </p>
-
-                  <div className="flex flex-wrap gap-2">
-                    {["Biotech Focus", "1,400+ Startups", "Zero Equity"].map((tag) => (
-                      <span
-                        key={tag}
-                        className="text-xs px-3 py-1.5 rounded-full border border-metal-dark/50 text-text-muted"
-                      >
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              </MetallicCard>
-            </ScrollReveal>
-
-            <ScrollReveal delay={150}>
-              <MetallicCard className="h-full">
-                <div className="flex flex-col h-full p-2">
+                <div className="flex flex-col h-full px-3 py-4">
                   <div className="flex items-center gap-3 mb-5">
                     <div className="w-10 h-10 rounded-full bg-accent/10 flex items-center justify-center shrink-0">
                       <svg className="w-5 h-5 text-accent" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
@@ -439,7 +395,7 @@ export default function Home() {
                     </div>
                   </div>
 
-                  <p className="text-text-secondary text-sm font-[Avenirlight] leading-relaxed mb-5 flex-grow">
+                  <p className="text-text-secondary text-sm font-[Avenirlight] leading-relaxed mb-5">
                     A youth-led STEM initiative empowering underrepresented students
                     through hands-on workshops, mentorship, and community-driven
                     research. Together with ThinkSci, we&apos;re building pathways for
@@ -451,7 +407,7 @@ export default function Home() {
                     {["STEM Outreach", "Mentorship", "Community Research"].map((tag) => (
                       <span
                         key={tag}
-                        className="text-xs px-3 py-1.5 rounded-full border border-metal-dark/50 text-text-muted"
+                        className="text-xs px-3 py-1.5 rounded-full slide-frosted text-text-muted"
                       >
                         {tag}
                       </span>
@@ -462,7 +418,7 @@ export default function Home() {
             </ScrollReveal>
           </div>
 
-          <ScrollReveal className="text-center mt-10" delay={300}>
+          <ScrollReveal className="text-center mt-10" delay={200}>
             <Link
               href="/partnership"
               className="text-sm uppercase tracking-widest text-text-secondary hover:text-accent transition-colors border-b border-metal-dark hover:border-accent pb-1"
@@ -515,7 +471,7 @@ export default function Home() {
           </ScrollReveal>
         </section>
 
-        {/* ═══ NEWS / MILESTONES ═══ */}
+        {/* ═══ MILESTONES ═══ */}
         <MetalDivider />
 
         <section className="max-w-6xl mx-auto px-6 py-24 sm:py-32">
@@ -528,14 +484,14 @@ export default function Home() {
             </p>
           </ScrollReveal>
 
-          <div className="grid md:grid-cols-2 gap-6">
+          <div className="grid md:grid-cols-3 gap-6">
             {newsItems.map((item, i) => (
               <ScrollReveal key={i} delay={i * 100}>
-                <div className="brushed-metal metal-border rounded-xl p-8 h-full flex flex-col">
+                <div className="brushed-metal slide-label rounded-xl px-7 py-8 h-full flex flex-col">
                   <span className="text-xs uppercase tracking-widest text-accent font-[Avenirlight]">
                     {item.date}
                   </span>
-                  <h3 className="text-xl font-[Avenir] text-white mt-3 mb-3 leading-tight">
+                  <h3 className="text-xl font-[Avenir] text-white mt-3 mb-4 leading-tight">
                     {item.title}
                   </h3>
                   <p className="text-text-secondary text-sm font-[Avenirlight] leading-relaxed flex-grow">
@@ -555,7 +511,7 @@ export default function Home() {
             className="absolute inset-0 pointer-events-none"
             style={{
               background:
-                "radial-gradient(ellipse at center, rgba(0,212,170,0.06) 0%, transparent 50%)",
+                "radial-gradient(ellipse at center, rgba(199,125,186,0.06) 0%, transparent 50%)",
             }}
             aria-hidden="true"
           />
