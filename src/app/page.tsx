@@ -220,7 +220,7 @@ export default function Home() {
             </div>
 
             <div className="opacity-0 animate-[pageIn_0.8s_ease_0.8s_forwards]">
-              <TitaniumText className="text-6xl sm:text-8xl lg:text-9xl font-[Avenir] uppercase tracking-tight leading-[0.85]">
+              <TitaniumText className="text-6xl sm:text-8xl lg:text-9xl font-[Avenir] uppercase tracking-tight leading-[0.85] pt-10">
                 PRECISION.
               </TitaniumText>
             </div>
