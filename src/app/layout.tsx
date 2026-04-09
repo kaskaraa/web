@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     locale: "en_US",
     images: [
       {
-        url: "/images/kaskaraa.png", 
+        url: "/images/about1.png", 
         width: 1200,
         height: 630,
         alt: "Kaskaraa Instruments - Automated Pathology",
@@ -47,7 +47,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Kaskaraa Instruments | Automated Pathology",
     description: "Next-generation robotic instrumentation for pathology. Engineered in Montreal.",
-    images: ["/images/kaskaraa.png"],
+    images: ["/images/about1.png"],
   },
   applicationName: "Kaskaraa Instruments",
   referrer: "strict-origin-when-cross-origin",
