@@ -369,27 +369,81 @@ export default function Home() {
             </p>
           </ScrollReveal>
 
-          <div className="max-w-2xl mx-auto">
-            <ScrollReveal>
-              <MetallicCard className="h-full">
+          <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 items-stretch">
+
+            <ScrollReveal className="h-full">
+              <MetallicCard className="h-full hover:-translate-y-1 transition-transform duration-300">
                 <div className="flex flex-col h-full px-3 py-4">
-                  <div className="flex items-center gap-3 mb-5">
-                    <div className="w-10 h-10 rounded-full bg-accent/10 flex items-center justify-center shrink-0">
-                      <svg className="w-5 h-5 text-accent" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 00-.941-3.197m0 0A5.995 5.995 0 0012 12.75a5.995 5.995 0 00-5.058 2.772m0 0a3 3 0 00-4.681 2.72 8.986 8.986 0 003.74.477m.94-3.197a5.971 5.971 0 00-.94 3.197M15 6.75a3 3 0 11-6 0 3 3 0 016 0zm6 3a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0zm-13.5 0a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0z" />
-                      </svg>
-                    </div>
-                    <div>
-                      <h3 className="text-xl font-[Avenir] text-white leading-tight">
-                        ThinkSci Outreach
-                      </h3>
-                      <p className="text-xs text-text-muted font-[Avenirlight] mt-0.5">
-                        Montreal &amp; Ottawa
-                      </p>
+                  <div className="relative overflow-hidden rounded-xl border border-metal-dark/40 mb-5 h-36 bg-gradient-to-br from-[#1b1b1b] via-[#141414] to-[#0d0d0d]">
+                    <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,rgba(255,255,255,0.12),transparent_55%)]" />
+                    <div className="absolute inset-0 flex items-center justify-between px-5">
+                      <div className="pr-4">
+                        <p className="text-base sm:text-lg text-white font-[Avenir] leading-tight">
+                          District 3 Innovation Centre
+                        </p>
+                        <p className="text-xs text-text-secondary font-[Avenirlight] mt-1">
+                          Concordia University, Montreal
+                        </p>
+                      </div>
+                      <div className="ml-4 flex w-20 h-20 shrink-0 items-center justify-center rounded-lg border border-metal-mid/40 bg-[#121212]">
+                        <Image
+                          src="/images/partnership/District3_Logo_2024_Symbol_Filled_White.png"
+                          alt="District 3 badge"
+                          width={72}
+                          height={72}
+                          sizes="80px"
+                          className="h-16 w-16 object-contain"
+                        />
+                      </div>
                     </div>
                   </div>
 
-                  <p className="text-text-secondary text-sm font-[Avenirlight] leading-relaxed mb-5">
+                  
+
+                  <p className="text-text-secondary text-sm font-[Avenirlight] leading-relaxed mb-5 flex-grow">
+                    Their holistic approach combines tailored coaching, sector-specific expertise, ESG-focused strategies, and access to state-of-the-art labs, collaborative workspaces, and global networks. More than just an incubator, District 3 is a vibrant community where creativity, collaboration, and passion ignite meaningful change and shape a better future.
+                  </p>
+
+                  <div className="flex flex-wrap gap-2">
+                    {["$573M+ sales & funds since inception", "12K+ Community members"].map((tag) => (
+                      <span
+                        key={tag}
+                        className="text-xs px-3 py-1.5 rounded-full slide-frosted text-text-muted"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </MetallicCard>
+            </ScrollReveal>
+            
+            <ScrollReveal className="h-full">
+              <MetallicCard className="h-full hover:-translate-y-1 transition-transform duration-300">
+                <div className="flex flex-col h-full px-3 py-4">
+                  <div className="relative overflow-hidden rounded-xl border border-metal-dark/40 mb-5 h-36 bg-[#0f0f0f]">
+                    <Image
+                      src="/images/partnership/thinksci.png"
+                      alt="ThinkSci Outreach"
+                      fill
+                      sizes="(min-width: 768px) 33vw, 100vw"
+                      className="object-cover"
+                    />
+                    <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,rgba(255,255,255,0.12),transparent_55%)]" />
+                    <div className="absolute inset-0 bg-black/25" />
+                    <div className="absolute inset-0 flex items-center px-5">
+                      <div className="pr-4">
+                        <p className="text-base sm:text-lg text-white font-[Avenir] leading-tight">
+                          ThinkSci Outreach
+                        </p>
+                        <p className="text-xs text-text-secondary font-[Avenirlight] mt-1">
+                          Montreal &amp; Ottawa
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <p className="text-text-secondary text-sm font-[Avenirlight] leading-relaxed mb-5 flex-grow">
                     A youth-led STEM initiative empowering underrepresented students
                     through hands-on workshops, mentorship, and community-driven
                     research. Together with ThinkSci, we&apos;re building pathways for
@@ -410,6 +464,8 @@ export default function Home() {
                 </div>
               </MetallicCard>
             </ScrollReveal>
+
+            
           </div>
 
           <ScrollReveal className="text-center mt-10" delay={200}>
