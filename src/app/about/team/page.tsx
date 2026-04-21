@@ -50,7 +50,7 @@ export default function TeamPage() {
 
           <ScrollReveal className="mt-4">
             <p className="text-text-secondary text-lg font-[Avenirlight] text-center max-w-xl mx-auto">
-              Four builders on a mission to transform pathology.
+              Four minds on a mission to transform pathology.
             </p>
           </ScrollReveal>
         </section>
