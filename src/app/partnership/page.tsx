@@ -7,15 +7,15 @@ import LetterReveal from "../components/letter-reveal";
 import MetallicCard from "../components/metallic-card";
 
 const partners = [
-  /*
+  
   {
     name: "District 3 Innovation Centre",
     subtitle: "Concordia University, Montreal",
-    bio: "Quebec's premier startup incubator...",
+    bio: "Their holistic approach combines tailored coaching, sector-specific expertise, ESG-focused strategies, and access to state-of-the-art labs, collaborative workspaces, and global networks. More than just an incubator, District 3 is a vibrant community where creativity, collaboration, and passion ignite meaningful change and shape a better future.",
     link: "https://www.district3.co",
-    tags: ["Biotech Incubator", "1,400+ Startups Supported", "Zero Equity Model"],
+    tags: ["Biotech Incubator", "$573M+ sales & funds since inception", "12K+ Community members" ],
   },
-  */
+
   {
     name: "ThinkSci Outreach",
     subtitle: "Montreal & Ottawa",

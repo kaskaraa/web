@@ -144,7 +144,7 @@ const bentoItems = [
   {
     title: "Micron-Level Precision",
     description:
-      "Robotic tissue sectioning engineered to tolerances previously unattainable by human hands.",
+      "Robotic tissue sectioning engineered to reach accuracy previously unattainable by human hands represents a fundamental shift in how histological preparation is performed. By replacing manual manipulation with precision-controlled robotics this approach enables consistent section thickness at the micron level, minimizing variability that traditionally come from operator skill, fatigue, and environmental conditions.",
     span: "md:col-span-2",
   },
   {
@@ -156,13 +156,13 @@ const bentoItems = [
   {
     title: "Integrated Sample Tracking",
     description:
-      "Automated barcode scanning ensures patient sample identity is never compromised.",
+      "Automated barcode scanning ensures patient sample identity is never mismatched or lost.",
     span: "md:col-span-1",
   },
   {
     title: "Hands-Free Operation",
     description:
-      "Continuous unattended runs allow a single technologist to oversee multiple units — scaling throughput without scaling headcount.",
+      "Continuous unattended runs transform tissue sectioning from a labor-intensive, one-to-one process into a scalable, parallelized workflow. Instead of being physically tied to a single microtome, a technologist can supervise multiple robotic units simultaneously, intervening only when the system flags anomalies or completes a batch. This shifts the role from manual operator to process supervisor focused on quality control, workflow optimization, and exception handling rather than repetitive cuts.",
     span: "md:col-span-2",
   },
 ];
@@ -374,7 +374,7 @@ export default function Home() {
             <ScrollReveal className="h-full">
               <MetallicCard className="h-full hover:-translate-y-1 transition-transform duration-300">
                 <div className="flex flex-col h-full px-3 py-4">
-                  <div className="relative overflow-hidden rounded-xl border border-metal-dark/40 mb-5 h-36 bg-gradient-to-br from-[#1b1b1b] via-[#141414] to-[#0d0d0d]">
+                  <div className="relative overflow-hidden rounded-xl  mb-5 h-36 bg-gradient-to-br from-[#1b1b1b] via-[#141414] to-[#0d0d0d]">
                     <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,rgba(255,255,255,0.12),transparent_55%)]" />
                     <div className="absolute inset-0 flex items-center justify-between px-5">
                       <div className="pr-4">
@@ -421,7 +421,7 @@ export default function Home() {
             <ScrollReveal className="h-full">
               <MetallicCard className="h-full hover:-translate-y-1 transition-transform duration-300">
                 <div className="flex flex-col h-full px-3 py-4">
-                  <div className="relative overflow-hidden rounded-xl border border-metal-dark/40 mb-5 h-36 bg-[#0f0f0f]">
+                  <div className="relative overflow-hidden rounded-xl  mb-5 h-36 bg-[#0f0f0f]">
                     <Image
                       src="/images/partnership/thinksci.png"
                       alt="ThinkSci Outreach"
