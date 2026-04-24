@@ -385,7 +385,7 @@ export default function Home() {
                           Concordia University, Montreal
                         </p>
                       </div>
-                      <div className="ml-4 flex w-20 h-20 shrink-0 items-center justify-center rounded-lg border border-metal-mid/40 bg-[#121212]">
+                      <div className="ml-4 flex w-20 h-20 shrink-0 items-center justify-center rounded-lg ]">
                         <Image
                           src="/images/partnership/District3_Logo_2024_Symbol_Filled_White.png"
                           alt="District 3 badge"
