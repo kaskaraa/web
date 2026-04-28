@@ -269,10 +269,8 @@ export default function Home() {
 
             <ScrollReveal className="md:col-span-2" delay={200}>
               <p className="text-text-secondary text-lg font-[Avenirlight] leading-relaxed">
-                Rising cancer incidence is colliding with a hemorrhaging talent
-                pipeline. Labs face record-breaking caseloads while histology
-                positions go unfilled and 19th-century rotary microtomes remain
-                the standard. Every block is still cut by hand.
+                Rising cancer incidence is colliding with a hemorrhaging workforce. Labs face record-breaking caseloads while histology
+                positions go unfilled and 19th-century rotary microtomes are still a standard. Every block is still cut by hand.
               </p>
             </ScrollReveal>
           </div>
@@ -374,7 +372,7 @@ export default function Home() {
             <ScrollReveal className="h-full">
               <MetallicCard className="h-full hover:-translate-y-1 transition-transform duration-300">
                 <div className="flex flex-col h-full px-3 py-4">
-                  <div className="relative overflow-hidden rounded-xl  mb-5 h-36 bg-gradient-to-br from-[#1b1b1b] via-[#141414] to-[#0d0d0d]">
+                  <div className="relative overflow-hidden rounded-xl  mb-5 h-36 ">
                     <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,rgba(255,255,255,0.12),transparent_55%)]" />
                     <div className="absolute inset-0 flex items-center justify-between px-5">
                       <div className="pr-4">
@@ -418,19 +416,20 @@ export default function Home() {
               </MetallicCard>
             </ScrollReveal>
             
-            <ScrollReveal className="h-full">
-              <MetallicCard className="h-full hover:-translate-y-1 transition-transform duration-300">
+            <ScrollReveal  className="h-full">
+              <MetallicCard  className="h-full hover:-translate-y-1 transition-transform duration-300">
                 <div className="flex flex-col h-full px-3 py-4">
-                  <div className="relative overflow-hidden rounded-xl  mb-5 h-36 bg-[#0f0f0f]">
+                  <div className="relative overflow-hidden rounded-xl  mb-5 h-36 ]">
                     <Image
                       src="/images/partnership/thinksci.png"
                       alt="ThinkSci Outreach"
                       fill
                       sizes="(min-width: 768px) 33vw, 100vw"
                       className="object-cover"
+                      
                     />
                     <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,rgba(255,255,255,0.12),transparent_55%)]" />
-                    <div className="absolute inset-0 bg-black/25" />
+                    <div className="absolute inset-0 " />
                     <div className="absolute inset-0 flex items-center px-5">
                       <div className="pr-4">
                         <p className="text-base sm:text-lg text-white font-[Avenir] leading-tight">
@@ -464,7 +463,6 @@ export default function Home() {
                 </div>
               </MetallicCard>
             </ScrollReveal>
-
             
           </div>
 
@@ -522,7 +520,7 @@ export default function Home() {
         </section>
 
         {/* ═══ MILESTONES ═══ */}
-        <MetalDivider />
+        {/* <MetalDivider />
 
         <section className="max-w-6xl mx-auto px-6 py-24 sm:py-32">
           <ScrollReveal>
@@ -551,7 +549,7 @@ export default function Home() {
               </ScrollReveal>
             ))}
           </div>
-        </section>
+        </section> */}
 
         {/* ═══ CONTACT CTA ═══ */}
         <MetalDivider />
@@ -576,7 +574,7 @@ export default function Home() {
             <ScrollReveal delay={150}>
               <p className="mt-6 text-text-secondary text-lg font-[Avenirlight] max-w-lg mx-auto">
                 Whether you&apos;re a pathology lab, a healthcare investor, or a
-                potential collaborator — we&apos;d love to hear from you.
+                potential collaborator we&apos;d love to hear from you!
               </p>
             </ScrollReveal>
 
