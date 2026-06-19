@@ -10,9 +10,9 @@ import Image from "next/image";
 const team = [
   {
     name: "Nathan Aruna",
-    role: "Founder & CEO — Engineering & Technology",
+    role: "Founder — Chief of Research & Development",
     image: "/images/team/Nathan.png",
-    bio: "Nathan leads engineering and product development at Kaskaraa Instruments. Currently studying electrical engineering with a deep passion for technology and robotics, he is driven to create innovative solutions that can advance humanity. Nathan drives the research and development of our automation tools, working to ensure they are built to the highest standards of quality and performance. He has presented his research on the international stage, reflecting his commitment to pushing the boundaries of robotics.",
+    bio: "Nathan leads research and development at Kaskaraa Instruments. He is currently studying electrical engineering, with a deep passion for technology and robotics that drives him to create innovative solutions to advance healthcare and humanity. Beyond playing tennis and traveling he ensures Kaskaraa's lab automation tools are built to transform modern healthcare. He has presented his research on the international stage, demonstrating a commitment to pushing the boundaries of robotics within medicine."
   },
   {
     name: "Domenico Valentino",
@@ -22,13 +22,13 @@ const team = [
   },
   {
     name: "Raphael Ethier",
-    role: "Co-Founder — Chief of Hardware Engineering",
+    role: "Co-Founder — Chief Hardware Architect",
     image: "/images/team/Raphael.png",
-    bio: "Raphael leads hardware engineering and mechanical design at Kaskaraa Instruments. Currently studying aerospace engineering with a strong foundation in mechanical design, his passion for engineering was sparked through competitive robotics, where he developed the technical expertise to lead and mentor the next generation of engineers. Raphael drives the research and development of our hardware systems, working to ensure our tools are designed for precision and reliability.",
+    bio: "Raphael leads hardware engineering and mechanical design at Kaskaraa Instruments. Currently studying aerospace engineering with a strong foundation in mechanical design, his passion for engineering was sparked through competitive robotics, where he developed the technical expertise to lead and mentor the next generation of engineers. Raphael is the mastermind behind our hardware systems, working to ensure our tools are designed for precision and reliability.",
   },
   {
     name: "Majed Munazzit",
-    role: "Co-Founder — Business Development & Clinical Applications",
+    role: "Co-Founder — Chief of Business/Clinical Development",
     image: "/images/team/Majed.png",
     bio: "With a career spanning over 10 years in pathology laboratory operations, Majed has evolved from a medical technologist to a lab manager and digital pathology project leader. He has successfully spearheaded large-scale digital transformations and AI-powered imaging deployments across North America, bridging the gap between complex hospital IT requirements and clinical workflows. At Kaskaraa Instruments, Majed leads market validation, ensuring our automation solutions are perfectly aligned with the operational needs and regulatory standards of modern pathology labs.",
   },

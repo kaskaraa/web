@@ -168,10 +168,11 @@ const bentoItems = [
 ];
 
 const team = [
-  { name: "Nathan Aruna", role: "Founder & CEO", image: "/images/team/Nathan.png" },
-  { name: "Domenico Valentino", role: "Chief Software Architect", image: "/images/team/Domenico.png" },
-  { name: "Raphael Ethier", role: "Chief Hardware Engineer", image: "/images/team/Raphael.png" },
-  { name: "Majed Munazzit", role: "Business Development", image: "/images/team/Majed.png" },
+  { name: "Nathan Aruna", role: "Founder & Chief of Research & Development", image: "/images/team/Nathan.png" },
+  { name: "Domenico Valentino", role: "Co-Founder & Chief Software Architect", image: "/images/team/Domenico.png" },
+  { name: "Raphael Ethier", role: "Co-Founder & Chief Hardware Architect", image: "/images/team/Raphael.png" },
+  { name: "Majed Munazzit", role: "Co-Founder & Chief of Business/Clinical Development", image: "/images/team/Majed.png" },
+
 ];
 
 const newsItems = [
@@ -270,7 +271,7 @@ export default function Home() {
             <ScrollReveal className="md:col-span-2" delay={200}>
               <p className="text-text-secondary text-lg font-[Avenirlight] leading-relaxed">
                 Rising cancer incidence is colliding with a hemorrhaging workforce. Labs face record-breaking caseloads while histology
-                positions go unfilled and 19th-century rotary microtomes are still a standard. Every block is still cut by hand.
+                positions go unfilled and 19th-century rotary microtomes are still a standard. Every block still being cut by hand.
               </p>
             </ScrollReveal>
           </div>
@@ -340,7 +341,7 @@ export default function Home() {
             {bentoItems.map((item, i) => (
               <ScrollReveal key={i} delay={i * 100} className={item.span}>
                 <MetallicCard className="h-full">
-                  <div className="flex flex-col justify-between h-full px-3 py-4 min-h-[220px]">
+                  <div className="flex flex-col justify-between h-full px-3 py-4 min-h-[180px]">
                     <h3 className="text-xl sm:text-2xl font-[Avenir] text-white leading-tight mb-auto">
                       {item.title}
                     </h3>
