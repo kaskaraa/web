@@ -1,6 +1,4 @@
 User-agent: *
 Allow: /
-Disallow: /admin
-Crawl-delay: 1
 
-Sitemap: https://yourdomain.com/sitemap.xml
+Sitemap: https://kaskaraa.com/sitemap.xml

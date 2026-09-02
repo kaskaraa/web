@@ -2,38 +2,15 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="border-t border-metal-dark/30 bg-[#080808]">
-      <div className="max-w-6xl mx-auto px-6 py-12 flex flex-col md:flex-row items-center justify-between gap-8">
-        {/* Logo */}
-        <Link href="/">
-          <span className="text-lg font-[Avenir] text-white tracking-tight">
-            Kaskaraa Instruments
-          </span>
-        </Link>
-
-        {/* Nav links */}
-        <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-3 text-sm text-text-muted">
-          <Link href="/about" className="hover:text-text-secondary transition-colors">About</Link>
-          <Link href="/about/team" className="hover:text-text-secondary transition-colors">Team</Link>
-          <Link href="/partnership" className="hover:text-text-secondary transition-colors">Partners</Link>
-          <Link href="/contact" className="hover:text-text-secondary transition-colors">Contact</Link>
-          <Link href="/investment" className="hover:text-text-secondary transition-colors">Investment</Link>
-          <a
-            href="https://www.linkedin.com/company/106752688"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:text-text-secondary transition-colors"
-          >
-            LinkedIn
-          </a>
-        </div>
-      </div>
-
-      <div className="max-w-6xl mx-auto px-6 pb-8">
-        <p className="text-xs text-text-muted text-center md:text-left">
-          &copy; {new Date().getFullYear()} Kaskaraa Instruments Inc. All rights reserved.
-        </p>
-      </div>
+    <footer className="w-full max-w-5xl mx-auto px-6 py-10 mt-16 border-t border-rule text-sm text-ink-2 flex flex-col sm:flex-row gap-3 sm:justify-between">
+      <p>Kaskaraa Instruments Inc. · Montreal, Quebec</p>
+      <p className="flex gap-5">
+        <a href="https://www.linkedin.com/company/106752688" target="_blank" rel="noopener noreferrer" className="hover:text-accent">
+          LinkedIn
+        </a>
+        <Link href="/contact" className="hover:text-accent">Contact</Link>
+        <span>&copy; {new Date().getFullYear()}</span>
+      </p>
     </footer>
   );
 }

@@ -1,268 +1,49 @@
 @import "tailwindcss";
 
-/* ── Design Tokens ── */
-:root {
-  --bg-primary: #0a0a0a;
-  --bg-surface: #111111;
-  --bg-surface-hover: #1a1a1a;
-
-  --metal-dark: #8a8a8a;
-  --metal-mid: #c0c0c0;
-  --metal-light: #e8e8e8;
-
-  --accent: #6d6888;
-  --accent-hover: #7e789a;
-
-  --accent-secondary: #b49aa3;
-
-  --text-primary: #ffffff;
-  --text-secondary: #a0a0a0;
-  --text-muted: #666666;
-}
-
-@theme inline {
-  --color-background: var(--bg-primary);
-  --color-foreground: var(--text-primary);
-  --color-accent: var(--accent);
-  --color-accent-hover: var(--accent-hover);
-  --color-surface: var(--bg-surface);
-  --color-surface-hover: var(--bg-surface-hover);
-  --color-metal-dark: var(--metal-dark);
-  --color-metal-mid: var(--metal-mid);
-  --color-metal-light: var(--metal-light);
-  --color-text-secondary: var(--text-secondary);
-  --color-text-muted: var(--text-muted);
-}
-
-/* ── Fonts ── */
 @font-face {
-  font-family: Avenir;
-  font-weight: 600 1100;
-  font-display: swap;
-  src: url("/fonts/AvenirNextLTProDemi.otf") format("opentype");
-}
-
-@font-face {
-  font-family: Avenirlight;
-  font-weight: 600 1100;
+  font-family: "Avenir Next";
+  font-weight: 300;
   font-display: swap;
   src: url("/fonts/AvenirLTStd-Light.otf") format("opentype");
 }
 
 @font-face {
-  font-family: Sagona;
-  font-style: normal;
-  font-weight: 200 700;
+  font-family: "Avenir Next";
+  font-weight: 600;
   font-display: swap;
-  src: url("/fonts/SAGONABOOKITALIC.TTF") format("truetype");
+  src: url("/fonts/AvenirNextLTProDemi.otf") format("opentype");
 }
 
-/* ── Base ── */
-html {
-  scroll-behavior: smooth;
+@theme {
+  --font-sans: "Avenir Next", "Helvetica Neue", Arial, sans-serif;
+  --font-mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+
+  /* paper: paraffin wax. accent: hematoxylin. */
+  --color-paper: #f7f6f2;
+  --color-ink: #17161a;
+  --color-ink-2: #5c5a63;
+  --color-rule: #d8d5cc;
+  --color-accent: #4a2d7a;
 }
 
 body {
-  background: var(--bg-primary);
-  color: var(--text-primary);
-  font-family: "Inter", Arial, Helvetica, sans-serif;
-  overflow-x: hidden;
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  font-weight: 300;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, strong, b {
+  font-weight: 600;
 }
 
 ::selection {
-  background: var(--accent);
-  color: var(--bg-primary);
+  background: var(--color-accent);
+  color: var(--color-paper);
 }
 
-/* ── Dot Grid Background ── */
-.dot-grid {
-  background-image: radial-gradient(circle, var(--metal-dark) 1px, transparent 1px);
-  background-size: 40px 40px;
-}
-
-/* ── Brushed Aluminium Surface ── */
-.brushed-metal {
-  background: linear-gradient(
-    90deg,
-    var(--bg-surface) 0%,
-    #161616 20%,
-    #1a1a1a 40%,
-    #141414 60%,
-    #181818 80%,
-    var(--bg-surface) 100%
-  );
-  position: relative;
-}
-
-.brushed-metal::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: repeating-linear-gradient(
-    90deg,
-    transparent,
-    transparent 2px,
-    rgba(255, 255, 255, 0.015) 2px,
-    rgba(255, 255, 255, 0.015) 4px
-  );
-  pointer-events: none;
-}
-
-/* ── Metallic Border Gradient ── */
-.metal-border {
-  border: 1px solid var(--metal-dark);
-  background-clip: padding-box;
-}
-
-.metal-ring {
-  box-shadow: 0 0 0 2px var(--metal-dark),
-              0 0 0 3px var(--metal-mid),
-              0 0 0 4px var(--metal-dark);
-}
-
-/* ── Scroll Reveal Animations ── */
-.reveal {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 0.7s ease, transform 0.7s ease;
-}
-
-.reveal.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* ── SVG Line Drawing ── */
-.draw-line {
-  stroke-dasharray: var(--line-length, 1000);
-  stroke-dashoffset: var(--line-length, 1000);
-  transition: stroke-dashoffset 2.5s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.draw-line.drawn {
-  stroke-dashoffset: 0;
-}
-
-/* ── Letter Reveal ── */
-.letter-reveal span {
-  display: inline-block;
-  opacity: 0;
-  transform: translateY(24px);
-  transition: opacity 0.5s ease, transform 0.5s ease;
-}
-
-.letter-reveal.animate span {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* ── Horizontal Line Draw ── */
-.line-draw {
-  width: 0;
-  transition: width 1.2s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.line-draw.visible {
-  width: 100%;
-}
-
-/* ── Page Fade In ── */
-@keyframes pageIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-
-.page-enter {
-  animation: pageIn 0.6s ease forwards;
-}
-
-/* ── Titanium / Brushed Aluminium Text ── */
-.titanium-text {
-  background: linear-gradient(
-    90deg,
-    #666666 0%,
-    #8a8a8a 15%,
-    #b8b8b8 30%,
-    #e8e8e8 45%,
-    #ffffff 50%,
-    #e8e8e8 55%,
-    #b8b8b8 70%,
-    #8a8a8a 85%,
-    #666666 100%
-  );
-  background-size: 200% 100%;
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-/* ── Slide / Specimen Label ── */
-.slide-label {
-  border: 1px solid rgba(160, 136, 168, 0.14);
-  background: linear-gradient(
-    180deg,
-    rgba(160, 136, 168, 0.035) 0%,
-    rgba(10, 10, 10, 0) 100%
-  );
-}
-
-.slide-frosted {
-  border: 1px solid rgba(160, 136, 168, 0.07);
-  background: linear-gradient(
-    180deg,
-    rgba(255, 255, 255, 0.02) 0%,
-    rgba(255, 255, 255, 0) 100%
-  );
-}
-
-/* ── Section divider — thin specimen line ── */
-.specimen-line {
-  height: 1px;
-  background: linear-gradient(
-    90deg,
-    transparent 0%,
-    rgba(160, 136, 168, 0.18) 20%,
-    rgba(160, 136, 168, 0.3) 50%,
-    rgba(160, 136, 168, 0.18) 80%,
-    transparent 100%
-  );
-}
-
-/* ── Glow Effects ── */
-.accent-glow {
-  box-shadow: 0 0 60px rgba(160, 136, 168, 0.12),
-              0 0 120px rgba(160, 136, 168, 0.04);
-}
-
-/* ── Glass Morphism ── */
-.glass {
-  background: rgba(10, 10, 10, 0.7);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(138, 138, 138, 0.2);
-}
-
-/* ── Reduced Motion ── */
-@media (prefers-reduced-motion: reduce) {
-  .reveal {
-    opacity: 1;
-    transform: none;
-    transition: none;
-  }
-
-  .draw-line {
-    stroke-dashoffset: 0;
-    transition: none;
-  }
-
-  .letter-reveal span {
-    opacity: 1;
-    transform: none;
-    transition: none;
-  }
-
-  .line-draw {
-    width: 100%;
-    transition: none;
-  }
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
 }

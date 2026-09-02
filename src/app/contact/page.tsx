@@ -2,121 +2,61 @@
 
 import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
-import Footer from "../components/footer";
-import Navbar from "../components/navbar";
-import ScrollReveal from "../components/scroll-reveal";
-import LetterReveal from "../components/letter-reveal";
+
+const field =
+  "w-full bg-transparent border-b border-rule py-3 focus:border-ink focus:outline-none placeholder:text-ink-2/60";
 
 export default function ContactPage() {
   const formRef = useRef<HTMLFormElement>(null);
   const [status, setStatus] = useState("");
 
-  const sendEmail = async (e: React.FormEvent) => {
+  async function send(e: React.FormEvent) {
     e.preventDefault();
     if (!formRef.current) return;
-
-    setStatus("Sending...");
-
-    emailjs
-      .sendForm(
+    setStatus("Sending…");
+    try {
+      await emailjs.sendForm(
         process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
         process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
         formRef.current,
         process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!
-      )
-      .then(
-        () => {
-          setStatus("Message sent successfully!");
-          formRef.current?.reset();
-        },
-        (error) => {
-          console.error(error);
-          setStatus("Failed to send message. Please try again.");
-        }
       );
-  };
+      setStatus("Sent. We read everything and reply within a few days.");
+      formRef.current.reset();
+    } catch (err) {
+      console.error(err);
+      setStatus("Could not send. Please try again, or reach us on LinkedIn.");
+    }
+  }
 
   return (
-    <div className="flex flex-col min-h-screen page-enter">
-      <Navbar />
+    <section className="py-20 sm:py-28 max-w-xl">
+      <h1 className="text-4xl sm:text-5xl tracking-tight">Contact</h1>
+      <p className="mt-6 text-lg leading-relaxed">
+        Labs, universities, investors, press. Tell us who you are and what you are after.
+      </p>
 
-      <main className="flex-grow pt-28">
-        <section className="max-w-2xl mx-auto px-6 py-16 sm:py-24">
-          <LetterReveal
-            text="Get in Touch"
-            className="text-5xl sm:text-6xl font-[Avenir] tracking-tight text-center"
-            delay={300}
-            letterDelay={40}
-          />
-
-          <ScrollReveal className="mt-4">
-            <p className="text-text-secondary text-lg font-[Avenirlight] text-center">
-              Technical questions, partnership inquiries, or just want to say hello.
-            </p>
-          </ScrollReveal>
-
-          <ScrollReveal delay={200}>
-            <form ref={formRef} onSubmit={sendEmail} className="space-y-8 mt-16">
-              <div>
-                <label htmlFor="email" className="block mb-2 text-sm font-[Avenirlight] text-text-secondary">
-                  Your email
-                </label>
-                <input
-                  type="email"
-                  name="email"
-                  id="email"
-                  required
-                  placeholder="you@company.com"
-                  className="w-full bg-transparent border-b border-metal-dark text-white text-sm py-3 px-1 placeholder:text-text-muted focus:border-accent focus:outline-none transition-colors duration-300"
-                />
-              </div>
-
-              <div>
-                <label htmlFor="subject" className="block mb-2 text-sm font-[Avenirlight] text-text-secondary">
-                  Subject
-                </label>
-                <input
-                  type="text"
-                  name="subject"
-                  id="subject"
-                  required
-                  placeholder="How can we help?"
-                  className="w-full bg-transparent border-b border-metal-dark text-white text-sm py-3 px-1 placeholder:text-text-muted focus:border-accent focus:outline-none transition-colors duration-300"
-                />
-              </div>
-
-              <div>
-                <label htmlFor="message" className="block mb-2 text-sm font-[Avenirlight] text-text-secondary">
-                  Message
-                </label>
-                <textarea
-                  name="message"
-                  id="message"
-                  rows={5}
-                  required
-                  placeholder="Tell us more..."
-                  className="w-full bg-transparent border-b border-metal-dark text-white text-sm py-3 px-1 placeholder:text-text-muted focus:border-accent focus:outline-none transition-colors duration-300 resize-none"
-                />
-              </div>
-
-              <button
-                type="submit"
-                className="bg-accent text-[#0a0a0a] font-[Avenir] px-10 py-3 rounded-full text-sm uppercase tracking-widest hover:bg-accent-hover transition-colors duration-300"
-              >
-                Send Message
-              </button>
-
-              {status && (
-                <p className={`text-sm mt-4 ${status.includes("success") ? "text-accent" : "text-text-secondary"}`}>
-                  {status}
-                </p>
-              )}
-            </form>
-          </ScrollReveal>
-        </section>
-      </main>
-
-      <Footer />
-    </div>
+      <form ref={formRef} onSubmit={send} className="mt-12 space-y-8">
+        <div>
+          <label htmlFor="email" className="block text-sm text-ink-2 mb-1">Email</label>
+          <input id="email" name="email" type="email" required placeholder="you@hospital.ca" className={field} />
+        </div>
+        <div>
+          <label htmlFor="subject" className="block text-sm text-ink-2 mb-1">Subject</label>
+          <input id="subject" name="subject" type="text" required className={field} />
+        </div>
+        <div>
+          <label htmlFor="message" className="block text-sm text-ink-2 mb-1">Message</label>
+          <textarea id="message" name="message" rows={6} required className={`${field} resize-none`} />
+        </div>
+        <button
+          type="submit"
+          className="border border-ink px-6 py-3 text-sm hover:bg-ink hover:text-paper transition-colors"
+        >
+          Send message
+        </button>
+        {status && <p className="text-sm" role="status">{status}</p>}
+      </form>
+    </section>
   );
 }
