@@ -2,7 +2,8 @@ import Link from "next/link";
 import Image from "next/image";
 
 const status: [string, string][] = [
-  ["2025-08-15", "Kaskaraa Instruments incorporated in Montreal."],
+  ["2024", "Project began as a student research project."],
+  ["2025", "Kaskaraa Instruments incorporated in Montreal."],
   ["2025", "Joined District 3 Innovation Centre at Concordia University."],
   ["2025", "Profiled in La Presse."],
   ["2025", "Partnered with ThinkSci Outreach on STEM programming in Montreal and Ottawa."],
@@ -144,8 +145,6 @@ export default function Home() {
           <a href="https://linktr.ee/thinkscioutreach" target="_blank" rel="noopener noreferrer" className="hover:text-accent">
             ThinkSci Outreach
           </a>
-          <span className="text-ink-2"> · </span>
-          <span>La Presse</span>
         </p>
       </Section>
     </>
